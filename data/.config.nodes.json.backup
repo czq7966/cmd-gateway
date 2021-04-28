@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "1.3.3",
+        "version": "1.3.3-git",
         "local": false,
         "user": false,
         "nodes": {
@@ -433,7 +433,7 @@
     },
     "node-red-contrib-gree-hvac": {
         "name": "node-red-contrib-gree-hvac",
-        "version": "0.1.3",
+        "version": "0.1.4",
         "local": true,
         "user": true,
         "nodes": {
@@ -697,6 +697,36 @@
                 "user": false,
                 "module": "node-red-dashboard",
                 "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_spacer.js"
+            }
+        }
+    },
+    "node-red-nd-gree-hvac": {
+        "name": "node-red-nd-gree-hvac",
+        "version": "0.0.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "gree-hvac": {
+                "name": "gree-hvac",
+                "types": [
+                    "gree-hvac"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-nd-gree-hvac",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gree-hvac\\gree-hvac\\gree-hvac.js"
+            },
+            "gree-hvac-config": {
+                "name": "gree-hvac-config",
+                "types": [
+                    "gree-hvac-config"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-nd-gree-hvac",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gree-hvac\\gree-hvac\\gree-hvac-config.js"
             }
         }
     }

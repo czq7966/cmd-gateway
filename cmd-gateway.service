@@ -3,7 +3,7 @@ Description=CMD Gateway
 
 [Service]
 WorkingDirectory=/data/cmd-gateway
-ExecStart=/data/node-v14.16.1/bin/node ./src/index.js -u ./data
+ExecStart=/data/node-v14.16.1/bin/node /data/cmd-gateway/src/index.js -u /data/cmd-gateway/data
 KillMode=process
 Restart=on-failure
 

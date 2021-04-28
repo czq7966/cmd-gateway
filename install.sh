@@ -10,6 +10,9 @@ mv node-v14.16.1-linux-armv7l node-v14.16.1
 #tar -xvf node-v14.16.1-linux-x64.tar.xz
 #mv node-v14.16.1-linux-x64 node-v14.16.1
 
+# install mDNS dependency
+#sudo apt-get install avahi-daemon
+#sudo apt-get install libavahi-compat-libdnssd-dev
 
 
 
