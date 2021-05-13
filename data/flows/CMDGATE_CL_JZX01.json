@@ -2816,7 +2816,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "playload",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
@@ -2965,7 +2965,8 @@
         "wires": [
             [
                 "9a7c5bd5.1c48e8",
-                "93d1dd50.35d66"
+                "93d1dd50.35d66",
+                "944addd3.5bb31"
             ]
         ]
     },
@@ -3269,7 +3270,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "\"cmdgate/device/\" & $globalContext(\"device.transceiver.no1.did\")\t",
+                "to": "$globalContext(\"terminal.mqtt.pub.topic.prefix\") & $globalContext(\"device.transceiver.no1.did\")",
                 "tot": "jsonata"
             }
         ],
@@ -3443,11 +3444,29 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 430,
         "y": 540,
+        "wires": []
+    },
+    {
+        "id": "944addd3.5bb31",
+        "type": "debug",
+        "z": "2a593e50.77ef92",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 440,
         "wires": []
     }
 ]
