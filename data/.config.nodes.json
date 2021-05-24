@@ -672,7 +672,7 @@
     },
     "node-red-nd-gree-hvac": {
         "name": "node-red-nd-gree-hvac",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "local": true,
         "user": true,
         "nodes": {
@@ -697,6 +697,173 @@
                 "user": false,
                 "module": "node-red-nd-gree-hvac",
                 "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gree-hvac\\gree-hvac\\gree-hvac-config.js"
+            }
+        }
+    },
+    "node-red-contrib-zigbee": {
+        "name": "node-red-contrib-zigbee",
+        "version": "0.20.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "zigbee-shepherd": {
+                "name": "zigbee-shepherd",
+                "types": [
+                    "zigbee-shepherd"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\shepherd.js"
+            },
+            "zigbee-controller": {
+                "name": "zigbee-controller",
+                "types": [
+                    "zigbee-controller"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\controller.js"
+            },
+            "zigbee-converter": {
+                "name": "zigbee-converter",
+                "types": [
+                    "zigbee-converter"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\converter.js"
+            },
+            "zigbee-event": {
+                "name": "zigbee-event",
+                "types": [
+                    "zigbee-event"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\event.js"
+            },
+            "zigbee-command": {
+                "name": "zigbee-command",
+                "types": [
+                    "zigbee-command"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\command.js"
+            },
+            "zigbee-offline": {
+                "name": "zigbee-offline",
+                "types": [
+                    "zigbee-offline"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\offline.js"
+            },
+            "zigbee-hue-light": {
+                "name": "zigbee-hue-light",
+                "types": [
+                    "zigbee-hue-light"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\hue-light.js"
+            },
+            "zigbee-hue-device": {
+                "name": "zigbee-hue-device",
+                "types": [
+                    "zigbee-hue-device"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-zigbee",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\hue-device.js"
+            }
+        }
+    },
+    "node-red-node-serialport": {
+        "name": "node-red-node-serialport",
+        "version": "0.14.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "serialport": {
+                "name": "serialport",
+                "types": [
+                    "serial in",
+                    "serial out",
+                    "serial request",
+                    "serial-port"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-serialport",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-node-serialport\\25-serial.js"
+            }
+        }
+    },
+    "node-red-nd-gpio-rf": {
+        "name": "node-red-nd-gpio-rf",
+        "version": "0.0.8",
+        "local": true,
+        "user": false,
+        "nodes": {
+            "gpio-rf-sender": {
+                "name": "gpio-rf-sender",
+                "types": [
+                    "gpio-rf-sender"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-nd-gpio-rf",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gpio-rf\\dist\\gpio-rf-sender.js"
+            },
+            "gpio-rf-sniffer": {
+                "name": "gpio-rf-sniffer",
+                "types": [
+                    "gpio-rf-sniffer"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-nd-gpio-rf",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gpio-rf\\dist\\gpio-rf-sniffer.js"
+            }
+        }
+    },
+    "node-red-contrib-rf-command": {
+        "name": "node-red-contrib-rf-command",
+        "version": "1.0.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "rf-command": {
+                "name": "rf-command",
+                "types": [
+                    "rf-command"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-rf-command",
+                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-rf-command\\src\\rf-command.js"
             }
         }
     }
