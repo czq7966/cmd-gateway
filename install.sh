@@ -26,8 +26,8 @@ sudo apt-get install avahi-daemon libavahi-compat-libdnssd-dev
 
 #vi /etc/resolv.conf  加入 192.168.9.35
 #在/etc/environment 加入 :/data/node/bin
-vi /etc/environment
-
+vi /etc/environment 加入 :/data/node/bin
+echo  "export PATH=\$PATH:/data/node/bin" >> /etc/profile
 
 #### config
 # set PATH
