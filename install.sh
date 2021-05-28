@@ -16,7 +16,7 @@ ln -s node-v14.16.1-linux-armv7l node
 #x64
 #wget https://npm.taobao.org/mirrors/node/v14.16.1/node-v14.16.1-linux-x64.tar.xz
 #tar -xvf node-v14.16.1-linux-x64.tar.xz
-#mv node-v14.16.1-linux-x64 node-v14.16.1
+#ln -s node-v14.16.1-linux-x64 node
 
 # install mDNS dependency
 sudo apt-get install avahi-daemon libavahi-compat-libdnssd-dev
@@ -84,6 +84,6 @@ cp cmd-gateway.service /lib/systemd/system/cmd-gateway.service
 systemctl enable cmd-gateway
 systemctl list-unit-files|grep cmd-gateway
 
-cp mqtt-server.service /lib/systemd/system/mqtt-server.service
+cp mqtt-server.service /lib/systemd/system/mqtt-server.service 
 systemctl enable mqtt-server
 systemctl list-unit-files|grep mqtt-server

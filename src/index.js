@@ -1,4 +1,20 @@
-const aedes = require('aedes')()
+function onAuthenticate (client, username, password, callback) {
+    let users = ["device", "cmdgate"]
+    
+    if (users.indexOf(username) < 0) {
+        callback({ returnCode: 4 }, false);
+        console.log("invalid user:" + username);
+    }
+    else {
+        callback(null, true);
+        console.log("user login:" + username);
+    }
+  }
+  
+
+const aedes = require('aedes')({
+    authenticate: onAuthenticate
+})
 
 // tcp server
 const server = require('net').createServer(aedes.handle)
@@ -47,3 +63,4 @@ aedes.on("subscribe", (subscriptions, client) => {
 aedes.on("publish", (AedesPublishPacket, client) => {
     console.log('on publish event: ', AedesPublishPacket);
 })
+
