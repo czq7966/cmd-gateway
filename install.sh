@@ -59,11 +59,12 @@ npm install
 
 #### install cmd gateway
 cd /data
+git clone http://761208@gerrit.sdp.nd/a/app-cpp/local-iot cmd-gateway -b cmd-gateway
 #ssh download
 #git clone ssh://761208@gerrit.sdp.nd:29418/app-cpp/local-iot cmd-gateway -b cmd-gateway
 
 #http download
-git clone http://761208@gerrit.sdp.nd/a/app-cpp/local-iot cmd-gateway -b cmd-gateway
+
 #git clone http://github.com/czq7966/cmd-gateway cmd-gateway -b cmd-gateway
 
 

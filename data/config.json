@@ -1,0 +1,90 @@
+{
+    "mqtt": {
+        "topic": {
+            "business": {
+                "sub": {
+                    "prefix": "business/cmdgate/"
+                },
+                "pub": {
+                    "prefix": "business/svcgate/"
+                }
+            },
+            "terminal": {
+                "sub": {
+                    "prefix": "cmdgate/central/",
+                    "cmd": "cmdgate/central/cmd"
+                },
+                "pub": {
+                    "prefix": "cmdgate/device/",
+                    "central": "cmdgate/device/central"
+                }
+            }
+        }
+    },
+    "devices": {
+        "CMDGATE_CL_VRTYG": {
+            "name": "长乐VR体验馆",
+            "devices": {
+                "ESP8266_14476206": {
+                    "name": "1号空调"
+                },
+                "ESP8266_5628343": {
+                    "name": "2号空调"
+                }
+            }
+        },
+        "CMDGATE_CL_JZX01": {
+            "name": "长乐1号集装箱",
+            "devices": {
+                "c8f742e36fd2": {
+                    "name": "1号空调"
+                },
+                "24dfa7056ca9": {
+                    "name": "2号空调"
+                },
+                "ESP8266_2317612": {
+                    "name": "窗帘控制芯片"
+                },
+                "CL_JZX01_curtain_01": {
+                    "name": "1号窗帘"
+                },
+                "CL_JZX01_curtain_02": {
+                    "name": "2号窗帘"
+                },
+                "CL_JZX01_curtain_03": {
+                    "name": "3号窗帘"
+                },
+                "CL_JZX01_curtain_04": {
+                    "name": "4号窗帘"
+                },
+                "CL_JZX01_curtain_05": {
+                    "name": "5号窗帘"
+                },
+                "CL_JZX01_curtain_06": {
+                    "name": "6号窗帘"
+                }
+            }
+        },
+        "CMDGATE_CL_JZX02": {
+            "name": "长乐2号集装箱",
+            "devices": {}
+        },
+        "CMDGATE_XA_KFDX01": {
+            "name": "西安开放大学",
+            "devices": {
+                "780f7732d5f6": {
+                    "name": "1号空调"
+                },
+                "XA_KFDX01_curtain_01": {
+                    "name": "1号窗帘"
+                },
+                "XA_KFDX01_curtain_02": {
+                    "name": "2号窗帘"
+                },
+                "XA_KFDX01_curtain_03": {
+                    "name": "3号窗帘"
+                }
+            }
+        }
+    }
+}
