@@ -1,0 +1,2352 @@
+[
+    {
+        "id": "7f966f2b.565cf",
+        "type": "tab",
+        "label": "全局配置",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6e9ccff0.31174",
+        "type": "tab",
+        "label": "长乐VR体验馆",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "75a3e362.0ad2cc",
+        "type": "tab",
+        "label": "空调看板",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f57dd416.5de4f8",
+        "type": "tab",
+        "label": "射频模块",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "347b576.75e0aa8",
+        "type": "tab",
+        "label": "长乐集装箱1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b67ee71.21ee718",
+        "type": "tab",
+        "label": "西安电大",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "da0bc893.9025c8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "849cbceb.9873d",
+        "type": "mqtt-broker",
+        "name": "mqtt.local",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "480b54ad.8c4e1c",
+        "type": "mqtt-broker",
+        "name": "mqtt.business",
+        "broker": "43.231.150.88",
+        "port": "1780",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5c569ec8.d608f",
+        "type": "ui_group",
+        "name": "AC",
+        "tab": "168c092a.469d97",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "168c092a.469d97",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a2f3dcc3.dab8e",
+        "type": "mqtt-broker",
+        "name": "mqtt.sdp.dev",
+        "broker": "ws://iot-mqtt.dev.ndaeweb.com/mqtt",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7ff38474.6c903c",
+        "type": "mqtt-broker",
+        "name": "mqtt.sdp.beta",
+        "broker": "wss://iot-mqtt.beta.ndaeweb.com/mqtt",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "93e6383b.594068",
+        "type": "mqtt-broker",
+        "name": "mqtt.sdp.pro",
+        "broker": "ws://iot-mqtt.sdp.ndaeweb.com/mqtt",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "154dae3c.baf342",
+        "type": "mqtt out",
+        "z": "7f966f2b.565cf",
+        "d": true,
+        "name": "mqtt",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a2f3dcc3.dab8e",
+        "x": 230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1b2bd928.c474e7",
+        "type": "comment",
+        "z": "7f966f2b.565cf",
+        "name": "编号配置",
+        "info": "",
+        "x": 60,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b892f30e.722aa",
+        "type": "comment",
+        "z": "7f966f2b.565cf",
+        "name": "MQTT服务地址",
+        "info": "",
+        "x": 80,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3b4727b1.907a78",
+        "type": "function",
+        "z": "7f966f2b.565cf",
+        "name": "",
+        "func": "    let devices = global.get(\"devices\") ;\n    let setDevice = (did, device, gateway) => {\n        if (devices[did] && devices[did].gid) {\n            node.error(\"设备编号重复：\" + did);\n            node.warn(devices[did]);\n            node.warn(gateway);\n            return;\n        }\n        device.did = did;\n        device.gid = gateway ? gateway.did : null\n        device.gateway = gateway;\n        devices[did] = device;\n\n        let subdevs = device.devices;\n        if (subdevs) {\n            let subkeys = Object.keys(subdevs);\n            subkeys.forEach(subkey => {\n                let subdev = subdevs[subkey];\n                setDevice(subkey, subdev, device);            \n            });        \n\n        }\n    }\n\n\n\n    let keys = Object.keys(devices);\n    keys.forEach(key => {\n        let device = devices[key];\n        setDevice(key, device)\n        \n    });\n\nmsg.payload = devices;\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [
+                "b792b146.59037"
+            ]
+        ]
+    },
+    {
+        "id": "f544f205.d51a7",
+        "type": "inject",
+        "z": "7f966f2b.565cf",
+        "name": "刷新编号",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 40,
+        "wires": [
+            [
+                "d6802406.a5a078"
+            ]
+        ]
+    },
+    {
+        "id": "b792b146.59037",
+        "type": "debug",
+        "z": "7f966f2b.565cf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "fb9a3122.06773",
+        "type": "exec",
+        "z": "f57dd416.5de4f8",
+        "command": "/data/433F/sniffer/cpp/sender ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "cmd",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "e1fd9c40.b6229"
+            ],
+            [
+                "e1fd9c40.b6229"
+            ],
+            [
+                "e1fd9c40.b6229"
+            ]
+        ]
+    },
+    {
+        "id": "15ce72c1.85efdd",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "props": [
+            {
+                "p": "pin",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "p": "ray",
+                "v": "1,482,1646,577,1645,583,548,596,1622,598,18147,9114,4523,586,539,581,549,589,548,581,570,551,1658,586,537,593,548,570,553,585,551,571,567,573,566,544,595,542,1667,567,572,558,1660,587,538,583,558,588,557,559,1653,579,549,587,548,567,567,573,1659,567,553,582,1648,578,1660,578,546,577,1659,585,1648,584,1637,576,567,571,1635,582,16859,224,697,231,127,9129,4514,588,551,569,559,578,562,573,565,565,1636,604,534,592,558,564,558,573,553,576,561,559,573,574,562,567,1649,573,562,569,1657,575,573,550,573,566,563,557,1660,614,516,573,564,574,568,561,1665,565,568,569,1668,564,1646,581,581,552,1656,577,1640,602,1629,599,532,598,1633,595,18131,9115,",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "d47f9e74.82d5d"
+            ]
+        ]
+    },
+    {
+        "id": "d47f9e74.82d5d",
+        "type": "function",
+        "z": "f57dd416.5de4f8",
+        "name": "args",
+        "func": "msg.payload = \"\\\"\" + msg.pin + \"\\\" \" + \n              \"\\\"\" + msg.ray + \"\\\" \" + \n              \"\\\"\" + msg.count + \"\\\" \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "fb9a3122.06773",
+                "e1fd9c40.b6229"
+            ]
+        ]
+    },
+    {
+        "id": "e1fd9c40.b6229",
+        "type": "debug",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "70ce228b.27a65c",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "props": [
+            {
+                "p": "pin",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "p": "ray",
+                "v": "/data/433F/sniffer/codes/micros.txt_3",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "10",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "d47f9e74.82d5d"
+            ]
+        ]
+    },
+    {
+        "id": "4835cbb2.c44624",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "props": [
+            {
+                "p": "pin",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "p": "ray",
+                "v": "0,52,270,807,281,815,279,816,629,460,272,814,281,832,257,811,653,8854,4731,1588,625,449,643,452,288,818,277,804,642,465,625,463,626,461,630,527,262,807,638,457,282,848,235,825,270,813,280,808,633,462,626,478,628,455,642,464,274,818,625,470,623,461,632,473,272,810,276,833,626,491,249,823,615,478,618,463,281,819,270,804,633,484,256,837,267,818,278,825,267,818,624,464,272,814,273,830,267,828,614,8907,4737,1574,640,460,631,497,244,799,291,812,632,459,632,473,611,474,625,481,279,808,630,477,266,815,276,811,280,835,253,820,624,467,630,470,633,465,638,454,281,810,626,471,630,462,623,467,278,817,274,829,626,467,279,812,627,467,645,478,274,814,278,824,620,453,278,815,300,809,278,813,278,813,627,461,282,813,277,812,278,809,628,9106,4729,1571,635,460,636,460,282,804,288,828,611,460,629,448,645,463,633,478,277,809,633,459,281,834,292,818,273,793,42,806,627,454,643,479,629,467,622,472,272,809,640,455,630,474,614,475,268,836,262,854,605,459,312,776,628,491,598,469,285,807,280,817,621,485,260,836,270,812,271,793,300,809,630,472,271,807,284,815,278,814,618,8920,4728,1593,614,455,640,462,277,803,295,805,631,470,624,487,608,463,635,462,282,814,631,466,275,811,278,808,291,805,282,572,614,464,629,473,628,",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "d47f9e74.82d5d"
+            ]
+        ]
+    },
+    {
+        "id": "19605e44.1df5c2",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "open",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"hd\":{\"did\":\"\",\"cmd\":4},\"pld\":{\"open\":100,\"ray\":\"1,482,1646,577,1645,583,548,596,1622,598,18147,9114,4523,586,539,581,549,589,548,581,570,551,1658,586,537,593,548,570,553,585,551,571,567,573,566,544,595,542,1667,567,572,558,1660,587,538,583,558,588,557,559,1653,579,549,587,548,567,567,573,1659,567,553,582,1648,578,1660,578,546,577,1659,585,1648,584,1637,576,567,571,1635,582,16859,224,697,231,127,9129,4514,588,551,569,559,578,562,573,565,565,1636,604,534,592,558,564,558,573,553,576,561,559,573,574,562,567,1649,573,562,569,1657,575,573,550,573,566,563,557,1660,614,516,573,564,574,568,561,1665,565,568,569,1668,564,1646,581,581,552,1656,577,1640,602,1629,599,532,598,1633,595,18131,9115,\"}}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "d8c2b713.5551d8"
+            ]
+        ]
+    },
+    {
+        "id": "d8c2b713.5551d8",
+        "type": "change",
+        "z": "f57dd416.5de4f8",
+        "name": "temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.pld.ray",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "2be3d3d5.56d0ec",
+                "cd65207c.bb152"
+            ]
+        ]
+    },
+    {
+        "id": "2be3d3d5.56d0ec",
+        "type": "debug",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cd65207c.bb152",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/cmd-gateway/temp/ray.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "2e643592.97065a",
+                "71a9f325.df848c"
+            ]
+        ]
+    },
+    {
+        "id": "2e643592.97065a",
+        "type": "change",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71a9f325.df848c",
+        "type": "change",
+        "z": "f57dd416.5de4f8",
+        "name": "pin ray",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pin",
+                "pt": "msg",
+                "to": "13",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ray",
+                "pt": "msg",
+                "to": "/data/cmd-gateway/temp/ray.txt",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "count",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "d47f9e74.82d5d"
+            ]
+        ]
+    },
+    {
+        "id": "ebea6a3.d7e1298",
+        "type": "link in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "links": [],
+        "x": 85,
+        "y": 100,
+        "wires": [
+            [
+                "d8c2b713.5551d8"
+            ]
+        ]
+    },
+    {
+        "id": "82775b82.94d928",
+        "type": "link in",
+        "z": "6e9ccff0.31174",
+        "name": "终端上行",
+        "links": [
+            "50aa8a65.6a2c04"
+        ],
+        "x": 235,
+        "y": 140,
+        "wires": [
+            [
+                "ec525ded.95cd6"
+            ]
+        ]
+    },
+    {
+        "id": "90c1105.231f5f",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2Hello",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "78d75ca9.7abe04",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2power on",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "7aa25617.77a438",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2power off",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"off\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "16924e2a.b7f912",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2temp 18",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"temperature\":18,\"mode\":\"auto\",\"fanSpeed\":\"low\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 720,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "b322c9be.72ac68",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2temp 27",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"temperature\":27}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "f17ab6a9.a34cd8",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2fan low",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"fanSpeed\":\"low\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 820,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "f80e0d74.b498d",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2fan medium",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"fanSpeed\":\"medium\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 130,
+        "y": 860,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "2dd5818.50f137e",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2fan high",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"fanSpeed\":\"high\",\"mode\":\"cool\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 900,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "3be2b583.27585a",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2mode cool",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"mode\":\"cool\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 960,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "65e9c7f.bc7c538",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2mode auto",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"mode\":\"auto\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 130,
+        "y": 1000,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "775a9c96.55fcc4",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2mode dry",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"mode\":\"dry\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 1040,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "7c91301b.ad7fa",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "2mode heat",
+        "props": [
+            {
+                "p": "payload.hd",
+                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
+                "vt": "jsonata"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"mode\":\"heat\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 130,
+        "y": 1080,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "d6802406.a5a078",
+        "type": "change",
+        "z": "7f966f2b.565cf",
+        "name": "config",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mqtt",
+                "pt": "global",
+                "to": "{\"topic\":{\"business\":{\"sub\":{\"prefix\":\"business/cmdgate/\"},\"pub\":{\"prefix\":\"business/svcgate/\"}},\"terminal\":{\"sub\":{\"prefix\":\"cmdgate/central/\",\"cmd\":\"cmdgate/central/cmd\"},\"pub\":{\"prefix\":\"cmdgate/device/\",\"central\":\"cmdgate/device/central\"}}}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "devices",
+                "pt": "global",
+                "to": "{\"CMDGATE_CL_VRTYG\":{\"name\":\"长乐VR体验馆\",\"devices\":{\"ESP8266_14476206\":{\"name\":\"1号空调\"},\"ESP8266_5628343\":{\"name\":\"2号空调\"},\"ESP8266_6857248\":{\"name\":\"3号空调\"}}},\"CMDGATE_CL_JZX01\":{\"name\":\"长乐1号集装箱\",\"devices\":{\"c8f742e36fd2\":{\"name\":\"1号空调\"},\"24dfa7056ca9\":{\"name\":\"2号空调\"},\"ESP8266_2317612\":{\"name\":\"窗帘控制芯片\"},\"CL_JZX01_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_JZX01_curtain_02\":{\"name\":\"2号窗帘\"},\"CL_JZX01_curtain_03\":{\"name\":\"3号窗帘\"},\"CL_JZX01_curtain_04\":{\"name\":\"4号窗帘\"},\"CL_JZX01_curtain_05\":{\"name\":\"5号窗帘\"},\"CL_JZX01_curtain_06\":{\"name\":\"6号窗帘\"}}},\"CMDGATE_CL_JZX02\":{\"name\":\"长乐2号集装箱\",\"devices\":{}},\"CMDGATE_XA_KFDX01\":{\"name\":\"西安开放大学\",\"devices\":{\"780f7732d5f6\":{\"name\":\"1号空调\"},\"XA_KFDX01_curtain_01\":{\"name\":\"1号窗帘\"},\"XA_KFDX01_curtain_02\":{\"name\":\"2号窗帘\"},\"XA_KFDX01_curtain_03\":{\"name\":\"3号窗帘\"}}}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 40,
+        "wires": [
+            [
+                "3b4727b1.907a78"
+            ]
+        ]
+    },
+    {
+        "id": "7577ab7.99dc554",
+        "type": "mqtt in",
+        "z": "7f966f2b.565cf",
+        "name": "终端上行",
+        "topic": "cmdgate/central/cmd",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "849cbceb.9873d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "55cc1676.e1e1e8",
+                "721c33e2.eedd5c"
+            ]
+        ]
+    },
+    {
+        "id": "55cc1676.e1e1e8",
+        "type": "function",
+        "z": "7f966f2b.565cf",
+        "name": "设备",
+        "func": "if (msg.payload.hd) {\n    let did = msg.payload.hd.did;\n    let device = global.get(\"devices\")[did];\n    if (device) {\n        msg.payload.hd.gid = device.gid\n    } else {\n        node.error(\"设备未登记：\" + did);\n        return;\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "50aa8a65.6a2c04"
+            ]
+        ]
+    },
+    {
+        "id": "e63c8469.e2ed68",
+        "type": "comment",
+        "z": "7f966f2b.565cf",
+        "name": "MQTT终端上行",
+        "info": "",
+        "x": 80,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "50aa8a65.6a2c04",
+        "type": "link out",
+        "z": "7f966f2b.565cf",
+        "name": "长乐VR体验馆",
+        "links": [
+            "82775b82.94d928"
+        ],
+        "x": 595,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c1235d37.633ea",
+        "type": "mqtt out",
+        "z": "7f966f2b.565cf",
+        "name": "终端下行",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "849cbceb.9873d",
+        "x": 640,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "90a962bb.f07c4",
+        "type": "link in",
+        "z": "7f966f2b.565cf",
+        "name": "终端下行",
+        "links": [
+            "c67e09e8.3b7178",
+            "68c90e66.5e785"
+        ],
+        "x": 335,
+        "y": 360,
+        "wires": [
+            [
+                "ef55a887.19d568"
+            ]
+        ]
+    },
+    {
+        "id": "94b3038a.dd76c",
+        "type": "comment",
+        "z": "7f966f2b.565cf",
+        "name": "MQTT终端下行",
+        "info": "",
+        "x": 80,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ef55a887.19d568",
+        "type": "function",
+        "z": "7f966f2b.565cf",
+        "name": "主题",
+        "func": "msg.topic = global.get(\"mqtt\").topic.terminal.pub.prefix + msg.payload.hd.did\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "c1235d37.633ea"
+            ]
+        ]
+    },
+    {
+        "id": "8eb80638.5a9e08",
+        "type": "mqtt in",
+        "z": "7f966f2b.565cf",
+        "name": "边缘下行",
+        "topic": "business/cmdgate/+",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "480b54ad.8c4e1c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "4f7defdf.42831"
+            ]
+        ]
+    },
+    {
+        "id": "b8a5477a.9e1d18",
+        "type": "comment",
+        "z": "7f966f2b.565cf",
+        "name": "MQTT边缘下行",
+        "info": "",
+        "x": 80,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4f7defdf.42831",
+        "type": "function",
+        "z": "7f966f2b.565cf",
+        "name": "设备",
+        "func": "if (msg.payload.hd) {\n    let did = msg.payload.hd.did;\n    let device = global.get(\"devices\")[did];\n    if (device) {\n        msg.payload.hd.gid = device.gid\n    } else {\n        node.error(\"设备未登记：\" + did);\n        return;\n    }\n}\n\n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "a8683765.5e9b48"
+            ]
+        ]
+    },
+    {
+        "id": "a8683765.5e9b48",
+        "type": "link out",
+        "z": "7f966f2b.565cf",
+        "name": "边缘下行",
+        "links": [
+            "bf6a789a.410a38"
+        ],
+        "x": 595,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fb5e88f.b504c78",
+        "type": "comment",
+        "z": "7f966f2b.565cf",
+        "name": "MQTT边缘上行",
+        "info": "",
+        "x": 80,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "79e98182.a04d8",
+        "type": "mqtt out",
+        "z": "7f966f2b.565cf",
+        "name": "边缘上行",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "480b54ad.8c4e1c",
+        "x": 640,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e21357a9.a0d888",
+        "type": "function",
+        "z": "7f966f2b.565cf",
+        "name": "主题",
+        "func": "msg.topic = global.get(\"mqtt\").topic.business.pub.prefix + msg.payload.hd.gid\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "79e98182.a04d8"
+            ]
+        ]
+    },
+    {
+        "id": "db90a60b.8feba8",
+        "type": "link in",
+        "z": "7f966f2b.565cf",
+        "name": "边缘上行",
+        "links": [
+            "14963224.11111e"
+        ],
+        "x": 335,
+        "y": 420,
+        "wires": [
+            [
+                "e21357a9.a0d888"
+            ]
+        ]
+    },
+    {
+        "id": "bf6a789a.410a38",
+        "type": "link in",
+        "z": "6e9ccff0.31174",
+        "name": "边缘下行",
+        "links": [
+            "a8683765.5e9b48"
+        ],
+        "x": 235,
+        "y": 420,
+        "wires": [
+            [
+                "f733baa1.8bb358"
+            ]
+        ]
+    },
+    {
+        "id": "ec525ded.95cd6",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "网关",
+        "property": "payload.hd.gid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CMDGATE_CL_VRTYG",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "134d8ca2.44bad3"
+            ]
+        ]
+    },
+    {
+        "id": "f733baa1.8bb358",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "网关",
+        "property": "payload.hd.gid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CMDGATE_CL_VRTYG",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 420,
+        "wires": [
+            [
+                "97f05558.87bad8"
+            ]
+        ]
+    },
+    {
+        "id": "134d8ca2.44bad3",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "指令",
+        "property": "payload.hd.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "e87d89ad.e4b458"
+            ]
+        ]
+    },
+    {
+        "id": "e87d89ad.e4b458",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "空调解析",
+        "func": "    let pld = msg.payload.pld;\n    let extra = pld.extra;\n    let Mode = {\"0\": \"cool\",\"1\": \"dry\",\"2\": \"auto\",\"3\": \"heat\",\"4\": \"fan_only\"};\n    let Fan = {\"0\": \"auto\",\"1\": \"high\",\"2\": \"medium\",\"4\":\"low\", \"5\": \"auto\"};\n\n    if (extra) {\n        extra = extra.toLowerCase();\n        extra = extra.replace(\"Mesg Desc.:\".toLowerCase(), \"\");\n        let items = extra.split(\",\");\n        items.forEach(item => {\n            let _item = item.split(\":\");\n            let key = _item[0].trim();\n            let value = _item[1].trim();\n            switch(key) {\n                case \"power\":\n                    pld.power = value;                    \n                    break;\n                case \"temp\":                    \n                    value = value.substr(0, value.length -1)                    \n                    pld.temperature = parseInt(value);\n                    break;\n                case \"mode\":\n                    pld.mode = Mode[value[0]];\n                    break;\n                case \"fan\":\n                    pld.fanSpeed = Fan[value[0]];                   \n                    break;\n                case \"zone follow\":\n                \n                    break;     \n                case \"sensor temp\":\n            \n                    break;                          \n                                  \n            }\n        })\n    }\n    \n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n    return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 140,
+        "wires": [
+            [
+                "14963224.11111e",
+                "2c5f8070.781e4"
+            ]
+        ]
+    },
+    {
+        "id": "14963224.11111e",
+        "type": "link out",
+        "z": "6e9ccff0.31174",
+        "d": true,
+        "name": "边缘上行",
+        "links": [
+            "db90a60b.8feba8"
+        ],
+        "x": 895,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "531590df.51c2f",
+        "type": "comment",
+        "z": "6e9ccff0.31174",
+        "name": "终端上行",
+        "info": "",
+        "x": 80,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "23eb6c55.bada24",
+        "type": "comment",
+        "z": "6e9ccff0.31174",
+        "name": "边缘下行",
+        "info": "",
+        "x": 80,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "97f05558.87bad8",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "指令",
+        "property": "payload.hd.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "716d202d.38aff"
+            ]
+        ]
+    },
+    {
+        "id": "716d202d.38aff",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "空调",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "68c90e66.5e785"
+            ]
+        ]
+    },
+    {
+        "id": "68c90e66.5e785",
+        "type": "link out",
+        "z": "6e9ccff0.31174",
+        "name": "终端下行",
+        "links": [
+            "90a962bb.f07c4"
+        ],
+        "x": 895,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "61046675.c20dd8",
+        "type": "switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "power",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "mode",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "fanSpeed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "swingVert",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "swingHor",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "health",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "blow",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "lights",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "powerSave",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 10,
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "d8c89bd2.2a04a8"
+            ],
+            [
+                "1a544b94.0ee074"
+            ],
+            [
+                "9b5f6baa.f4cea8"
+            ],
+            [
+                "b331259c.875d98"
+            ],
+            [
+                "6829b2cb.ea15fc"
+            ],
+            [
+                "b94c722a.5224c"
+            ],
+            [
+                "17740952.0f17d7"
+            ],
+            [
+                "875ecf15.75b7b"
+            ],
+            [
+                "96dfc05e.8fe29"
+            ],
+            [
+                "7673e0f8.a6f0d"
+            ]
+        ]
+    },
+    {
+        "id": "d8c89bd2.2a04a8",
+        "type": "ui_switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "开关",
+        "label": "Power",
+        "tooltip": "",
+        "group": "5c569ec8.d608f",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "power",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 810,
+        "y": 100,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "96dfc05e.8fe29",
+        "type": "ui_switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "灯光",
+        "label": "Lights",
+        "tooltip": "",
+        "group": "5c569ec8.d608f",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "lights",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 810,
+        "y": 580,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "9b5f6baa.f4cea8",
+        "type": "ui_numeric",
+        "z": "75a3e362.0ad2cc",
+        "name": "温度",
+        "label": "Temperature",
+        "tooltip": "",
+        "group": "5c569ec8.d608f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "temperature",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": "23",
+        "max": "25",
+        "step": 1,
+        "x": 810,
+        "y": 220,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "6829b2cb.ea15fc",
+        "type": "ui_dropdown",
+        "z": "75a3e362.0ad2cc",
+        "name": "垂直扫风",
+        "label": "Vertical swing ",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5c569ec8.d608f",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Default",
+                "value": "default",
+                "type": "str"
+            },
+            {
+                "label": "Swing in full range",
+                "value": "full",
+                "type": "str"
+            },
+            {
+                "label": "Fixed top",
+                "value": "fixedTop",
+                "type": "str"
+            },
+            {
+                "label": "Fixed mid-top",
+                "value": "fixedMidTop",
+                "type": "str"
+            },
+            {
+                "label": "Fixed mid",
+                "value": "fixedMid",
+                "type": "str"
+            },
+            {
+                "label": "Fixed mid-bottom",
+                "value": "fixedMidBottom",
+                "type": "str"
+            },
+            {
+                "label": "Fixed bottom",
+                "value": "fixedBottom",
+                "type": "str"
+            },
+            {
+                "label": "Swing bottom",
+                "value": "swingBottom",
+                "type": "str"
+            },
+            {
+                "label": "Swing mid-bottom",
+                "value": "swingMidBottom",
+                "type": "str"
+            },
+            {
+                "label": "Swing mid",
+                "value": "swingMid",
+                "type": "str"
+            },
+            {
+                "label": "Swing mid top",
+                "value": "swingMidTop",
+                "type": "str"
+            },
+            {
+                "label": "Swing top",
+                "value": "swingTop",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "swingVert",
+        "topicType": "str",
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "c4602e6e.68bd2",
+        "type": "rbe",
+        "z": "75a3e362.0ad2cc",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "x": 1090,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b94c722a.5224c",
+        "type": "ui_dropdown",
+        "z": "75a3e362.0ad2cc",
+        "name": "水平扫风",
+        "label": "Horizontal swing ",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5c569ec8.d608f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Default",
+                "value": "default",
+                "type": "str"
+            },
+            {
+                "label": "Full",
+                "value": "full",
+                "type": "str"
+            },
+            {
+                "label": "Fixed left",
+                "value": "fixedLeft",
+                "type": "str"
+            },
+            {
+                "label": "Fixed mid-left",
+                "value": "fixedMidLeft",
+                "type": "str"
+            },
+            {
+                "label": "Fixed mid",
+                "value": "fixedMid",
+                "type": "str"
+            },
+            {
+                "label": "Fixed mid-right",
+                "value": "fixedMidRight",
+                "type": "str"
+            },
+            {
+                "label": "Fixed right",
+                "value": "fixedRight",
+                "type": "str"
+            },
+            {
+                "label": "Full alt",
+                "value": "fullAlt",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "swingHor",
+        "topicType": "str",
+        "x": 820,
+        "y": 400,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ],
+        "info": "Controls the swing mode of the horizontal air blades (not available on all units)"
+    },
+    {
+        "id": "b331259c.875d98",
+        "type": "ui_dropdown",
+        "z": "75a3e362.0ad2cc",
+        "name": "风速",
+        "label": "Fan speed",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5c569ec8.d608f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Auto",
+                "value": "auto",
+                "type": "str"
+            },
+            {
+                "label": "Low",
+                "value": "low",
+                "type": "str"
+            },
+            {
+                "label": "Medium low",
+                "value": "mediumLow",
+                "type": "str"
+            },
+            {
+                "label": "Medium",
+                "value": "medium",
+                "type": "str"
+            },
+            {
+                "label": "Medium high",
+                "value": "mediumHigh",
+                "type": "str"
+            },
+            {
+                "label": "High",
+                "value": "high",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "fanSpeed",
+        "topicType": "str",
+        "x": 810,
+        "y": 280,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "7673e0f8.a6f0d",
+        "type": "ui_switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "省电",
+        "label": "Power save",
+        "tooltip": "",
+        "group": "5c569ec8.d608f",
+        "order": 10,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "powerSave",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 810,
+        "y": 640,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "a5b358c2.3e4ad8",
+        "type": "split",
+        "z": "75a3e362.0ad2cc",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "61046675.c20dd8"
+            ]
+        ]
+    },
+    {
+        "id": "1a544b94.0ee074",
+        "type": "ui_dropdown",
+        "z": "75a3e362.0ad2cc",
+        "name": "模式",
+        "label": "Mode",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5c569ec8.d608f",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Auto",
+                "value": "auto",
+                "type": "str"
+            },
+            {
+                "label": "Cool",
+                "value": "cool",
+                "type": "str"
+            },
+            {
+                "label": "Dry",
+                "value": "dry",
+                "type": "str"
+            },
+            {
+                "label": "Fan only",
+                "value": "fan_only",
+                "type": "str"
+            },
+            {
+                "label": "Heat",
+                "value": "heat",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "mode",
+        "topicType": "str",
+        "x": 810,
+        "y": 160,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "17740952.0f17d7",
+        "type": "ui_switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "等离子(健康)",
+        "label": "Cold plasma",
+        "tooltip": "",
+        "group": "5c569ec8.d608f",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "health",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 830,
+        "y": 460,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "875ecf15.75b7b",
+        "type": "ui_switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "通风",
+        "label": "X-Fan",
+        "tooltip": "",
+        "group": "5c569ec8.d608f",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "blow",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 810,
+        "y": 520,
+        "wires": [
+            [
+                "c4602e6e.68bd2"
+            ]
+        ]
+    },
+    {
+        "id": "6e9291c.b1e257",
+        "type": "link in",
+        "z": "75a3e362.0ad2cc",
+        "name": "空调看板",
+        "links": [
+            "de0481fa.fcbbb",
+            "2c5f8070.781e4"
+        ],
+        "x": 175,
+        "y": 160,
+        "wires": [
+            [
+                "6187900f.e76d9"
+            ]
+        ]
+    },
+    {
+        "id": "6187900f.e76d9",
+        "type": "switch",
+        "z": "75a3e362.0ad2cc",
+        "name": "",
+        "property": "payload.hd.did",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ESP8266_6857248",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "732e0597.9c747c"
+            ],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "732e0597.9c747c",
+        "type": "function",
+        "z": "75a3e362.0ad2cc",
+        "name": "空调名称",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.gateway.name + device.name;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\nlet _msg = {\n    payload: msg.payload.pld\n}\nreturn _msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "a5b358c2.3e4ad8"
+            ]
+        ]
+    },
+    {
+        "id": "721c33e2.eedd5c",
+        "type": "debug",
+        "z": "7f966f2b.565cf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "744571a3.d875e",
+        "type": "change",
+        "z": "6e9ccff0.31174",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "ESP8266_6857248",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 760,
+        "wires": [
+            [
+                "97f05558.87bad8"
+            ]
+        ]
+    },
+    {
+        "id": "2c5f8070.781e4",
+        "type": "link out",
+        "z": "6e9ccff0.31174",
+        "d": true,
+        "name": "空调看板",
+        "links": [
+            "6e9291c.b1e257"
+        ],
+        "x": 895,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "84a7c82a.76ee28",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7f3f60c.6f1768",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"pld\":{}}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "84a7c82a.76ee28",
+                "e87d89ad.e4b458"
+            ]
+        ]
+    }
+]

@@ -52,16 +52,20 @@ function deviceRegCheck() {
 }
 
 //VR体验馆空调数据格式转换
-function test() {
+function VRTYG_Parse() {
     let pld = msg.payload.pld;
     let extra = pld.extra;
+    let Mode = {"0": "cool","1": "dry","2": "auto","3": "heat","4": "fan_only"};
+    let Fan = {"0": "auto","1": "high","2": "medium","4":"low", "5": "auto"};
+
     if (extra) {
         extra = extra.toLowerCase();
         extra = extra.replace("Mesg Desc.:".toLowerCase(), "");
         let items = extra.split(",");
         items.forEach(item => {
-            let key = item[0].trim();
-            let value = item[1].trim();
+            let _item = item.split(":");
+            let key = _item[0].trim();
+            let value = _item[1].trim();
             switch(key) {
                 case "power":
                     pld.power = value;                    
@@ -71,10 +75,10 @@ function test() {
                     pld.temperature = parseInt(value);
                     break;
                 case "mode":
-
+                    pld.mode = Mode[value[0]];
                     break;
                 case "fan":
-                   
+                    pld.fanSpeed = Fan[value[0]];                   
                     break;
                 case "zone follow":
                 
