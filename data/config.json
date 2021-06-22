@@ -72,6 +72,14 @@
             "name": "长乐2号集装箱",
             "devices": {}
         },
+        "CMDGATE_FZ_DEV1": {
+            "name": "福州亚太二楼开发(有433射频)",
+            "devices": {
+                "DJ-YT-500-01": {
+                    "name": "1号舵机"
+                }
+            }
+        },
         "CMDGATE_XA_KFDX01": {
             "name": "西安开放大学",
             "devices": {
