@@ -14,16 +14,16 @@
         "info": ""
     },
     {
-        "id": "b67ee71.21ee718",
+        "id": "75a3e362.0ad2cc",
         "type": "tab",
-        "label": "福州开发",
+        "label": "空调看板",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "75a3e362.0ad2cc",
+        "id": "b67ee71.21ee718",
         "type": "tab",
-        "label": "空调看板",
+        "label": "福州开发",
         "disabled": false,
         "info": ""
     },
@@ -35,9 +35,9 @@
         "info": ""
     },
     {
-        "id": "347b576.75e0aa8",
+        "id": "3d341b1e.496694",
         "type": "tab",
-        "label": "长乐集装箱1",
+        "label": "OTA",
         "disabled": false,
         "info": ""
     },
@@ -205,31 +205,6 @@
         "hidden": false
     },
     {
-        "id": "a2f3dcc3.dab8e",
-        "type": "mqtt-broker",
-        "name": "mqtt.sdp.dev",
-        "broker": "ws://iot-mqtt.dev.ndaeweb.com/mqtt",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "sessionExpiry": ""
-    },
-    {
         "id": "154dae3c.baf342",
         "type": "mqtt out",
         "z": "7f966f2b.565cf",
@@ -243,7 +218,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "a2f3dcc3.dab8e",
+        "broker": "480b54ad.8c4e1c",
         "x": 230,
         "y": 140,
         "wires": []
@@ -329,7 +304,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 730,
         "y": 40,
         "wires": []
     },
@@ -353,12 +328,57 @@
         "id": "90c1105.231f5f",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2Hello",
+        "name": "查询",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 110,
+        "y": 500,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "78d75ca9.7abe04",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "开启",
         "props": [
             {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
+                "p": "payload.pld",
+                "v": "{\"power\":\"on\",\"temperature\":26,\"mode\":\"cool\",\"fanSpeed\":\"medium\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "744571a3.d875e"
+            ]
+        ]
+    },
+    {
+        "id": "7aa25617.77a438",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "关闭",
+        "props": [
+            {
+                "p": "payload.pld",
+                "v": "{\"power\":\"off\"}",
+                "vt": "json"
             }
         ],
         "repeat": "",
@@ -375,76 +395,11 @@
         ]
     },
     {
-        "id": "78d75ca9.7abe04",
-        "type": "inject",
-        "z": "6e9ccff0.31174",
-        "name": "2power on",
-        "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
-            {
-                "p": "payload.pld",
-                "v": "{\"power\":\"on\"}",
-                "vt": "json"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "1",
-        "topic": "",
-        "x": 120,
-        "y": 620,
-        "wires": [
-            [
-                "744571a3.d875e"
-            ]
-        ]
-    },
-    {
-        "id": "7aa25617.77a438",
-        "type": "inject",
-        "z": "6e9ccff0.31174",
-        "name": "2power off",
-        "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
-            {
-                "p": "payload.pld",
-                "v": "{\"power\":\"off\"}",
-                "vt": "json"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "1",
-        "topic": "",
-        "x": 120,
-        "y": 660,
-        "wires": [
-            [
-                "744571a3.d875e"
-            ]
-        ]
-    },
-    {
         "id": "16924e2a.b7f912",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2temp 18",
+        "name": "温度18/自动/低风",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"temperature\":18,\"mode\":\"auto\",\"fanSpeed\":\"low\"}",
@@ -456,8 +411,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 120,
-        "y": 720,
+        "x": 140,
+        "y": 640,
         "wires": [
             [
                 "744571a3.d875e"
@@ -468,13 +423,8 @@
         "id": "b322c9be.72ac68",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2temp 27",
+        "name": "温度27",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"temperature\":27}",
@@ -486,8 +436,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 120,
-        "y": 760,
+        "x": 110,
+        "y": 680,
         "wires": [
             [
                 "744571a3.d875e"
@@ -498,13 +448,8 @@
         "id": "f17ab6a9.a34cd8",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2fan low",
+        "name": "风速低",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"fanSpeed\":\"low\"}",
@@ -516,8 +461,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 120,
-        "y": 820,
+        "x": 110,
+        "y": 740,
         "wires": [
             [
                 "744571a3.d875e"
@@ -528,13 +473,8 @@
         "id": "f80e0d74.b498d",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2fan medium",
+        "name": "风速中",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"fanSpeed\":\"medium\"}",
@@ -546,8 +486,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 130,
-        "y": 860,
+        "x": 110,
+        "y": 780,
         "wires": [
             [
                 "744571a3.d875e"
@@ -558,13 +498,8 @@
         "id": "2dd5818.50f137e",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2fan high",
+        "name": "风速高/制冷",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"fanSpeed\":\"high\",\"mode\":\"cool\"}",
@@ -576,8 +511,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 120,
-        "y": 900,
+        "x": 130,
+        "y": 820,
         "wires": [
             [
                 "744571a3.d875e"
@@ -588,13 +523,8 @@
         "id": "3be2b583.27585a",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2mode cool",
+        "name": "制冷",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"mode\":\"cool\"}",
@@ -606,9 +536,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "payloadType": "str",
-        "x": 130,
-        "y": 960,
+        "x": 110,
+        "y": 880,
         "wires": [
             [
                 "744571a3.d875e"
@@ -619,13 +548,8 @@
         "id": "65e9c7f.bc7c538",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2mode auto",
+        "name": "自动",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"mode\":\"auto\"}",
@@ -637,8 +561,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 130,
-        "y": 1000,
+        "x": 110,
+        "y": 920,
         "wires": [
             [
                 "744571a3.d875e"
@@ -649,13 +573,8 @@
         "id": "775a9c96.55fcc4",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2mode dry",
+        "name": "除湿",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"mode\":\"dry\"}",
@@ -667,8 +586,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 120,
-        "y": 1040,
+        "x": 110,
+        "y": 960,
         "wires": [
             [
                 "744571a3.d875e"
@@ -679,13 +598,8 @@
         "id": "7c91301b.ad7fa",
         "type": "inject",
         "z": "6e9ccff0.31174",
-        "name": "2mode heat",
+        "name": "制热",
         "props": [
-            {
-                "p": "payload.hd",
-                "v": "{\t   \"did\":$globalContext(\"device.air.no2.did\"),\t   \"cmd\":3\t}",
-                "vt": "jsonata"
-            },
             {
                 "p": "payload.pld",
                 "v": "{\"power\":\"on\",\"mode\":\"heat\"}",
@@ -697,8 +611,8 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 130,
-        "y": 1080,
+        "x": 110,
+        "y": 1000,
         "wires": [
             [
                 "744571a3.d875e"
@@ -722,7 +636,7 @@
                 "t": "set",
                 "p": "devices",
                 "pt": "global",
-                "to": "{\"CMDGATE_CL_VRTYG\":{\"name\":\"长乐VR体验馆\",\"devices\":{\"ESP8266_14476206\":{\"name\":\"1号空调\"},\"ESP8266_5628343\":{\"name\":\"2号空调\"},\"ESP8266_6857248\":{\"name\":\"3号空调\"}}},\"CMDGATE_CL_JZX01\":{\"name\":\"长乐1号集装箱\",\"devices\":{\"c8f742e36fd2\":{\"name\":\"1号空调\"},\"24dfa7056ca9\":{\"name\":\"2号空调\"},\"ESP8266_2317612\":{\"name\":\"窗帘控制芯片\"},\"CL_JZX01_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_JZX01_curtain_02\":{\"name\":\"2号窗帘\"},\"CL_JZX01_curtain_03\":{\"name\":\"3号窗帘\"},\"CL_JZX01_curtain_04\":{\"name\":\"4号窗帘\"},\"CL_JZX01_curtain_05\":{\"name\":\"5号窗帘\"},\"CL_JZX01_curtain_06\":{\"name\":\"6号窗帘\"}}},\"CMDGATE_CL_JZX02\":{\"name\":\"长乐2号集装箱\",\"devices\":{}},\"CMDGATE_FZ_DEV1\":{\"name\":\"福州亚太二楼开发(有433射频)\",\"devices\":{\"DJ-YT-500-01\":{\"name\":\"1号舵机\"}}},\"CMDGATE_XA_KFDX01\":{\"name\":\"西安开放大学\",\"devices\":{\"780f7732d5f6\":{\"name\":\"1号空调\"},\"XA_KFDX01_curtain_01\":{\"name\":\"1号窗帘\"},\"XA_KFDX01_curtain_02\":{\"name\":\"2号窗帘\"},\"XA_KFDX01_curtain_03\":{\"name\":\"3号窗帘\"}}}}",
+                "to": "{\"CMDGATE_CL_VRTYG\":{\"name\":\"长乐VR体验馆\",\"devices\":{\"ESP8266_9926564\":{\"name\":\"二楼1成果区宣传大屏前空调\"},\"ESP8266_9928598\":{\"name\":\"二楼2成果区体验中心入口空调\"},\"ESP8266_9933676\":{\"name\":\"二楼3成果区富士康大屏处空调\"},\"ESP8266_488969\":{\"name\":\"二楼5成果区版图区域内侧空调\"},\"ESP8266_9931870\":{\"name\":\"二楼6成果区版图区域外侧空调\"},\"ESP8266_9956709\":{\"name\":\"二楼7成果区小镇沙盘前空调\"},\"ESP8266_430864\":{\"name\":\"二楼8成果区红色教育一体机旁空调\"},\"ESP8266_486720\":{\"name\":\"二楼9恐龙休息区沙发区上方空调\"},\"ESP8266_469370\":{\"name\":\"二楼10恐龙休息区恐龙区入口上方空调\"},\"ESP8266_9922593\":{\"name\":\"二楼11恐龙休息区恐龙大屏上方空调\"},\"ESP8266_491535\":{\"name\":\"二楼12恐龙休息区长桌上方空调\"},\"ESP8266_9945247\":{\"name\":\"二楼16沉浸教室地理沙盘上方空调\"},\"ESP8266_450977\":{\"name\":\"二楼17沉浸教室3D扫描上方空调\"},\"ESP8266_9954003\":{\"name\":\"二楼18沉浸教室曲面屏上方空调\"},\"ESP8266_448616\":{\"name\":\"二楼19沉浸教室座位区上方空调\"},\"ESP8266_431099\":{\"name\":\"二楼22应用区新品体验展位上方空调\"},\"ESP8266_9930630\":{\"name\":\"二楼23应用区急速风暴展位上方空调\"},\"ESP8266_502328\":{\"name\":\"二楼24应用区世宇展位上方空调\"},\"ESP8266_525449\":{\"name\":\"二楼25应用区ColdingGalaxy展位上方空调\"},\"ESP8266_9928778\":{\"name\":\"二楼26应用区虎豹骑展位上方空调\"},\"ESP8266_9930144\":{\"name\":\"二楼27应用区VR消防展位上方空调\"},\"ESP8266_523355\":{\"name\":\"二楼28应用区虚拟实验室前空调\"},\"ESP8266_524983\":{\"name\":\"二楼29应用区央馆虚拟实验展位上方空调\"},\"ESP8266_10004904\":{\"name\":\"二楼30全息舞台舞台上方空调-1\"},\"ESP8266_9921707\":{\"name\":\"二楼31全息舞台舞台上方空调-2\"},\"ESP8266_433213\":{\"name\":\"二楼32乐空间四格空间1空调\"},\"ESP8266_9920978\":{\"name\":\"二楼33乐空间入口空调\"},\"ESP8266_464648\":{\"name\":\"二楼34乐空间六轴赛车上方空调\"},\"ESP8266_9924660\":{\"name\":\"二楼35乐空间四轴赛车上方空调\"},\"ESP8266_9957889\":{\"name\":\"二楼36乐空间Switch游戏上方空调\"},\"ESP8266_9930089\":{\"name\":\"二楼37乐空间VR自行车上方空调\"},\"ESP8266_448481\":{\"name\":\"二楼38乐空间四格空间4空调\"},\"ESP8266_427331\":{\"name\":\"二楼39乐空间四格空间2&3空调\"},\"ESP8266_9934513\":{\"name\":\"二楼40乐空间仓库空调\"},\"ESP8266_9925594\":{\"name\":\"二楼41乐空间滑雪机上方空调\"},\"ESP8266_9926755\":{\"name\":\"二楼4通道、卫生间区域卫生间一外空调\"},\"ESP8266_9938106\":{\"name\":\"二楼13通道、卫生间区域卫生间二外空调\"},\"ESP8266_9932037\":{\"name\":\"二楼14通道、卫生间区域电梯厅外空调\"},\"ESP8266_465345\":{\"name\":\"二楼15通道、卫生间区域电梯厅内空调\"},\"ESP8266_10009326\":{\"name\":\"二楼20通道、卫生间区域卫生间三外新风机\"},\"ESP8266_9926288\":{\"name\":\"二楼21通道、卫生间区域卫生间三外空调\"},\"ESP8266_9937795\":{\"name\":\"三楼1直播摄影棚摄影棚后方空调1\"},\"ESP8266_10006724\":{\"name\":\"三楼2直播摄影棚摄影棚区域办公室空调1\"},\"ESP8266_442480\":{\"name\":\"三楼3直播摄影棚摄影棚后方空调2\"},\"ESP8266_519369\":{\"name\":\"三楼4直播摄影棚摄影棚区域办公室空调2\"},\"ESP8266_448586\":{\"name\":\"三楼5直播摄影棚摄影棚区域会议室空调\"},\"ESP8266_9930798\":{\"name\":\"三楼6直播摄影棚摄影棚前方空调1\"},\"ESP8266_521738\":{\"name\":\"三楼7直播摄影棚摄影棚前方空调2\"},\"ESP8266_432044\":{\"name\":\"三楼8VR办公区VR办公室新风\"},\"ESP8266_526058\":{\"name\":\"三楼9VR办公区VR办公室空调1\"},\"ESP8266_9926764\":{\"name\":\"三楼10VR办公区VR办公室空调2\"},\"ESP8266_427863\":{\"name\":\"三楼11党建办公区党建办公室空调1\"},\"ESP8266_9926765\":{\"name\":\"三楼12党建办公区党建办公室空调2\"},\"ESP8266_9958380\":{\"name\":\"三楼13党建办公区党建办公室空调3\"},\"ESP8266_474651\":{\"name\":\"三楼14党建办公区党建办公室空调4\"},\"ESP8266_432426\":{\"name\":\"三楼15通道区域电梯间空调\"},\"ESP8266_447884\":{\"name\":\"三楼16通道区域通道空调1\"},\"ESP8266_522277\":{\"name\":\"三楼17通道区域通道空调2\"},\"ESP8266_525584\":{\"name\":\"三楼18通道区域通道空调3\"},\"ESP8266_10029119\":{\"name\":\"三楼19通道区域通道区域新风\"},\"ESP8266_9944959\":{\"name\":\"三楼20党员活动室活动室空调1\"},\"ESP8266_10047940\":{\"name\":\"三楼21党员活动室活动室空调2\"},\"ESP8266_9927599\":{\"name\":\"三楼22党员活动室活动室空调3\"},\"ESP8266_440864\":{\"name\":\"三楼23党员活动室活动室空调4\"},\"ESP8266_9920788\":{\"name\":\"三楼24党员活动室活动室展区空调1\"},\"ESP8266_500512\":{\"name\":\"三楼25党员活动室活动室展区空调2\"},\"ESP8266_9934592\":{\"name\":\"三楼26党员活动室活动室展区空调3\"},\"ESP8266_9925572\":{\"name\":\"三楼27党建会议室前方空调1\"},\"ESP8266_9926218\":{\"name\":\"三楼28党建会议室前方空调2\"},\"ESP8266_9955466\":{\"name\":\"三楼29党建会议室前方空调3\"},\"ESP8266_448179\":{\"name\":\"三楼30党建会议室前方空调4\"},\"ESP8266_9932108\":{\"name\":\"三楼31党建会议室前方空调5\"},\"ESP8266_10027740\":{\"name\":\"三楼32党建会议室前方空调6\"},\"ESP8266_9928853\":{\"name\":\"三楼33党建会议室前方空调7\"},\"ESP8266_433112\":{\"name\":\"三楼34党建会议室前方空调8\"},\"ESP8266_9932430\":{\"name\":\"三楼35党建会议室新风\"},\"ESP8266_10005258\":{\"name\":\"\"},\"ESP8266_524478\":{\"name\":\"\"},\"ESP8266_9959024\":{\"name\":\"\"},\"ESP8266_9924667\":{\"name\":\"\"},\"ESP8266_9931370\":{\"name\":\"\"},\"ESP8266_9923383\":{\"name\":\"\"},\"ESP8266_10006696\":{\"name\":\"\"},\"ESP8266_469696\":{\"name\":\"\"},\"ESP8266_9944985\":{\"name\":\"\"},\"ESP8266_9941341\":{\"name\":\"\"},\"ESP8266_9936075\":{\"name\":\"\"},\"ESP8266_449971\":{\"name\":\"\"},\"ESP8266_9935390\":{\"name\":\"\"},\"ESP8266_10007032\":{\"name\":\"\"}}},\"CMDGATE_CL_JZX01\":{\"name\":\"长乐1号集装箱\",\"devices\":{\"c8f742e36fd2\":{\"name\":\"1号空调\"},\"24dfa7056ca9\":{\"name\":\"2号空调\"},\"ESP8266_2317612\":{\"name\":\"窗帘控制芯片\"},\"CL_JZX01_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_JZX01_curtain_02\":{\"name\":\"2号窗帘\"},\"CL_JZX01_curtain_03\":{\"name\":\"3号窗帘\"},\"CL_JZX01_curtain_04\":{\"name\":\"4号窗帘\"},\"CL_JZX01_curtain_05\":{\"name\":\"5号窗帘\"},\"CL_JZX01_curtain_06\":{\"name\":\"6号窗帘\"}}},\"CMDGATE_CL_JZX02\":{\"name\":\"长乐2号集装箱\",\"devices\":{}},\"CMDGATE_FZ_DEV1\":{\"name\":\"福州亚太二楼开发(有433射频)\",\"devices\":{\"DJ-YT-500-01\":{\"name\":\"1号舵机\"}}},\"CMDGATE_XA_KFDX01\":{\"name\":\"西安开放大学\",\"devices\":{\"780f7732d5f6\":{\"name\":\"1号空调\"},\"XA_KFDX01_curtain_01\":{\"name\":\"1号窗帘\"},\"XA_KFDX01_curtain_02\":{\"name\":\"2号窗帘\"},\"XA_KFDX01_curtain_03\":{\"name\":\"3号窗帘\"}}}}",
                 "tot": "json"
             }
         ],
@@ -746,7 +660,7 @@
         "name": "终端上行",
         "topic": "cmdgate/central/cmd",
         "qos": "2",
-        "datatype": "json",
+        "datatype": "auto",
         "broker": "849cbceb.9873d",
         "nl": false,
         "rap": true,
@@ -755,8 +669,8 @@
         "y": 220,
         "wires": [
             [
-                "55cc1676.e1e1e8",
-                "721c33e2.eedd5c"
+                "721c33e2.eedd5c",
+                "16d263fa.4e507c"
             ]
         ]
     },
@@ -771,7 +685,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 750,
         "y": 220,
         "wires": [
             [
@@ -797,7 +711,7 @@
         "links": [
             "82775b82.94d928"
         ],
-        "x": 595,
+        "x": 895,
         "y": 220,
         "wires": []
     },
@@ -826,7 +740,8 @@
         "name": "终端下行",
         "links": [
             "c67e09e8.3b7178",
-            "68c90e66.5e785"
+            "68c90e66.5e785",
+            "a886891b.7850a8"
         ],
         "x": 335,
         "y": 360,
@@ -870,7 +785,7 @@
         "type": "mqtt in",
         "z": "7f966f2b.565cf",
         "name": "边缘下行",
-        "topic": "business/cmdgate/+",
+        "topic": "business/cmdgate/CMDGATE_CL_VRTYG",
         "qos": "2",
         "datatype": "json",
         "broker": "480b54ad.8c4e1c",
@@ -910,7 +825,8 @@
         "y": 560,
         "wires": [
             [
-                "a8683765.5e9b48"
+                "a8683765.5e9b48",
+                "d501f268.749f"
             ]
         ]
     },
@@ -1086,7 +1002,7 @@
         "type": "function",
         "z": "6e9ccff0.31174",
         "name": "空调解析",
-        "func": "    let pld = msg.payload.pld;\n    let extra = pld.extra;\n    let Mode = {\"0\": \"cool\",\"1\": \"dry\",\"2\": \"auto\",\"3\": \"heat\",\"4\": \"fan_only\"};\n    let Fan = {\"0\": \"auto\",\"1\": \"high\",\"2\": \"medium\",\"4\":\"low\", \"5\": \"auto\"};\n\n    if (extra) {\n        extra = extra.toLowerCase();\n        extra = extra.replace(\"Mesg Desc.:\".toLowerCase(), \"\");\n        let items = extra.split(\",\");\n        items.forEach(item => {\n            let _item = item.split(\":\");\n            let key = _item[0].trim();\n            let value = _item[1].trim();\n            switch(key) {\n                case \"power\":\n                    pld.power = value;                    \n                    break;\n                case \"temp\":                    \n                    value = value.substr(0, value.length -1)                    \n                    pld.temperature = parseInt(value);\n                    break;\n                case \"mode\":\n                    pld.mode = Mode[value[0]];\n                    break;\n                case \"fan\":\n                    pld.fanSpeed = Fan[value[0]];                   \n                    break;\n                case \"zone follow\":\n                \n                    break;     \n                case \"sensor temp\":\n            \n                    break;                          \n                                  \n            }\n        })\n    }\n    \n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n    return msg;",
+        "func": "    let pld = msg.payload.pld;\n    if(!pld) {\n        node.error(\"终端没有返回数据\")\n        return;\n    }\n    let extra = pld.extra;\n    let Mode = {\"0\": \"cool\",\"1\": \"dry\",\"2\": \"auto\",\"3\": \"heat\",\"4\": \"fan_only\"};\n    let Fan = {\"0\": \"auto\",\"1\": \"high\",\"2\": \"medium\",\"4\":\"low\", \"5\": \"auto\"};\n\n    if (extra) {\n        extra = extra.toLowerCase();\n        extra = extra.replace(\"Mesg Desc.:\".toLowerCase(), \"\");\n        let items = extra.split(\",\");\n        items.forEach(item => {\n            let _item = item.split(\":\");\n            let key = _item[0].trim();\n            let value = _item[1].trim();\n            switch(key) {\n                case \"power\":\n                    pld.power = value;                    \n                    break;\n                case \"temp\":                    \n                    value = value.substr(0, value.length -1)                    \n                    pld.temperature = parseInt(value);\n                    break;\n                case \"mode\":\n                    pld.mode = Mode[value[0]];\n                    break;\n                case \"fan\":\n                    pld.fanSpeed = Fan[value[0]];                   \n                    break;\n                case \"zone follow\":\n                \n                    break;     \n                case \"sensor temp\":\n            \n                    break;                          \n                                  \n            }\n        })\n    }\n    \n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n    return msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1105,7 +1021,6 @@
         "id": "14963224.11111e",
         "type": "link out",
         "z": "6e9ccff0.31174",
-        "d": true,
         "name": "边缘上行",
         "links": [
             "db90a60b.8feba8"
@@ -1479,7 +1394,7 @@
         "septopics": true,
         "property": "payload",
         "x": 1090,
-        "y": 320,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1789,7 +1704,7 @@
             "2c5f8070.781e4"
         ],
         "x": 175,
-        "y": 160,
+        "y": 340,
         "wires": [
             [
                 "6187900f.e76d9"
@@ -1806,37 +1721,20 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "ESP8266_6857248",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "",
+                "v": "ESP8266_9928853",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 4,
-        "x": 290,
-        "y": 160,
+        "outputs": 1,
+        "x": 270,
+        "y": 340,
         "wires": [
             [
-                "732e0597.9c747c"
-            ],
-            [],
-            [],
-            []
+                "732e0597.9c747c",
+                "92f6ab5c.d76f88"
+            ]
         ]
     },
     {
@@ -1863,7 +1761,7 @@
         "type": "debug",
         "z": "7f966f2b.565cf",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1871,7 +1769,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
+        "x": 750,
         "y": 280,
         "wires": []
     },
@@ -1885,7 +1783,14 @@
                 "t": "set",
                 "p": "payload.hd.did",
                 "pt": "msg",
-                "to": "ESP8266_6857248",
+                "to": "ESP8266_9928853",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.hd.cmd",
+                "pt": "msg",
+                "to": "3",
                 "tot": "str"
             }
         ],
@@ -1894,7 +1799,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
+        "x": 440,
         "y": 760,
         "wires": [
             [
@@ -1906,57 +1811,14 @@
         "id": "2c5f8070.781e4",
         "type": "link out",
         "z": "6e9ccff0.31174",
-        "d": true,
         "name": "空调看板",
         "links": [
-            "6e9291c.b1e257"
+            "6e9291c.b1e257",
+            "7945fee2.25132"
         ],
         "x": 895,
         "y": 200,
         "wires": []
-    },
-    {
-        "id": "84a7c82a.76ee28",
-        "type": "function",
-        "z": "6e9ccff0.31174",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c7f3f60c.6f1768",
-        "type": "inject",
-        "z": "6e9ccff0.31174",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"pld\":{}}",
-        "payloadType": "json",
-        "x": 290,
-        "y": 280,
-        "wires": [
-            [
-                "84a7c82a.76ee28",
-                "e87d89ad.e4b458"
-            ]
-        ]
     },
     {
         "id": "c712e54a.e9b9c8",
@@ -2905,6 +2767,2162 @@
             [
                 "a7500816.615e88"
             ]
+        ]
+    },
+    {
+        "id": "4c0a373d.4c71f8",
+        "type": "inject",
+        "z": "3d341b1e.496694",
+        "name": "获取版本",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"hd\":{\"cmd\":5}}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "62141ea6.82a76"
+            ]
+        ]
+    },
+    {
+        "id": "a886891b.7850a8",
+        "type": "link out",
+        "z": "3d341b1e.496694",
+        "name": "",
+        "links": [
+            "90a962bb.f07c4"
+        ],
+        "x": 795,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "cfe7752.fbbe288",
+        "type": "inject",
+        "z": "3d341b1e.496694",
+        "name": "升级",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"hd\":{\"cmd\":6}}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "62141ea6.82a76"
+            ]
+        ]
+    },
+    {
+        "id": "27195880.50c6b8",
+        "type": "inject",
+        "z": "3d341b1e.496694",
+        "name": "重启",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"hd\":{\"cmd\":7}}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "62141ea6.82a76"
+            ]
+        ]
+    },
+    {
+        "id": "16d263fa.4e507c",
+        "type": "json",
+        "z": "7f966f2b.565cf",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "55cc1676.e1e1e8",
+                "721c33e2.eedd5c"
+            ]
+        ]
+    },
+    {
+        "id": "62141ea6.82a76",
+        "type": "change",
+        "z": "3d341b1e.496694",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "ESP8266_9920978",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "a886891b.7850a8"
+            ]
+        ]
+    },
+    {
+        "id": "92f6ab5c.d76f88",
+        "type": "function",
+        "z": "75a3e362.0ad2cc",
+        "d": true,
+        "name": "",
+        "func": "\nvar tmp = global.get(msg.payload.hd.did);\nif (tmp) {\n    tmp.payload = msg.payload\n    tmp.timestamp.resp = (new Date()).valueOf();\n    tmp.timestamp.delta = tmp.timestamp.resp - tmp.timestamp.req\n    node.error(tmp);\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d501f268.749f",
+        "type": "debug",
+        "z": "7f966f2b.565cf",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "da74981.eb92968",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "",
+        "func": "let devices = global.get(\"devices\")[\"CMDGATE_CL_VRTYG\"].devices;\nObject.keys(devices).forEach(key=> {\n    let _msg = {payload:{hd:{did:key, cmd:3}}} \n    node.send(_msg)\n    \n})\n     \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 760,
+        "wires": [
+            [
+                "97f05558.87bad8"
+            ]
+        ]
+    },
+    {
+        "id": "61da202e.4c51e",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "查询全部空调",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 730,
+        "y": 760,
+        "wires": [
+            [
+                "da74981.eb92968"
+            ]
+        ]
+    },
+    {
+        "id": "dcfc724.39a2c9",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "二楼空调",
+        "property": "payload.hd.did",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ESP8266_9926564",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9928598",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9933676",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9926755",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_488969",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9931870",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9956709",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_430864",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_486720",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_469370",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9922593",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_491535",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9938106",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9932037",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_465345",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9945247",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_450977",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9954003",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_448616",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10009326",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9926288",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_431099",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9930630",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_502328",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_525449",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9928778",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9930144",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_523355",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_524983",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10004904",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9921707",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_433213",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9920978",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_464648",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9924660",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9957889",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9930089",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_448481",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_427331",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9934513",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9925594",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 41,
+        "x": 260,
+        "y": 1480,
+        "wires": [
+            [
+                "2e007929.be65b6"
+            ],
+            [
+                "61baf31e.e5951c"
+            ],
+            [
+                "63901f95.2f925"
+            ],
+            [
+                "6c55d35f.5aba7c"
+            ],
+            [
+                "8a86f3e6.2404"
+            ],
+            [
+                "796c95fe.4147dc"
+            ],
+            [
+                "5c6c35b5.eaf57c"
+            ],
+            [
+                "95262960.b81148"
+            ],
+            [
+                "ffa353eb.7723c"
+            ],
+            [
+                "68ff8344.02f69c"
+            ],
+            [
+                "a847d29d.d59ee"
+            ],
+            [
+                "404ce874.5fa0e8"
+            ],
+            [
+                "a1dfe894.076ce8"
+            ],
+            [
+                "d1c4f0e9.6a6b3"
+            ],
+            [
+                "1521ddea.5039f2"
+            ],
+            [
+                "3ea29630.bf5e4a"
+            ],
+            [
+                "ba197d71.d550d"
+            ],
+            [
+                "cdbfb892.3a63b8"
+            ],
+            [
+                "3c7c5f11.c7e3c"
+            ],
+            [
+                "c5f06d64.e7365"
+            ],
+            [
+                "8dc8d08f.39b4a"
+            ],
+            [
+                "8f8cb66c.ac5d48"
+            ],
+            [
+                "2cc8425d.eb832e"
+            ],
+            [
+                "3459cf0f.983ce"
+            ],
+            [
+                "1e30db7b.cacce5"
+            ],
+            [
+                "4f6cfba8.4d0694"
+            ],
+            [
+                "64c4f153.0fb2"
+            ],
+            [
+                "e2c30d92.f3624"
+            ],
+            [
+                "82925761.531c18"
+            ],
+            [
+                "32a0496a.1d4cd6"
+            ],
+            [
+                "56bc7adf.9da3a4"
+            ],
+            [
+                "662b30bc.32e62"
+            ],
+            [
+                "3235e257.6576be"
+            ],
+            [
+                "60d00c6.0346ff4"
+            ],
+            [
+                "4fc24270.e80dbc"
+            ],
+            [
+                "988e8759.d47118"
+            ],
+            [
+                "d7826089.5bb88"
+            ],
+            [
+                "e4543070.a1c7a"
+            ],
+            [
+                "9dccd55c.976c08"
+            ],
+            [
+                "b95332b.22626d"
+            ],
+            [
+                "f738e31d.493cd"
+            ]
+        ]
+    },
+    {
+        "id": "7945fee2.25132",
+        "type": "link in",
+        "z": "6e9ccff0.31174",
+        "name": "空调看板",
+        "links": [
+            "de0481fa.fcbbb",
+            "2c5f8070.781e4"
+        ],
+        "x": 75,
+        "y": 2060,
+        "wires": [
+            [
+                "dcfc724.39a2c9",
+                "c60624f8.a13858"
+            ]
+        ]
+    },
+    {
+        "id": "6c55d35f.5aba7c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-4",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e007929.be65b6",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-1",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1052,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61baf31e.e5951c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-2",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1102,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63901f95.2f925",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-3",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1152,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a86f3e6.2404",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-5",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1249,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ffa353eb.7723c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-9",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1444,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "796c95fe.4147dc",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-6",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1296,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c6c35b5.eaf57c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-7",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1346,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95262960.b81148",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-8",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1396,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68ff8344.02f69c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-10",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1493,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fc24270.e80dbc",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-35",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56bc7adf.9da3a4",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-31",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3235e257.6576be",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-33",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1662,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60d00c6.0346ff4",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-34",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1712,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "988e8759.d47118",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-36",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1809,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b95332b.22626d",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-40",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2004,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7826089.5bb88",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-37",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1856,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4543070.a1c7a",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-38",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1906,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dccd55c.976c08",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-39",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1956,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f738e31d.493cd",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-41",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2053,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1c4f0e9.6a6b3",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-14",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a847d29d.d59ee",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-11",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1552,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "404ce874.5fa0e8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-12",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1602,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1dfe894.076ce8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-13",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1652,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1521ddea.5039f2",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-15",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1749,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c7c5f11.c7e3c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-19",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1944,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ea29630.bf5e4a",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-16",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1796,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba197d71.d550d",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-17",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1846,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdbfb892.3a63b8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-18",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1896,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5f06d64.e7365",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-20",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1993,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3459cf0f.983ce",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-24",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8dc8d08f.39b4a",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-21",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1052,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f8cb66c.ac5d48",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-22",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1102,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2cc8425d.eb832e",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-23",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1152,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e30db7b.cacce5",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-25",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1249,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82925761.531c18",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-29",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1444,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f6cfba8.4d0694",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-26",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1296,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64c4f153.0fb2",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-27",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1346,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2c30d92.f3624",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-28",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1396,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32a0496a.1d4cd6",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-30",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1493,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "662b30bc.32e62",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "2-32",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1610,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c60624f8.a13858",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "三楼空调",
+        "property": "payload.hd.did",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ESP8266_9937795",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10006724",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_442480",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_519369",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_448586",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9930798",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_521738",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_432044",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_526058",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9926764",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_427863",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9926765",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9958380",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_474651",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_432426",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_447884",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_522277",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_525584",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10029119",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9944959",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10047940",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9927599",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_440864",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9920788",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_500512",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9934592",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9925572",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9926218",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9955466",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_448179",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9932108",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10027740",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9928853",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_433112",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9932430",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 35,
+        "x": 260,
+        "y": 2640,
+        "wires": [
+            [
+                "32050e5e.bedb12"
+            ],
+            [
+                "4ab51d45.4bb204"
+            ],
+            [
+                "bd291b8b.754098"
+            ],
+            [
+                "dafb54fe.5d3158"
+            ],
+            [
+                "a44f92a8.038f8"
+            ],
+            [
+                "c430abf0.f41bd8"
+            ],
+            [
+                "a10d41fa.9c7d2"
+            ],
+            [
+                "1b5f7cfd.a9e903"
+            ],
+            [
+                "98230102.f2e66"
+            ],
+            [
+                "fae72481.6fa228"
+            ],
+            [
+                "4159b37f.37769c"
+            ],
+            [
+                "6505725f.a286ac"
+            ],
+            [
+                "5d44d6f2.d2c6e8"
+            ],
+            [
+                "bdf2261.3f370d8"
+            ],
+            [
+                "b64fc71c.66af38"
+            ],
+            [
+                "e6adfe3.4c353"
+            ],
+            [
+                "2396d6ca.c4a4da"
+            ],
+            [
+                "ef91ff84.ec2eb"
+            ],
+            [
+                "49083744.bd9dc8"
+            ],
+            [
+                "e291105d.4a2d4"
+            ],
+            [
+                "21a431a9.62278e"
+            ],
+            [
+                "61e7ec.4d6a1814"
+            ],
+            [
+                "d91ed1f1.dd0fd"
+            ],
+            [
+                "245f6c53.9aaaf4"
+            ],
+            [
+                "453b5539.42e3fc"
+            ],
+            [
+                "3c3ab7fa.79d688"
+            ],
+            [
+                "df15f2ce.0c12"
+            ],
+            [
+                "a84ab497.22b548"
+            ],
+            [
+                "85da8a34.78a768"
+            ],
+            [
+                "fdd30f15.1b128"
+            ],
+            [
+                "d69832bc.d39a9"
+            ],
+            [
+                "75a2de41.00fb8"
+            ],
+            [
+                "ff28aab7.35d9d8"
+            ],
+            [
+                "66de7a9f.770e64"
+            ],
+            [
+                "722a4b27.b29d24"
+            ]
+        ]
+    },
+    {
+        "id": "dafb54fe.5d3158",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-4",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32050e5e.bedb12",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-1",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2212,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ab51d45.4bb204",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-2",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2262,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd291b8b.754098",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-3",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2312,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a44f92a8.038f8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-5",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2409,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98230102.f2e66",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-9",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2604,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c430abf0.f41bd8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-6",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2456,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a10d41fa.9c7d2",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-7",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2506,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b5f7cfd.a9e903",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-8",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2556,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fae72481.6fa228",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-10",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2653,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "722a4b27.b29d24",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-35",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d69832bc.d39a9",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-31",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ff28aab7.35d9d8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-33",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2822,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66de7a9f.770e64",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-34",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2872,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdf2261.3f370d8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-14",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4159b37f.37769c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-11",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2712,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6505725f.a286ac",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-12",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2762,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d44d6f2.d2c6e8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-13",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2812,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b64fc71c.66af38",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-15",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2909,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "49083744.bd9dc8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-19",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 3104,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6adfe3.4c353",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-16",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2956,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2396d6ca.c4a4da",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-17",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 3006,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef91ff84.ec2eb",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-18",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 3056,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e291105d.4a2d4",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-20",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 3153,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "245f6c53.9aaaf4",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-24",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21a431a9.62278e",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-21",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2212,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61e7ec.4d6a1814",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-22",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2262,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d91ed1f1.dd0fd",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-23",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2312,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "453b5539.42e3fc",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-25",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2409,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85da8a34.78a768",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-29",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2604,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c3ab7fa.79d688",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-26",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2456,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df15f2ce.0c12",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-27",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2506,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a84ab497.22b548",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-28",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2556,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fdd30f15.1b128",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-30",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2653,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75a2de41.00fb8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "3-32",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 2770,
+        "wires": [
+            []
         ]
     }
 ]
