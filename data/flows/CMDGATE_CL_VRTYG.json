@@ -636,7 +636,7 @@
                 "t": "set",
                 "p": "devices",
                 "pt": "global",
-                "to": "{\"CMDGATE_CL_VRTYG\":{\"name\":\"长乐VR体验馆\",\"devices\":{\"ESP8266_9926564\":{\"name\":\"二楼1成果区宣传大屏前空调\"},\"ESP8266_9928598\":{\"name\":\"二楼2成果区体验中心入口空调\"},\"ESP8266_9933676\":{\"name\":\"二楼3成果区富士康大屏处空调\"},\"ESP8266_488969\":{\"name\":\"二楼5成果区版图区域内侧空调\"},\"ESP8266_9931870\":{\"name\":\"二楼6成果区版图区域外侧空调\"},\"ESP8266_9956709\":{\"name\":\"二楼7成果区小镇沙盘前空调\"},\"ESP8266_430864\":{\"name\":\"二楼8成果区红色教育一体机旁空调\"},\"ESP8266_486720\":{\"name\":\"二楼9恐龙休息区沙发区上方空调\"},\"ESP8266_469370\":{\"name\":\"二楼10恐龙休息区恐龙区入口上方空调\"},\"ESP8266_9922593\":{\"name\":\"二楼11恐龙休息区恐龙大屏上方空调\"},\"ESP8266_491535\":{\"name\":\"二楼12恐龙休息区长桌上方空调\"},\"ESP8266_9945247\":{\"name\":\"二楼16沉浸教室地理沙盘上方空调\"},\"ESP8266_450977\":{\"name\":\"二楼17沉浸教室3D扫描上方空调\"},\"ESP8266_9954003\":{\"name\":\"二楼18沉浸教室曲面屏上方空调\"},\"ESP8266_448616\":{\"name\":\"二楼19沉浸教室座位区上方空调\"},\"ESP8266_431099\":{\"name\":\"二楼22应用区新品体验展位上方空调\"},\"ESP8266_9930630\":{\"name\":\"二楼23应用区急速风暴展位上方空调\"},\"ESP8266_502328\":{\"name\":\"二楼24应用区世宇展位上方空调\"},\"ESP8266_525449\":{\"name\":\"二楼25应用区ColdingGalaxy展位上方空调\"},\"ESP8266_9928778\":{\"name\":\"二楼26应用区虎豹骑展位上方空调\"},\"ESP8266_9930144\":{\"name\":\"二楼27应用区VR消防展位上方空调\"},\"ESP8266_523355\":{\"name\":\"二楼28应用区虚拟实验室前空调\"},\"ESP8266_524983\":{\"name\":\"二楼29应用区央馆虚拟实验展位上方空调\"},\"ESP8266_10004904\":{\"name\":\"二楼30全息舞台舞台上方空调-1\"},\"ESP8266_9921707\":{\"name\":\"二楼31全息舞台舞台上方空调-2\"},\"ESP8266_433213\":{\"name\":\"二楼32乐空间四格空间1空调\"},\"ESP8266_9920978\":{\"name\":\"二楼33乐空间入口空调\"},\"ESP8266_464648\":{\"name\":\"二楼34乐空间六轴赛车上方空调\"},\"ESP8266_9924660\":{\"name\":\"二楼35乐空间四轴赛车上方空调\"},\"ESP8266_9957889\":{\"name\":\"二楼36乐空间Switch游戏上方空调\"},\"ESP8266_9930089\":{\"name\":\"二楼37乐空间VR自行车上方空调\"},\"ESP8266_448481\":{\"name\":\"二楼38乐空间四格空间4空调\"},\"ESP8266_427331\":{\"name\":\"二楼39乐空间四格空间2&3空调\"},\"ESP8266_9934513\":{\"name\":\"二楼40乐空间仓库空调\"},\"ESP8266_9925594\":{\"name\":\"二楼41乐空间滑雪机上方空调\"},\"ESP8266_9926755\":{\"name\":\"二楼4通道、卫生间区域卫生间一外空调\"},\"ESP8266_9938106\":{\"name\":\"二楼13通道、卫生间区域卫生间二外空调\"},\"ESP8266_9932037\":{\"name\":\"二楼14通道、卫生间区域电梯厅外空调\"},\"ESP8266_465345\":{\"name\":\"二楼15通道、卫生间区域电梯厅内空调\"},\"ESP8266_10009326\":{\"name\":\"二楼20通道、卫生间区域卫生间三外新风机\"},\"ESP8266_9926288\":{\"name\":\"二楼21通道、卫生间区域卫生间三外空调\"},\"ESP8266_9937795\":{\"name\":\"三楼1直播摄影棚摄影棚后方空调1\"},\"ESP8266_10006724\":{\"name\":\"三楼2直播摄影棚摄影棚区域办公室空调1\"},\"ESP8266_442480\":{\"name\":\"三楼3直播摄影棚摄影棚后方空调2\"},\"ESP8266_519369\":{\"name\":\"三楼4直播摄影棚摄影棚区域办公室空调2\"},\"ESP8266_448586\":{\"name\":\"三楼5直播摄影棚摄影棚区域会议室空调\"},\"ESP8266_9930798\":{\"name\":\"三楼6直播摄影棚摄影棚前方空调1\"},\"ESP8266_521738\":{\"name\":\"三楼7直播摄影棚摄影棚前方空调2\"},\"ESP8266_432044\":{\"name\":\"三楼8VR办公区VR办公室新风\"},\"ESP8266_526058\":{\"name\":\"三楼9VR办公区VR办公室空调1\"},\"ESP8266_9926764\":{\"name\":\"三楼10VR办公区VR办公室空调2\"},\"ESP8266_427863\":{\"name\":\"三楼11党建办公区党建办公室空调1\"},\"ESP8266_9926765\":{\"name\":\"三楼12党建办公区党建办公室空调2\"},\"ESP8266_9958380\":{\"name\":\"三楼13党建办公区党建办公室空调3\"},\"ESP8266_474651\":{\"name\":\"三楼14党建办公区党建办公室空调4\"},\"ESP8266_432426\":{\"name\":\"三楼15通道区域电梯间空调\"},\"ESP8266_447884\":{\"name\":\"三楼16通道区域通道空调1\"},\"ESP8266_522277\":{\"name\":\"三楼17通道区域通道空调2\"},\"ESP8266_525584\":{\"name\":\"三楼18通道区域通道空调3\"},\"ESP8266_10029119\":{\"name\":\"三楼19通道区域通道区域新风\"},\"ESP8266_9944959\":{\"name\":\"三楼20党员活动室活动室空调1\"},\"ESP8266_10047940\":{\"name\":\"三楼21党员活动室活动室空调2\"},\"ESP8266_9927599\":{\"name\":\"三楼22党员活动室活动室空调3\"},\"ESP8266_440864\":{\"name\":\"三楼23党员活动室活动室空调4\"},\"ESP8266_9920788\":{\"name\":\"三楼24党员活动室活动室展区空调1\"},\"ESP8266_500512\":{\"name\":\"三楼25党员活动室活动室展区空调2\"},\"ESP8266_9934592\":{\"name\":\"三楼26党员活动室活动室展区空调3\"},\"ESP8266_9925572\":{\"name\":\"三楼27党建会议室前方空调1\"},\"ESP8266_9926218\":{\"name\":\"三楼28党建会议室前方空调2\"},\"ESP8266_9955466\":{\"name\":\"三楼29党建会议室前方空调3\"},\"ESP8266_448179\":{\"name\":\"三楼30党建会议室前方空调4\"},\"ESP8266_9932108\":{\"name\":\"三楼31党建会议室前方空调5\"},\"ESP8266_10027740\":{\"name\":\"三楼32党建会议室前方空调6\"},\"ESP8266_9928853\":{\"name\":\"三楼33党建会议室前方空调7\"},\"ESP8266_433112\":{\"name\":\"三楼34党建会议室前方空调8\"},\"ESP8266_9932430\":{\"name\":\"三楼35党建会议室新风\"},\"ESP8266_10005258\":{\"name\":\"\"},\"ESP8266_524478\":{\"name\":\"\"},\"ESP8266_9959024\":{\"name\":\"\"},\"ESP8266_9924667\":{\"name\":\"\"},\"ESP8266_9931370\":{\"name\":\"\"},\"ESP8266_9923383\":{\"name\":\"\"},\"ESP8266_10006696\":{\"name\":\"\"},\"ESP8266_469696\":{\"name\":\"\"},\"ESP8266_9944985\":{\"name\":\"\"},\"ESP8266_9941341\":{\"name\":\"\"},\"ESP8266_9936075\":{\"name\":\"\"},\"ESP8266_449971\":{\"name\":\"\"},\"ESP8266_9935390\":{\"name\":\"\"},\"ESP8266_10007032\":{\"name\":\"\"}}},\"CMDGATE_CL_JZX01\":{\"name\":\"长乐1号集装箱\",\"devices\":{\"c8f742e36fd2\":{\"name\":\"1号空调\"},\"24dfa7056ca9\":{\"name\":\"2号空调\"},\"ESP8266_2317612\":{\"name\":\"窗帘控制芯片\"},\"CL_JZX01_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_JZX01_curtain_02\":{\"name\":\"2号窗帘\"},\"CL_JZX01_curtain_03\":{\"name\":\"3号窗帘\"},\"CL_JZX01_curtain_04\":{\"name\":\"4号窗帘\"},\"CL_JZX01_curtain_05\":{\"name\":\"5号窗帘\"},\"CL_JZX01_curtain_06\":{\"name\":\"6号窗帘\"}}},\"CMDGATE_CL_JZX02\":{\"name\":\"长乐2号集装箱\",\"devices\":{}},\"CMDGATE_FZ_DEV1\":{\"name\":\"福州亚太二楼开发(有433射频)\",\"devices\":{\"DJ-YT-500-01\":{\"name\":\"1号舵机\"}}},\"CMDGATE_XA_KFDX01\":{\"name\":\"西安开放大学\",\"devices\":{\"780f7732d5f6\":{\"name\":\"1号空调\"},\"XA_KFDX01_curtain_01\":{\"name\":\"1号窗帘\"},\"XA_KFDX01_curtain_02\":{\"name\":\"2号窗帘\"},\"XA_KFDX01_curtain_03\":{\"name\":\"3号窗帘\"}}}}",
+                "to": "{\"CMDGATE_CL_VRTYG\":{\"name\":\"长乐VR体验馆\",\"devices\":{\"ESP8266_9926564\":{\"name\":\"二楼1成果区宣传大屏前空调\"},\"ESP8266_9928598\":{\"name\":\"二楼2成果区体验中心入口空调\"},\"ESP8266_9933676\":{\"name\":\"二楼3成果区富士康大屏处空调\"},\"ESP8266_488969\":{\"name\":\"二楼5成果区版图区域内侧空调\"},\"ESP8266_9931870\":{\"name\":\"二楼6成果区版图区域外侧空调\"},\"ESP8266_9956709\":{\"name\":\"二楼7成果区小镇沙盘前空调\"},\"ESP8266_430864\":{\"name\":\"二楼8成果区红色教育一体机旁空调\"},\"ESP8266_486720\":{\"name\":\"二楼9恐龙休息区沙发区上方空调\"},\"ESP8266_469370\":{\"name\":\"二楼10恐龙休息区恐龙区入口上方空调\"},\"ESP8266_9922593\":{\"name\":\"二楼11恐龙休息区恐龙大屏上方空调\"},\"ESP8266_491535\":{\"name\":\"二楼12恐龙休息区长桌上方空调\"},\"ESP8266_9945247\":{\"name\":\"二楼16沉浸教室地理沙盘上方空调\"},\"ESP8266_450977\":{\"name\":\"二楼17沉浸教室3D扫描上方空调\"},\"ESP8266_9954003\":{\"name\":\"二楼18沉浸教室曲面屏上方空调\"},\"ESP8266_448616\":{\"name\":\"二楼19沉浸教室座位区上方空调\"},\"ESP8266_431099\":{\"name\":\"二楼22应用区新品体验展位上方空调\"},\"ESP8266_9930630\":{\"name\":\"二楼23应用区急速风暴展位上方空调\"},\"ESP8266_502328\":{\"name\":\"二楼24应用区世宇展位上方空调\"},\"ESP8266_525449\":{\"name\":\"二楼25应用区ColdingGalaxy展位上方空调\"},\"ESP8266_9928778\":{\"name\":\"二楼26应用区虎豹骑展位上方空调\"},\"ESP8266_9930144\":{\"name\":\"二楼27应用区VR消防展位上方空调\"},\"ESP8266_523355\":{\"name\":\"二楼28应用区虚拟实验室前空调\"},\"ESP8266_524983\":{\"name\":\"二楼29应用区央馆虚拟实验展位上方空调\"},\"ESP8266_10004904\":{\"name\":\"二楼30全息舞台舞台上方空调-1\"},\"ESP8266_9921707\":{\"name\":\"二楼31全息舞台舞台上方空调-2\"},\"ESP8266_433213\":{\"name\":\"二楼32乐空间四格空间1空调\"},\"ESP8266_9920978\":{\"name\":\"二楼33乐空间入口空调\"},\"ESP8266_464648\":{\"name\":\"二楼34乐空间六轴赛车上方空调\"},\"ESP8266_9924660\":{\"name\":\"二楼35乐空间四轴赛车上方空调\"},\"ESP8266_9957889\":{\"name\":\"二楼36乐空间Switch游戏上方空调\"},\"ESP8266_9930089\":{\"name\":\"二楼37乐空间VR自行车上方空调\"},\"ESP8266_448481\":{\"name\":\"二楼38乐空间四格空间4空调\"},\"ESP8266_427331\":{\"name\":\"二楼39乐空间四格空间2&3空调\"},\"ESP8266_9934513\":{\"name\":\"二楼40乐空间仓库空调\"},\"ESP8266_9925594\":{\"name\":\"二楼41乐空间滑雪机上方空调\"},\"ESP8266_9926755\":{\"name\":\"二楼4通道、卫生间区域卫生间一外空调\"},\"ESP8266_9938106\":{\"name\":\"二楼13通道、卫生间区域卫生间二外空调\"},\"ESP8266_9932037\":{\"name\":\"二楼14通道、卫生间区域电梯厅外空调\"},\"ESP8266_465345\":{\"name\":\"二楼15通道、卫生间区域电梯厅内空调\"},\"ESP8266_10009326\":{\"name\":\"二楼20通道、卫生间区域卫生间三外新风机\"},\"ESP8266_9926288\":{\"name\":\"二楼21通道、卫生间区域卫生间三外空调\"},\"ESP8266_9937795\":{\"name\":\"三楼1直播摄影棚摄影棚后方空调1\"},\"ESP8266_10006724\":{\"name\":\"三楼2直播摄影棚摄影棚区域办公室空调1\"},\"ESP8266_442480\":{\"name\":\"三楼3直播摄影棚摄影棚后方空调2\"},\"ESP8266_519369\":{\"name\":\"三楼4直播摄影棚摄影棚区域办公室空调2\"},\"ESP8266_448586\":{\"name\":\"三楼5直播摄影棚摄影棚区域会议室空调\"},\"ESP8266_9930798\":{\"name\":\"三楼6直播摄影棚摄影棚前方空调1\"},\"ESP8266_521738\":{\"name\":\"三楼7直播摄影棚摄影棚前方空调2\"},\"ESP8266_432044\":{\"name\":\"三楼8VR办公区VR办公室新风\"},\"ESP8266_526058\":{\"name\":\"三楼9VR办公区VR办公室空调1\"},\"ESP8266_9926764\":{\"name\":\"三楼10VR办公区VR办公室空调2\"},\"ESP8266_427863\":{\"name\":\"三楼11党建办公区党建办公室空调1\"},\"ESP8266_9926765\":{\"name\":\"三楼12党建办公区党建办公室空调2\"},\"ESP8266_9958380\":{\"name\":\"三楼13党建办公区党建办公室空调3\"},\"ESP8266_474651\":{\"name\":\"三楼14党建办公区党建办公室空调4\"},\"ESP8266_432426\":{\"name\":\"三楼15通道区域电梯间空调\"},\"ESP8266_447884\":{\"name\":\"三楼16通道区域通道空调1\"},\"ESP8266_522277\":{\"name\":\"三楼17通道区域通道空调2\"},\"ESP8266_525584\":{\"name\":\"三楼18通道区域通道空调3\"},\"ESP8266_10029119\":{\"name\":\"三楼19通道区域通道区域新风\"},\"ESP8266_9944959\":{\"name\":\"三楼20党员活动室活动室空调1\"},\"ESP8266_10047940\":{\"name\":\"三楼21党员活动室活动室空调2\"},\"ESP8266_9927599\":{\"name\":\"三楼22党员活动室活动室空调3\"},\"ESP8266_440864\":{\"name\":\"三楼23党员活动室活动室空调4\"},\"ESP8266_9920788\":{\"name\":\"三楼24党员活动室活动室展区空调1\"},\"ESP8266_500512\":{\"name\":\"三楼25党员活动室活动室展区空调2\"},\"ESP8266_9934592\":{\"name\":\"三楼26党员活动室活动室展区空调3\"},\"ESP8266_469696\":{\"name\":\"三楼27党建会议室前方空调1\"},\"ESP8266_9926218\":{\"name\":\"三楼28党建会议室前方空调2\"},\"ESP8266_9955466\":{\"name\":\"三楼29党建会议室前方空调3\"},\"ESP8266_448179\":{\"name\":\"三楼30党建会议室前方空调4\"},\"ESP8266_9932108\":{\"name\":\"三楼31党建会议室前方空调5\"},\"ESP8266_10027740\":{\"name\":\"三楼32党建会议室前方空调6\"},\"ESP8266_9928853\":{\"name\":\"三楼33党建会议室前方空调7\"},\"ESP8266_433112\":{\"name\":\"三楼34党建会议室前方空调8\"},\"ESP8266_9932430\":{\"name\":\"三楼35党建会议室新风\"},\"ESP8266_9925572\":{\"name\":\"\"},\"ESP8266_10005258\":{\"name\":\"\"},\"ESP8266_524478\":{\"name\":\"\"},\"ESP8266_9959024\":{\"name\":\"\"},\"ESP8266_9924667\":{\"name\":\"\"},\"ESP8266_9931370\":{\"name\":\"\"},\"ESP8266_9923383\":{\"name\":\"\"},\"ESP8266_10006696\":{\"name\":\"\"},\"ESP8266_9944985\":{\"name\":\"\"},\"ESP8266_9941341\":{\"name\":\"\"},\"ESP8266_9936075\":{\"name\":\"\"},\"ESP8266_449971\":{\"name\":\"\"},\"ESP8266_9935390\":{\"name\":\"\"},\"ESP8266_10007032\":{\"name\":\"\"},\"ESP8266_3715647\":{\"name\":\"开发测试\"}}},\"CMDGATE_CL_JZX01\":{\"name\":\"长乐1号集装箱\",\"devices\":{\"c8f742e36fd2\":{\"name\":\"1号空调\"},\"24dfa7056ca9\":{\"name\":\"2号空调\"},\"ESP8266_2317612\":{\"name\":\"窗帘控制芯片\"},\"CL_JZX01_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_JZX01_curtain_02\":{\"name\":\"2号窗帘\"},\"CL_JZX01_curtain_03\":{\"name\":\"3号窗帘\"},\"CL_JZX01_curtain_04\":{\"name\":\"4号窗帘\"},\"CL_JZX01_curtain_05\":{\"name\":\"5号窗帘\"},\"CL_JZX01_curtain_06\":{\"name\":\"6号窗帘\"}}},\"CMDGATE_CL_JZX02\":{\"name\":\"长乐2号集装箱\",\"devices\":{}},\"CMDGATE_FZ_DEV1\":{\"name\":\"福州亚太二楼开发(有433射频)\",\"devices\":{\"DJ-YT-500-01\":{\"name\":\"1号舵机\"}}},\"CMDGATE_XA_KFDX01\":{\"name\":\"西安开放大学\",\"devices\":{\"780f7732d5f6\":{\"name\":\"1号空调\"},\"XA_KFDX01_curtain_01\":{\"name\":\"1号窗帘\"},\"XA_KFDX01_curtain_02\":{\"name\":\"2号窗帘\"},\"XA_KFDX01_curtain_03\":{\"name\":\"3号窗帘\"}}}}",
                 "tot": "json"
             }
         ],
@@ -982,18 +982,49 @@
         "rules": [
             {
                 "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 5,
         "x": 530,
         "y": 140,
         "wires": [
             [
+                "17b0765d.0dff2a",
+                "14963224.11111e"
+            ],
+            [
                 "e87d89ad.e4b458"
+            ],
+            [
+                "60c2b2b4.9b128c"
+            ],
+            [],
+            [
+                "60c2b2b4.9b128c"
             ]
         ]
     },
@@ -1002,14 +1033,14 @@
         "type": "function",
         "z": "6e9ccff0.31174",
         "name": "空调解析",
-        "func": "    let pld = msg.payload.pld;\n    if(!pld) {\n        node.error(\"终端没有返回数据\")\n        return;\n    }\n    let extra = pld.extra;\n    let Mode = {\"0\": \"cool\",\"1\": \"dry\",\"2\": \"auto\",\"3\": \"heat\",\"4\": \"fan_only\"};\n    let Fan = {\"0\": \"auto\",\"1\": \"high\",\"2\": \"medium\",\"4\":\"low\", \"5\": \"auto\"};\n\n    if (extra) {\n        extra = extra.toLowerCase();\n        extra = extra.replace(\"Mesg Desc.:\".toLowerCase(), \"\");\n        let items = extra.split(\",\");\n        items.forEach(item => {\n            let _item = item.split(\":\");\n            let key = _item[0].trim();\n            let value = _item[1].trim();\n            switch(key) {\n                case \"power\":\n                    pld.power = value;                    \n                    break;\n                case \"temp\":                    \n                    value = value.substr(0, value.length -1)                    \n                    pld.temperature = parseInt(value);\n                    break;\n                case \"mode\":\n                    pld.mode = Mode[value[0]];\n                    break;\n                case \"fan\":\n                    pld.fanSpeed = Fan[value[0]];                   \n                    break;\n                case \"zone follow\":\n                \n                    break;     \n                case \"sensor temp\":\n            \n                    break;                          \n                                  \n            }\n        })\n    }\n    \n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n    return msg;",
+        "func": "    msg.payload.pld = msg.payload.pld || {}\n    let pld = msg.payload.pld;\n    if(!pld) {\n        node.error(\"终端没有返回数据：\" + msg.payload.hd.did)\n        node.error(msg)\n        return;\n    }\n    let extra = pld.extra;\n    let Mode = {\"0\": \"cool\",\"1\": \"dry\",\"2\": \"auto\",\"3\": \"heat\",\"4\": \"fan_only\"};\n    let Fan = {\"0\": \"auto\",\"1\": \"high\",\"2\": \"medium\",\"4\":\"low\", \"5\": \"auto\"};\n\n    if (extra) {\n        extra = extra.toLowerCase();\n        extra = extra.replace(\"Mesg Desc.:\".toLowerCase(), \"\");\n        let items = extra.split(\",\");\n        items.forEach(item => {\n            let _item = item.split(\":\");\n            let key = _item[0].trim();\n            let value = _item[1].trim();\n            switch(key) {\n                case \"power\":\n                    pld.power = value;                    \n                    break;\n                case \"temp\":                    \n                    value = value.substr(0, value.length -1)                    \n                    pld.temperature = parseInt(value);\n                    break;\n                case \"mode\":\n                    pld.mode = Mode[value[0]];\n                    break;\n                case \"fan\":\n                    pld.fanSpeed = Fan[value[0]];                   \n                    break;\n                case \"zone follow\":\n                \n                    break;     \n                case \"sensor temp\":\n            \n                    break;                          \n                                  \n            }\n        })\n    }\n    \n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n    return msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 140,
+        "x": 740,
+        "y": 128,
         "wires": [
             [
                 "14963224.11111e",
@@ -1025,8 +1056,8 @@
         "links": [
             "db90a60b.8feba8"
         ],
-        "x": 895,
-        "y": 140,
+        "x": 915,
+        "y": 80,
         "wires": []
     },
     {
@@ -1061,14 +1092,38 @@
                 "t": "eq",
                 "v": "3",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 4,
         "x": 530,
         "y": 420,
         "wires": [
+            [
+                "716d202d.38aff"
+            ],
+            [
+                "716d202d.38aff"
+            ],
+            [
+                "716d202d.38aff"
+            ],
             [
                 "716d202d.38aff"
             ]
@@ -1721,7 +1776,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "ESP8266_9928853",
+                "v": "ESP8266_469696",
                 "vt": "str"
             }
         ],
@@ -1783,7 +1838,7 @@
                 "t": "set",
                 "p": "payload.hd.did",
                 "pt": "msg",
-                "to": "ESP8266_9928853",
+                "to": "ESP8266_491535",
                 "tot": "str"
             },
             {
@@ -1803,7 +1858,7 @@
         "y": 760,
         "wires": [
             [
-                "97f05558.87bad8"
+                "e7336bec.ebd3b8"
             ]
         ]
     },
@@ -1816,8 +1871,8 @@
             "6e9291c.b1e257",
             "7945fee2.25132"
         ],
-        "x": 895,
-        "y": 200,
+        "x": 915,
+        "y": 180,
         "wires": []
     },
     {
@@ -2807,31 +2862,6 @@
         "wires": []
     },
     {
-        "id": "cfe7752.fbbe288",
-        "type": "inject",
-        "z": "3d341b1e.496694",
-        "name": "升级",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"hd\":{\"cmd\":6}}",
-        "payloadType": "json",
-        "x": 330,
-        "y": 300,
-        "wires": [
-            [
-                "62141ea6.82a76"
-            ]
-        ]
-    },
-    {
         "id": "27195880.50c6b8",
         "type": "inject",
         "z": "3d341b1e.496694",
@@ -2883,7 +2913,7 @@
                 "t": "set",
                 "p": "payload.hd.did",
                 "pt": "msg",
-                "to": "ESP8266_9920978",
+                "to": "ESP8266_9955466",
                 "tot": "str"
             }
         ],
@@ -3332,7 +3362,8 @@
         "wires": [
             [
                 "dcfc724.39a2c9",
-                "c60624f8.a13858"
+                "c60624f8.a13858",
+                "c94e5f45.92498"
             ]
         ]
     },
@@ -3518,7 +3549,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1760,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -3535,7 +3566,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1560,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -3552,7 +3583,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1662,
+        "y": 1642,
         "wires": [
             []
         ]
@@ -3569,7 +3600,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1712,
+        "y": 1692,
         "wires": [
             []
         ]
@@ -3586,7 +3617,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1809,
+        "y": 1789,
         "wires": [
             []
         ]
@@ -3603,7 +3634,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2004,
+        "y": 1984,
         "wires": [
             []
         ]
@@ -3620,7 +3651,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1856,
+        "y": 1836,
         "wires": [
             []
         ]
@@ -3637,7 +3668,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1906,
+        "y": 1886,
         "wires": [
             []
         ]
@@ -3654,7 +3685,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1956,
+        "y": 1936,
         "wires": [
             []
         ]
@@ -3671,7 +3702,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2053,
+        "y": 2033,
         "wires": [
             []
         ]
@@ -4028,7 +4059,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1610,
+        "y": 1590,
         "wires": [
             []
         ]
@@ -4173,7 +4204,7 @@
             },
             {
                 "t": "eq",
-                "v": "ESP8266_9925572",
+                "v": "ESP8266_469696",
                 "vt": "str"
             },
             {
@@ -4512,7 +4543,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2920,
+        "y": 2900,
         "wires": [
             []
         ]
@@ -4529,7 +4560,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2720,
+        "y": 2700,
         "wires": [
             []
         ]
@@ -4546,7 +4577,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2822,
+        "y": 2802,
         "wires": [
             []
         ]
@@ -4563,7 +4594,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2872,
+        "y": 2852,
         "wires": [
             []
         ]
@@ -4920,9 +4951,417 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 2770,
+        "y": 2750,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "7372db56.9c5254",
+        "type": "ui_text",
+        "z": "75a3e362.0ad2cc",
+        "group": "5c569ec8.d608f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 300,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "58e139c0.fdfa68",
+        "type": "function",
+        "z": "3d341b1e.496694",
+        "name": "",
+        "func": "let devices = global.get(\"devices\")[\"CMDGATE_CL_VRTYG\"].devices;\nObject.keys(devices).forEach(key=> {\n    let _msg = {payload:{hd:{did:key, cmd:7}}} \n    node.send(_msg)\n    \n})\n     \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f19fb97d.88cbb8",
+        "type": "inject",
+        "z": "3d341b1e.496694",
+        "name": "重启全部空调",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "58e139c0.fdfa68"
+            ]
+        ]
+    },
+    {
+        "id": "e54ce5f3.713168",
+        "type": "function",
+        "z": "3d341b1e.496694",
+        "name": "",
+        "func": "let devices = global.get(\"devices\")[\"CMDGATE_CL_VRTYG\"].devices;\nObject.keys(devices).forEach(key=> {\n    let _msg = {\n        payload:{\n            hd:{\n                did:key, \n                cmd:3\n            },\n            pld:{\n                power: \"off\",\n                temperature: 26,\n                mode: \"cool\",\n                fanSpeed: \"medium\"\n            }\n        }} \n    node.send(_msg)\n    \n})\n     \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b63f0a.e0cba1",
+        "type": "inject",
+        "z": "3d341b1e.496694",
+        "name": "重新26/cool/空调",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 340,
+        "y": 740,
+        "wires": [
+            [
+                "e54ce5f3.713168"
+            ]
+        ]
+    },
+    {
+        "id": "79139f44.9a913",
+        "type": "comment",
+        "z": "6e9ccff0.31174",
+        "name": "空调状态",
+        "info": "",
+        "x": 80,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "60c2b2b4.9b128c",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "版本号",
+        "func": "msg.payload.pld = msg.payload.pld || {};\nlet pld = msg.payload.pld;\n\nswitch(msg.payload.hd.cmd) {\n    case 5:\n        pld.power = pld.version;\n        break;\n    case 7:\n        pld.power = \"重启中\";\n        break;\n}\n\npld.mode = \"\"; \npld.temperature = \"\";\npld.fanSpeed = \"\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 208,
+        "wires": [
+            [
+                "2c5f8070.781e4"
+            ]
+        ]
+    },
+    {
+        "id": "ab6933ea.8d221",
+        "type": "inject",
+        "z": "6e9ccff0.31174",
+        "name": "查询全部版本",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 730,
+        "y": 840,
+        "wires": [
+            [
+                "50098cc.a3aa174"
+            ]
+        ]
+    },
+    {
+        "id": "50098cc.a3aa174",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "",
+        "func": "let devices = global.get(\"devices\")[\"CMDGATE_CL_VRTYG\"].devices;\nObject.keys(devices).forEach(key=> {\n    let _msg = {payload:{hd:{did:key, cmd:5}}} \n    node.send(_msg)\n    \n})\n     \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 840,
+        "wires": [
+            [
+                "97f05558.87bad8"
+            ]
+        ]
+    },
+    {
+        "id": "c94e5f45.92498",
+        "type": "switch",
+        "z": "6e9ccff0.31174",
+        "name": "开发测试",
+        "property": "payload.hd.did",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ESP8266_9959024",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10006696",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_10007032",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9935390",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_449971",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9936075",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_9941341",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ESP8266_3715647",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 8,
+        "x": 280,
+        "y": 3400,
+        "wires": [
+            [
+                "ced3be96.d3d44"
+            ],
+            [
+                "ca993f2c.50603"
+            ],
+            [
+                "d43ca7a1.180b68"
+            ],
+            [
+                "af626163.e08ab"
+            ],
+            [
+                "74d1b41f.a9ccfc"
+            ],
+            [
+                "216459f6.8e5e36"
+            ],
+            [
+                "5d176c11.e83ee4"
+            ],
+            [
+                "aba1bf32.b591"
+            ]
+        ]
+    },
+    {
+        "id": "ced3be96.d3d44",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_9959024",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 3280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca993f2c.50603",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_10006696",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 3329,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d43ca7a1.180b68",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_10007032",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 3376,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af626163.e08ab",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_9935390",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 3426,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74d1b41f.a9ccfc",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_449971",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 3476,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "216459f6.8e5e36",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_9936075",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 3524,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d176c11.e83ee4",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_9941341",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 3573,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aba1bf32.b591",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "ESP8266_3715647",
+        "func": "let device = global.get(\"devices\")[msg.payload.hd.did];\nlet text = device.name+\": \"+\n           msg.payload.pld.power+\"/\"+ \n           msg.payload.pld.mode+\"/\"+ \n           msg.payload.pld.temperature+\"/\"+\n           msg.payload.pld.fanSpeed;\nnode.status({fill:\"green\", shape:\"dot\", text: text});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 3620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7336bec.ebd3b8",
+        "type": "function",
+        "z": "6e9ccff0.31174",
+        "name": "",
+        "func": "let devices = [\n    \"ESP8266_488969\",\n    \"ESP8266_9931870\",\n    \"ESP8266_9956709\",\n    \"ESP8266_430864\"\n    ];\n\nif (devices.length > 0) {\n    devices.forEach(key=> {\n        msg.payload.hd.did = key; \n        node.send(msg)\n    })\n} else {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 620,
+        "wires": [
+            [
+                "97f05558.87bad8"
+            ]
+        ]
+    },
+    {
+        "id": "17b0765d.0dff2a",
+        "type": "debug",
+        "z": "6e9ccff0.31174",
+        "name": "心跳",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 68,
+        "wires": []
     }
 ]
