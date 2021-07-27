@@ -1,65 +1,100 @@
 [
     {
-        "id": "7f966f2b.565cf",
+        "id": "d9535c37.c62e9",
         "type": "tab",
         "label": "全局配置",
         "disabled": false,
         "info": ""
     },
     {
+        "id": "84e2b33.40c105",
+        "type": "tab",
+        "label": "射频模块",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1b2853d6.84776c",
+        "type": "tab",
+        "label": "窗帘状态",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f3dde26d.e2daf",
+        "type": "tab",
+        "label": "长乐集装箱",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f57dd416.5de4f8",
+        "type": "tab",
+        "label": "射频模块",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "7f966f2b.565cf",
+        "type": "tab",
+        "label": "全局配置",
+        "disabled": true,
+        "info": ""
+    },
+    {
         "id": "9892755d.518348",
         "type": "tab",
         "label": "其它配置",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "70a97e65.10882",
         "type": "tab",
         "label": "终端上行指令",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "2a593e50.77ef92",
         "type": "tab",
         "label": "终端下行指令",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "95689f3b.069d6",
         "type": "tab",
         "label": "业务网关输入",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "7f4f785d.e83d58",
         "type": "tab",
         "label": "业务网关输出",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "75a3e362.0ad2cc",
         "type": "tab",
         "label": "格力空调No1",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "8bcb415f.af69a",
         "type": "tab",
         "label": "格力空调No2",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "a56da18a.6be18",
         "type": "tab",
         "label": "窗帘",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -257,6 +292,7 @@
         "id": "50cd83fb.98b19c",
         "type": "gree-hvac",
         "z": "75a3e362.0ad2cc",
+        "d": true,
         "name": "AC",
         "device": "5f3bc18d.7141c",
         "interval": "3",
@@ -1413,7 +1449,7 @@
         "type": "debug",
         "z": "7f4f785d.e83d58",
         "name": "air.change",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1483,6 +1519,7 @@
         "id": "233890b5.de81d",
         "type": "gree-hvac",
         "z": "8bcb415f.af69a",
+        "d": true,
         "name": "AC",
         "device": "834b23cd.9a174",
         "interval": "3",
@@ -2618,7 +2655,8 @@
         "y": 220,
         "wires": [
             [
-                "1a25cef8.3c9021"
+                "1a25cef8.3c9021",
+                "b85f5350.df1ee"
             ]
         ]
     },
@@ -3094,14 +3132,14 @@
                 "t": "set",
                 "p": "device.transceiver.no1.did",
                 "pt": "global",
-                "to": "ESP8266_2317612",
+                "to": "ESP8266_5628343",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "device.curtain.no1.did",
                 "pt": "global",
-                "to": "CL_JZX01_curtain_02",
+                "to": "CL_JZX01_curtain_01",
                 "tot": "str"
             },
             {
@@ -3291,7 +3329,7 @@
         "id": "f898cc03.a26fe",
         "type": "inject",
         "z": "a56da18a.6be18",
-        "name": "Hello",
+        "name": "Hello2",
         "props": [
             {
                 "p": "payload.hd",
@@ -3339,14 +3377,14 @@
                 "t": "set",
                 "p": "device.curtain.ray.up",
                 "pt": "flow",
-                "to": "646, 653, 793, 506, 637, 653, 661, 638, 661, 630, 661, 637, 654, 661, 637, 646, 2589, 2605, 661, 629, 661, 1299, 653, 646, 645, 653, 653, 654, 1290, 1307, 1290, 1285, 661, 645, 654, 645, 646, 660, 654, 630, 661, 645, 661, 638, 1306, 1306, 1299, 637, 654, 1298, 1291, 653, 653, 646, 653, 1298, 1291, 1306, 646, 653, 638, 653, 654, 645, 645, 661, 654, 637, 661, 3233, 654, 639, 1300, 655, 1741, 199, 662, 647, 1300, 1293, 647, 646, 662, 654, 647, 631, 662, 638, 662, 639, 654, 645, 654, 639, 654, 654, 647, 654, 2578, 2609, 646, 654, 647, 1293, 662, 638, 655, 638, 662, 639, 1308, 1293, 1301, 1293, 646, 647, 662, 646, 647, 658, 646, 647, 654, 631, 662, 638, 1301, 1316, 1285, 647, 662, 1285, 1300, 647, 654, 639, 662, 1300, 1293, 1285, 662, 631, 670, 639, 654, 639, 662, 638, 662, 664, 631, 639, 654, 654, 647, 638, 662, 647, 1308, 639, 654, 1285, 654, 647, 1300, 1309, 646, 639, 662, 646, 647, 646, 647, 654, 647, 646, 654, 639, 662, 639, 654, 639, 662, 638, 2610, 2608, 639, 639, 654, 1300, 655, 638, 662, 639, 654, 639, 1301, 1313, 1285, 1301, 654, 646, 655, 646, 647, 646, 647, 638, 662, 647, 654, 640, 1309, 1285, 1308, 654, 647, 1308, 1285, 639, 654, 654, 647, 1293, 1300, 1301, 646, 662,647, 639, 646, 647, 662, 646, 646, 639, 662, 639, 662, 639, 662, 646, 649, 647, 1300, 639, 662, 1285, 654, 647, 1300, 1285, 662, ",
+                "to": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "device.curtain.ray.down",
                 "pt": "flow",
-                "to": "648, 1287, 1314, 638, 645, 646, 661, 1290, 1307, 645, 653, 1299, 645, 638, 661, 638, 653, 645, 661, 646, 653, 661, 630, 797, 1158, 1283, 1314, 669, 630, 1291, 653, 645, 1307, 1290, 654, 653, 645, 646, 653, 645, 661, 646, 653, 645, 646, 645, 661, 638, 661, 637, 654, 637, 2589, 2613, 646, 676, 622, 1291, 669, 645, 646, 637, 665, 645, 1298, 1291, 1314, 1307, 637, 653, 646, 653, 646, 637, 661, 646, 661, 637, 653, 3236, 1310, 646,654, 1293, 1352, 588, 654, 647, 654, 1301, 1300, 647, 638, 1309, 654, 646, 655, 638, 662, 647, 646, 639, 670, 646, 639, 662, 1285, 1308, 1293, 652, 647, 1300, 647, 654, 1285, 1301, 662, 638, 655, 638, 655, 646, 662, 647, 646, 639, 670, 638, 654, 647, 662, 639, 654, 639, 2601, 2601, 646, 647, 798, 1153, 654, 639, 662, 638, 662, 639, 1308, 1285, 1301, 1301, 662, 638, 655, 654, 646, 647, 646, 639, 670, 631, 662, 638, 1301, 1301, 1300, 639, 654, 1293, 1301, 654, 654, 647, 654, 1285, 1316, 647, 646, 1418, 538, 654, 646, 639, 654, 655, 646, 662, 639, 654, 646, 655, 1293, 1292, 1301, 646, 655, 1300, 647, 646, 1306, 1293, 647, ",
+                "to": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
                 "tot": "str"
             },
             {
@@ -3392,7 +3430,7 @@
         "type": "debug",
         "z": "2a593e50.77ef92",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3457,7 +3495,7 @@
         "type": "debug",
         "z": "2a593e50.77ef92",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3468,5 +3506,3685 @@
         "x": 510,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "b85f5350.df1ee",
+        "type": "debug",
+        "z": "7f4f785d.e83d58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ee412c0d.4d82b",
+        "type": "change",
+        "z": "a56da18a.6be18",
+        "name": "窗帘红码配置",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device.curtain.ray.up",
+                "pt": "flow",
+                "to": "646, 653, 793, 506, 637, 653, 661, 638, 661, 630, 661, 637, 654, 661, 637, 646, 2589, 2605, 661, 629, 661, 1299, 653, 646, 645, 653, 653, 654, 1290, 1307, 1290, 1285, 661, 645, 654, 645, 646, 660, 654, 630, 661, 645, 661, 638, 1306, 1306, 1299, 637, 654, 1298, 1291, 653, 653, 646, 653, 1298, 1291, 1306, 646, 653, 638, 653, 654, 645, 645, 661, 654, 637, 661, 3233, 654, 639, 1300, 655, 1741, 199, 662, 647, 1300, 1293, 647, 646, 662, 654, 647, 631, 662, 638, 662, 639, 654, 645, 654, 639, 654, 654, 647, 654, 2578, 2609, 646, 654, 647, 1293, 662, 638, 655, 638, 662, 639, 1308, 1293, 1301, 1293, 646, 647, 662, 646, 647, 658, 646, 647, 654, 631, 662, 638, 1301, 1316, 1285, 647, 662, 1285, 1300, 647, 654, 639, 662, 1300, 1293, 1285, 662, 631, 670, 639, 654, 639, 662, 638, 662, 664, 631, 639, 654, 654, 647, 638, 662, 647, 1308, 639, 654, 1285, 654, 647, 1300, 1309, 646, 639, 662, 646, 647, 646, 647, 654, 647, 646, 654, 639, 662, 639, 654, 639, 662, 638, 2610, 2608, 639, 639, 654, 1300, 655, 638, 662, 639, 654, 639, 1301, 1313, 1285, 1301, 654, 646, 655, 646, 647, 646, 647, 638, 662, 647, 654, 640, 1309, 1285, 1308, 654, 647, 1308, 1285, 639, 654, 654, 647, 1293, 1300, 1301, 646, 662,647, 639, 646, 647, 662, 646, 646, 639, 662, 639, 662, 639, 662, 646, 649, 647, 1300, 639, 662, 1285, 654, 647, 1300, 1285, 662, ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "device.curtain.ray.down",
+                "pt": "flow",
+                "to": "648, 1287, 1314, 638, 645, 646, 661, 1290, 1307, 645, 653, 1299, 645, 638, 661, 638, 653, 645, 661, 646, 653, 661, 630, 797, 1158, 1283, 1314, 669, 630, 1291, 653, 645, 1307, 1290, 654, 653, 645, 646, 653, 645, 661, 646, 653, 645, 646, 645, 661, 638, 661, 637, 654, 637, 2589, 2613, 646, 676, 622, 1291, 669, 645, 646, 637, 665, 645, 1298, 1291, 1314, 1307, 637, 653, 646, 653, 646, 637, 661, 646, 661, 637, 653, 3236, 1310, 646,654, 1293, 1352, 588, 654, 647, 654, 1301, 1300, 647, 638, 1309, 654, 646, 655, 638, 662, 647, 646, 639, 670, 646, 639, 662, 1285, 1308, 1293, 652, 647, 1300, 647, 654, 1285, 1301, 662, 638, 655, 638, 655, 646, 662, 647, 646, 639, 670, 638, 654, 647, 662, 639, 654, 639, 2601, 2601, 646, 647, 798, 1153, 654, 639, 662, 638, 662, 639, 1308, 1285, 1301, 1301, 662, 638, 655, 654, 646, 647, 646, 639, 670, 631, 662, 638, 1301, 1301, 1300, 639, 654, 1293, 1301, 654, 654, 647, 654, 1285, 1316, 647, 646, 1418, 538, 654, 646, 639, 654, 655, 646, 662, 639, 654, 646, 655, 1293, 1292, 1301, 646, 655, 1300, 647, 646, 1306, 1293, 647, ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "device.curtain.ray.stop",
+                "pt": "flow",
+                "to": "655, 646, 654, 655, 646, 639, 654, 654, 647, 654, 646, 647, 654, 639, 654, 639, 2601, 2609, 646, 639, 654, 1295, 662, 646, 647, 654, 646, 647, 1300, 1285, 1309, 1293, 662, 646, 654, 647, 646, 647, 654, 639, 654, 654, 647, 654, 1293, 1292, 1301, 662, 639, 1300, 1295, 646, 662, 647, 654, 1301, 646, 662, 1285, 1301, 646, 654, 655, 638, 655, 646, 654, 639, 654, 647, 1308, 1285, 662, 647, 1293, 654, 646, 1293, 654, 647, 1308, 1290, 654, 646, 655, 638, 662, 647, 646, 647, 646, 654, 655, 654, 646, 647, 639, 654, 654, 654, 2586, 2601, 646, 663, 637, 1571, 378, 647, 654, 646, 655, 644, 1301, 1292, 1301, 1301, 646, 647, 654, 654, 654, 647, 646, 647, 654, 639, 662, 638, 1301, 1308, 1293, 654, 647, 1300, 1293, 647, 654, 639, 654, 1301, 655, 639, 1293, 1308, 647, 646, 654, 655, 646, 654, 639, 647, 654, 646, 1309, 1292, 663, 646, 1301, 654, 639, 1292, 662, 639, 1308, 1293, 655, 646, 654, 639, 656, 638, 662, 655, 638, 655, 638, 670, 639, 662, 638, 663, 638, 639, 2601, 2601, 647, 646, 654, 1285, 662, 655, 646, 639, 662, 638, 1309, 1293, 1300, 1302, 647, 646, 654, 647, 654, 654, 639, 654, 647, 646, 655, 646, 1308, 1293, 1309, 646, 639, 1308,1301, 654, 639, 654, 654, 1285, 654, 654, 1301, 1283, 656, 646, 663, 646, 654, 647, 654, 631, 662, 654, 1293, 1293, 654, 646, 1309, 639, 654, 1293, 654, 646, 1293, 1293, 670, ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2d8dcb8.ef7b",
+        "type": "mqtt out",
+        "z": "d9535c37.c62e9",
+        "d": true,
+        "name": "mqtt",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "480b54ad.8c4e1c",
+        "x": 230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3e8ba86a.c1ce78",
+        "type": "comment",
+        "z": "d9535c37.c62e9",
+        "name": "编号配置",
+        "info": "",
+        "x": 60,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "fcbd8e21.e05c1",
+        "type": "comment",
+        "z": "d9535c37.c62e9",
+        "name": "MQTT服务地址",
+        "info": "",
+        "x": 80,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8d7b4c9f.0c9c9",
+        "type": "function",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "func": "    let devices = global.get(\"devices\") ;\n    let setDevice = (did, device, gateway) => {\n        if (devices[did] && devices[did].gid) {\n            node.error(\"设备编号重复：\" + did);\n            node.warn(devices[did]);\n            node.warn(gateway);\n            return;\n        }\n        device.did = did;\n        device.gid = gateway ? gateway.did : null\n        device.gateway = gateway;\n        devices[did] = device;\n\n        let subdevs = device.devices;\n        if (subdevs) {\n            let subkeys = Object.keys(subdevs);\n            subkeys.forEach(subkey => {\n                let subdev = subdevs[subkey];\n                setDevice(subkey, subdev, device);            \n            });        \n\n        }\n    }\n\n\n\n    let keys = Object.keys(devices);\n    keys.forEach(key => {\n        let device = devices[key];\n        setDevice(key, device)\n        \n    });\n\nmsg.payload = devices;\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [
+                "7c0d7a11.1d8184"
+            ]
+        ]
+    },
+    {
+        "id": "f93acb11.ff2808",
+        "type": "inject",
+        "z": "d9535c37.c62e9",
+        "name": "刷新编号",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 40,
+        "wires": [
+            [
+                "22664b4f.810b44"
+            ]
+        ]
+    },
+    {
+        "id": "7c0d7a11.1d8184",
+        "type": "debug",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "22664b4f.810b44",
+        "type": "change",
+        "z": "d9535c37.c62e9",
+        "name": "config",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mqtt",
+                "pt": "global",
+                "to": "{\"topic\":{\"business\":{\"sub\":{\"prefix\":\"business/cmdgate/\"},\"pub\":{\"prefix\":\"business/svcgate/\"}},\"terminal\":{\"sub\":{\"prefix\":\"cmdgate/central/\",\"cmd\":\"cmdgate/central/cmd\"},\"pub\":{\"prefix\":\"cmdgate/device/\",\"central\":\"cmdgate/device/central\"}}}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "devices",
+                "pt": "global",
+                "to": "{\"CMDGATE_CL_JZX01\":{\"name\":\"长乐1号集装箱\",\"devices\":{\"c8f742e36fd2\":{\"name\":\"1号空调\"},\"24dfa7056ca9\":{\"name\":\"2号空调\"},\"ESP8266_2317612\":{\"name\":\"窗帘控制芯片\"},\"CL_JZX01_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_JZX01_curtain_02\":{\"name\":\"2号窗帘\"},\"CL_JZX01_curtain_03\":{\"name\":\"3号窗帘\"},\"CL_JZX01_curtain_04\":{\"name\":\"4号窗帘\"},\"CL_JZX01_curtain_05\":{\"name\":\"5号窗帘\"},\"CL_JZX01_curtain_06\":{\"name\":\"6号窗帘\"}}},\"CMDGATE_CL_JZX02\":{\"name\":\"长乐2号集装箱\",\"devices\":{}},\"CMDGATE_CL_QYA53\":{\"name\":\"长乐企业号A5-3\",\"devices\":{\"CL_QYA53_curtain_01\":{\"name\":\"1号窗帘\"},\"CL_QYA53_curtain_02\":{\"name\":\"2号窗帘\"}}},\"CMDGATE_FZ_DEV1\":{\"name\":\"福州亚太二楼开发(有433射频)\",\"devices\":{\"DJ-YT-500-01\":{\"name\":\"1号舵机\"}}},\"CMDGATE_XA_KFDX01\":{\"name\":\"西安开放大学\",\"devices\":{\"780f7732d5f6\":{\"name\":\"1号空调\"},\"XA_KFDX01_curtain_01\":{\"name\":\"1号窗帘\"},\"XA_KFDX01_curtain_02\":{\"name\":\"2号窗帘\"},\"XA_KFDX01_curtain_03\":{\"name\":\"3号窗帘\"}}}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 40,
+        "wires": [
+            [
+                "8d7b4c9f.0c9c9"
+            ]
+        ]
+    },
+    {
+        "id": "1bb5708c.a1285f",
+        "type": "mqtt in",
+        "z": "d9535c37.c62e9",
+        "name": "终端上行",
+        "topic": "cmdgate/central/cmd",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "849cbceb.9873d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "70620a72.fe6e74",
+                "9d38a5b5.c210c8"
+            ]
+        ]
+    },
+    {
+        "id": "f9a09580.edc4b8",
+        "type": "function",
+        "z": "d9535c37.c62e9",
+        "name": "设备",
+        "func": "if (msg.payload.hd) {\n    let did = msg.payload.hd.did;\n    let device = global.get(\"devices\")[did];\n    if (device) {\n        msg.payload.hd.gid = device.gid\n    } else {\n        node.error(\"设备未登记：\" + did);\n        return;\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 220,
+        "wires": [
+            [
+                "b7b7146b.dff4d8"
+            ]
+        ]
+    },
+    {
+        "id": "7bdc1534.1725fc",
+        "type": "comment",
+        "z": "d9535c37.c62e9",
+        "name": "MQTT终端上行",
+        "info": "",
+        "x": 80,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b7b7146b.dff4d8",
+        "type": "link out",
+        "z": "d9535c37.c62e9",
+        "name": "终端上行(输出)",
+        "links": [],
+        "x": 895,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5ba98130.2a235",
+        "type": "mqtt out",
+        "z": "d9535c37.c62e9",
+        "name": "终端下行",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "849cbceb.9873d",
+        "x": 780,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2ac2f78e.8d66a8",
+        "type": "link in",
+        "z": "d9535c37.c62e9",
+        "name": "终端下行",
+        "links": [
+            "c67e09e8.3b7178",
+            "68c90e66.5e785",
+            "a886891b.7850a8"
+        ],
+        "x": 315,
+        "y": 360,
+        "wires": [
+            [
+                "27048be1.95e134"
+            ]
+        ]
+    },
+    {
+        "id": "fd986519.e8bd98",
+        "type": "comment",
+        "z": "d9535c37.c62e9",
+        "name": "MQTT终端下行",
+        "info": "",
+        "x": 80,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "27048be1.95e134",
+        "type": "function",
+        "z": "d9535c37.c62e9",
+        "name": "主题",
+        "func": "msg.topic = global.get(\"mqtt\").topic.terminal.pub.prefix + msg.payload.hd.did\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "5ba98130.2a235"
+            ]
+        ]
+    },
+    {
+        "id": "91a9a496.d8a4a8",
+        "type": "mqtt in",
+        "z": "d9535c37.c62e9",
+        "name": "边缘下行",
+        "topic": "business/cmdgate/CMDGATE_CL_JZX01",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "480b54ad.8c4e1c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "8eaca90a.d48ba8"
+            ]
+        ]
+    },
+    {
+        "id": "9a349459.998c18",
+        "type": "comment",
+        "z": "d9535c37.c62e9",
+        "name": "MQTT边缘下行",
+        "info": "",
+        "x": 80,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8eaca90a.d48ba8",
+        "type": "function",
+        "z": "d9535c37.c62e9",
+        "name": "设备",
+        "func": "if (msg.payload.hd) {\n    let did = msg.payload.hd.did;\n    let device = global.get(\"devices\")[did];\n    if (device) {\n        msg.payload.hd.gid = device.gid\n    } else {\n        node.error(\"设备未登记：\" + did);\n        return;\n    }\n}\n\n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "be4b9155.e9014",
+                "cecb9247.53ca8"
+            ]
+        ]
+    },
+    {
+        "id": "be4b9155.e9014",
+        "type": "link out",
+        "z": "d9535c37.c62e9",
+        "name": "边缘下行(输出)",
+        "links": [
+            "44eaef01.a1461"
+        ],
+        "x": 595,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7eb9289d.3d5808",
+        "type": "comment",
+        "z": "d9535c37.c62e9",
+        "name": "MQTT边缘上行",
+        "info": "",
+        "x": 80,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1ef339bc.e4cce6",
+        "type": "mqtt out",
+        "z": "d9535c37.c62e9",
+        "name": "边缘上行",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "480b54ad.8c4e1c",
+        "x": 780,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7ea06e3e.55fe",
+        "type": "function",
+        "z": "d9535c37.c62e9",
+        "name": "主题",
+        "func": "msg.topic = global.get(\"mqtt\").topic.business.pub.prefix + msg.payload.hd.gid\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "1ef339bc.e4cce6",
+                "3205dba.429aa24"
+            ]
+        ]
+    },
+    {
+        "id": "37f528b0.14a908",
+        "type": "link in",
+        "z": "d9535c37.c62e9",
+        "name": "边缘上行",
+        "links": [
+            "14963224.11111e",
+            "9531c25e.b8279",
+            "1e215df6.a85c12"
+        ],
+        "x": 315,
+        "y": 420,
+        "wires": [
+            [
+                "dffcfaf9.b652d8"
+            ]
+        ]
+    },
+    {
+        "id": "70620a72.fe6e74",
+        "type": "debug",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9d38a5b5.c210c8",
+        "type": "json",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "f9a09580.edc4b8",
+                "70620a72.fe6e74"
+            ]
+        ]
+    },
+    {
+        "id": "cecb9247.53ca8",
+        "type": "debug",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b94f8dd5.bfd84",
+        "type": "link in",
+        "z": "d9535c37.c62e9",
+        "name": "边缘下行(模拟输入)",
+        "links": [
+            "61bd7a00.126998"
+        ],
+        "x": 315,
+        "y": 680,
+        "wires": [
+            [
+                "8eaca90a.d48ba8",
+                "2d490656.0c353a"
+            ]
+        ]
+    },
+    {
+        "id": "c712e54a.e9b9c8",
+        "type": "gpio-rf-collect",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 40,
+        "wires": [
+            [
+                "93a4005a.0c7b9"
+            ]
+        ]
+    },
+    {
+        "id": "7866b57a.7a4f1c",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "1",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "c712e54a.e9b9c8"
+            ]
+        ]
+    },
+    {
+        "id": "93a4005a.0c7b9",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/1.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 40,
+        "wires": [
+            [
+                "6af3e721.7f1308"
+            ]
+        ]
+    },
+    {
+        "id": "b6d56cba.78834",
+        "type": "debug",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cdb1add1.b3f59",
+        "type": "gpio-rf-collect",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 86,
+        "wires": [
+            [
+                "f2556c.0969da98"
+            ]
+        ]
+    },
+    {
+        "id": "78c68c07.cc1b44",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "2",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 86,
+        "wires": [
+            [
+                "cdb1add1.b3f59"
+            ]
+        ]
+    },
+    {
+        "id": "f2556c.0969da98",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/2.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 86,
+        "wires": [
+            [
+                "6af3e721.7f1308"
+            ]
+        ]
+    },
+    {
+        "id": "2f4becaf.cec7c4",
+        "type": "gpio-rf-collect",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 135,
+        "wires": [
+            [
+                "79cd3a0a.086454"
+            ]
+        ]
+    },
+    {
+        "id": "5247f0fc.aa75e",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "3",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 135,
+        "wires": [
+            [
+                "2f4becaf.cec7c4"
+            ]
+        ]
+    },
+    {
+        "id": "79cd3a0a.086454",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/3.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 135,
+        "wires": [
+            [
+                "6af3e721.7f1308"
+            ]
+        ]
+    },
+    {
+        "id": "206fb418.aa66bc",
+        "type": "gpio-rf-collect",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 184,
+        "wires": [
+            [
+                "d336ed20.6b26a"
+            ]
+        ]
+    },
+    {
+        "id": "63465676.66a308",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "4",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 184,
+        "wires": [
+            [
+                "206fb418.aa66bc"
+            ]
+        ]
+    },
+    {
+        "id": "d336ed20.6b26a",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/4.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 184,
+        "wires": [
+            [
+                "6af3e721.7f1308"
+            ]
+        ]
+    },
+    {
+        "id": "d9c1f2d3.88612",
+        "type": "gpio-rf-collect",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 233,
+        "wires": [
+            [
+                "2fb387f2.8521a8"
+            ]
+        ]
+    },
+    {
+        "id": "ea87409.b034ec",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "5",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 233,
+        "wires": [
+            [
+                "d9c1f2d3.88612"
+            ]
+        ]
+    },
+    {
+        "id": "2fb387f2.8521a8",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/5.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 233,
+        "wires": [
+            [
+                "6af3e721.7f1308"
+            ]
+        ]
+    },
+    {
+        "id": "16f44870.c861d8",
+        "type": "gpio-rf-collect",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 282,
+        "wires": [
+            [
+                "744ef100.8cde9"
+            ]
+        ]
+    },
+    {
+        "id": "e2ba55b8.1852b8",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "6",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 282,
+        "wires": [
+            [
+                "16f44870.c861d8"
+            ]
+        ]
+    },
+    {
+        "id": "744ef100.8cde9",
+        "type": "file",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/6.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 282,
+        "wires": [
+            [
+                "6af3e721.7f1308"
+            ]
+        ]
+    },
+    {
+        "id": "594b55a0.26293c",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "1",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "fd49e883.56c3b8"
+            ]
+        ]
+    },
+    {
+        "id": "4b9536cd.d57448",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "2",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "93d7f8b7.523248"
+            ]
+        ]
+    },
+    {
+        "id": "dc95799c.b991e8",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "3",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "79598c30.15fd54"
+            ]
+        ]
+    },
+    {
+        "id": "15674505.b91c7b",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "4",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "e687ae18.2cd8"
+            ]
+        ]
+    },
+    {
+        "id": "890ec155.cbc12",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "5",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "fb4364c9.3ecee8"
+            ]
+        ]
+    },
+    {
+        "id": "35ed717c.3949ce",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "6",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "9ce60d02.a8ac"
+            ]
+        ]
+    },
+    {
+        "id": "fd49e883.56c3b8",
+        "type": "file in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/1.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "66609404.253bdc"
+            ]
+        ]
+    },
+    {
+        "id": "93d7f8b7.523248",
+        "type": "file in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/2.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "66609404.253bdc"
+            ]
+        ]
+    },
+    {
+        "id": "79598c30.15fd54",
+        "type": "file in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/3.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "66609404.253bdc"
+            ]
+        ]
+    },
+    {
+        "id": "e687ae18.2cd8",
+        "type": "file in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/4.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "66609404.253bdc"
+            ]
+        ]
+    },
+    {
+        "id": "fb4364c9.3ecee8",
+        "type": "file in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/5.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 520,
+        "wires": [
+            [
+                "66609404.253bdc"
+            ]
+        ]
+    },
+    {
+        "id": "9ce60d02.a8ac",
+        "type": "file in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "filename": "/data/temp/6.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 560,
+        "wires": [
+            [
+                "66609404.253bdc"
+            ]
+        ]
+    },
+    {
+        "id": "66609404.253bdc",
+        "type": "gpio-rf-sniffer",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "strMicros": "",
+        "minMicrotime": 150,
+        "minCount": 50,
+        "x": 510,
+        "y": 440,
+        "wires": [
+            [
+                "690218cb.b9d958",
+                "c556118d.8a88f"
+            ]
+        ]
+    },
+    {
+        "id": "6af3e721.7f1308",
+        "type": "gpio-rf-sniffer",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "strMicros": "",
+        "minMicrotime": 150,
+        "minCount": 50,
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "b6d56cba.78834"
+            ]
+        ]
+    },
+    {
+        "id": "690218cb.b9d958",
+        "type": "function",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "func": "let idx = 0;\nlet payload = msg.payload;\nlet count = Object.keys(payload).length;\n\nlet send = function(payload, idx, count) {\n    if (idx < count) {\n        node.send({\n            payload: payload[idx].micros\n        })\n    \n\n        idx++;\n        if (idx < count) {\n            setTimeout(() => {\n                send(payload, idx, count)\n            }, 3000)\n        }\n    }\n}\n\nsend(payload, idx, count)\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "c556118d.8a88f",
+        "type": "debug",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a7500816.615e88",
+        "type": "gpio-rf-sender",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "pin": "13",
+        "strMicros": "",
+        "count": "4",
+        "x": 500,
+        "y": 720,
+        "wires": [
+            [
+                "be8f51ea.5a72e",
+                "8b856881.e74418"
+            ]
+        ]
+    },
+    {
+        "id": "ecd3fd1d.bed75",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+        "payloadType": "str",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "be8f51ea.5a72e",
+        "type": "debug",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "55d1ad2e.0fcaa4",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "4a41f344.2fd78c",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "3",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "10cb001f.a5d85",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "4",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "7215e451.cc5eac",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "c6c7cd48.6b691",
+        "type": "inject",
+        "z": "f57dd416.5de4f8",
+        "name": "6",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "8b856881.e74418",
+        "type": "function",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "func": "let lowStr = \"0,1\"\nnode.error(msg.payload != lowStr)\nif (msg.payload != lowStr )\n    return {payload: lowStr}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 720,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "52f2f0db.4e06b",
+        "type": "link in",
+        "z": "f57dd416.5de4f8",
+        "name": "",
+        "links": [
+            "4586dddb.ccea44"
+        ],
+        "x": 155,
+        "y": 880,
+        "wires": [
+            [
+                "a7500816.615e88"
+            ]
+        ]
+    },
+    {
+        "id": "4db61805.af1308",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "1-up",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "35a8e52a.d4d07a"
+            ]
+        ]
+    },
+    {
+        "id": "f0cbe7d1.b75088",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "cmd=4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.cmd",
+                "pt": "msg",
+                "to": "4",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.pld.count",
+                "pt": "msg",
+                "to": "4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 960,
+        "wires": [
+            [
+                "61bd7a00.126998"
+            ]
+        ]
+    },
+    {
+        "id": "35a8e52a.d4d07a",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "CL_JZX01_curtain_01",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "CL_JZX01_curtain_01",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 760,
+        "wires": [
+            [
+                "f0cbe7d1.b75088"
+            ]
+        ]
+    },
+    {
+        "id": "e1b0790e.067428",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "1-down",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 760,
+        "wires": [
+            [
+                "35a8e52a.d4d07a"
+            ]
+        ]
+    },
+    {
+        "id": "5379e4c2.83cf9c",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "1-stop",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "-2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 800,
+        "wires": [
+            [
+                "35a8e52a.d4d07a"
+            ]
+        ]
+    },
+    {
+        "id": "61bd7a00.126998",
+        "type": "link out",
+        "z": "f3dde26d.e2daf",
+        "name": "",
+        "links": [
+            "b94f8dd5.bfd84"
+        ],
+        "x": 955,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "97130952.42ece8",
+        "type": "comment",
+        "z": "f3dde26d.e2daf",
+        "name": "窗帘",
+        "info": "",
+        "x": 50,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3448d062.b385b",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "2-up",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 820,
+        "wires": [
+            [
+                "58d250aa.71799"
+            ]
+        ]
+    },
+    {
+        "id": "58d250aa.71799",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "CL_JZX01_curtain_02",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "CL_JZX01_curtain_02",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 860,
+        "wires": [
+            [
+                "f0cbe7d1.b75088"
+            ]
+        ]
+    },
+    {
+        "id": "1efe9ae5.a95a45",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "2-down",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 860,
+        "wires": [
+            [
+                "58d250aa.71799"
+            ]
+        ]
+    },
+    {
+        "id": "1fe6a4b4.74b52b",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "2-stop",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "-2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 900,
+        "wires": [
+            [
+                "58d250aa.71799"
+            ]
+        ]
+    },
+    {
+        "id": "491575f.9ae518c",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "3-up",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 920,
+        "wires": [
+            [
+                "7acf22a9.28617c"
+            ]
+        ]
+    },
+    {
+        "id": "7acf22a9.28617c",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "CL_JZX01_curtain_03",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "CL_JZX01_curtain_03",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 960,
+        "wires": [
+            [
+                "f0cbe7d1.b75088"
+            ]
+        ]
+    },
+    {
+        "id": "75137c17.255a24",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "3-down",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,1300,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 960,
+        "wires": [
+            [
+                "7acf22a9.28617c"
+            ]
+        ]
+    },
+    {
+        "id": "81c10b1c.b8e398",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "3-stop",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "-2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1000,
+        "wires": [
+            [
+                "7acf22a9.28617c"
+            ]
+        ]
+    },
+    {
+        "id": "44eaef01.a1461",
+        "type": "link in",
+        "z": "f3dde26d.e2daf",
+        "name": "边缘下行",
+        "links": [
+            "be4b9155.e9014"
+        ],
+        "x": 135,
+        "y": 160,
+        "wires": [
+            [
+                "dd6d1d9e.b00cc"
+            ]
+        ]
+    },
+    {
+        "id": "dd6d1d9e.b00cc",
+        "type": "switch",
+        "z": "f3dde26d.e2daf",
+        "name": "网关",
+        "property": "payload.hd.gid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CMDGATE_CL_JZX01",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "8b2d8a5b.367408"
+            ]
+        ]
+    },
+    {
+        "id": "8b2d8a5b.367408",
+        "type": "switch",
+        "z": "f3dde26d.e2daf",
+        "name": "指令",
+        "property": "payload.hd.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "1849dda6.c19192"
+            ],
+            [
+                "b9c31880.e74348"
+            ]
+        ]
+    },
+    {
+        "id": "1849dda6.c19192",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "窗帘",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 160,
+        "wires": [
+            [
+                "b72222e5.415bc"
+            ]
+        ]
+    },
+    {
+        "id": "b72222e5.415bc",
+        "type": "link out",
+        "z": "f3dde26d.e2daf",
+        "name": "",
+        "links": [
+            "bb21c718.670d98"
+        ],
+        "x": 855,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ec60b7f3.d6c108",
+        "type": "gree-hvac",
+        "z": "f3dde26d.e2daf",
+        "name": "AC1",
+        "device": "5f3bc18d.7141c",
+        "interval": "3",
+        "debug": false,
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "cf6f0a64.ed2f38"
+            ]
+        ]
+    },
+    {
+        "id": "f0437e2a.bcdf8",
+        "type": "function",
+        "z": "f3dde26d.e2daf",
+        "name": "空调1",
+        "func": "let pld = msg.payload.pld;\nreturn {payload: pld};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "ec60b7f3.d6c108"
+            ]
+        ]
+    },
+    {
+        "id": "b9c31880.e74348",
+        "type": "switch",
+        "z": "f3dde26d.e2daf",
+        "name": "空调",
+        "property": "payload.hd.did",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "c8f742e36fd2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "24dfa7056ca9",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "f0437e2a.bcdf8"
+            ],
+            [
+                "f68674d5.4ad288"
+            ]
+        ]
+    },
+    {
+        "id": "cf6f0a64.ed2f38",
+        "type": "function",
+        "z": "f3dde26d.e2daf",
+        "name": "状态",
+        "func": "\nnode.status({fill:\"green\", shape:\"dot\", text: JSON.stringify(msg.payload)});\nreturn {payload:{pld: msg.payload}};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "e645083d.dbea48"
+            ]
+        ]
+    },
+    {
+        "id": "e645083d.dbea48",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "设置did",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "c8f742e36fd2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 380,
+        "wires": [
+            [
+                "9144895f.f02238"
+            ]
+        ]
+    },
+    {
+        "id": "f68674d5.4ad288",
+        "type": "function",
+        "z": "f3dde26d.e2daf",
+        "name": "空调2",
+        "func": "let pld = msg.payload.pld;\nreturn {payload: pld};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "3e8a861f.b7b3ba"
+            ]
+        ]
+    },
+    {
+        "id": "811b0b66.609318",
+        "type": "function",
+        "z": "f3dde26d.e2daf",
+        "name": "状态",
+        "func": "\nnode.status({fill:\"green\", shape:\"dot\", text: JSON.stringify(msg.payload)});\nreturn {payload:{pld: msg.payload}};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "246a2c68.e43f84"
+            ]
+        ]
+    },
+    {
+        "id": "246a2c68.e43f84",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "设置did",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "24dfa7056ca9",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 500,
+        "wires": [
+            [
+                "9144895f.f02238"
+            ]
+        ]
+    },
+    {
+        "id": "3e8a861f.b7b3ba",
+        "type": "gree-hvac",
+        "z": "f3dde26d.e2daf",
+        "name": "AC2",
+        "device": "834b23cd.9a174",
+        "interval": "3",
+        "debug": false,
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [],
+            [
+                "811b0b66.609318"
+            ]
+        ]
+    },
+    {
+        "id": "9144895f.f02238",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "设置指令",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.cmd",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload.hd.stp",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 440,
+        "wires": [
+            [
+                "1e215df6.a85c12"
+            ]
+        ]
+    },
+    {
+        "id": "1e215df6.a85c12",
+        "type": "link out",
+        "z": "f3dde26d.e2daf",
+        "name": "",
+        "links": [
+            "37f528b0.14a908"
+        ],
+        "x": 1095,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "dffcfaf9.b652d8",
+        "type": "function",
+        "z": "d9535c37.c62e9",
+        "name": "设备",
+        "func": "if (msg.payload.hd && !msg.payload.hd.gid) {\n    let did = msg.payload.hd.did;\n    let device = global.get(\"devices\")[did];\n    if (device) {\n        msg.payload.hd.gid = device.gid\n    } else {\n        node.error(\"设备未登记：\" + did);\n        return;\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "7ea06e3e.55fe"
+            ]
+        ]
+    },
+    {
+        "id": "3205dba.429aa24",
+        "type": "debug",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "63ff78bb.ccd2e8",
+        "type": "comment",
+        "z": "f3dde26d.e2daf",
+        "name": "空调",
+        "info": "",
+        "x": 50,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f2cf1e48.72396",
+        "type": "inject",
+        "z": "1b2853d6.84776c",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "f16b4ac6.cabaf8"
+            ]
+        ]
+    },
+    {
+        "id": "f16b4ac6.cabaf8",
+        "type": "file in",
+        "z": "1b2853d6.84776c",
+        "name": "加载状态",
+        "filename": "/data/cmd-gateway/data/config/curtain_state.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "f23b4d50.9f803"
+            ]
+        ]
+    },
+    {
+        "id": "85ac8f87.d38e",
+        "type": "function",
+        "z": "1b2853d6.84776c",
+        "name": "缓存状态",
+        "func": "let states = msg.payload || {};\n\nflow.set(\"states\", states);\n\nreturn {payload: flow.get(\"states\")};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f23b4d50.9f803",
+        "type": "json",
+        "z": "1b2853d6.84776c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "85ac8f87.d38e"
+            ]
+        ]
+    },
+    {
+        "id": "3ea1de8d.770fd2",
+        "type": "file",
+        "z": "1b2853d6.84776c",
+        "name": "保存状态",
+        "filename": "/data/cmd-gateway/data/config/curtain_state.json",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1020,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d82a5d2.dc804c",
+        "type": "switch",
+        "z": "1b2853d6.84776c",
+        "name": "指令4",
+        "property": "payload.hd.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 440,
+        "wires": [
+            [
+                "dcf85919.4cb008"
+            ]
+        ]
+    },
+    {
+        "id": "bb21c718.670d98",
+        "type": "link in",
+        "z": "1b2853d6.84776c",
+        "name": "",
+        "links": [
+            "b72222e5.415bc"
+        ],
+        "x": 195,
+        "y": 440,
+        "wires": [
+            [
+                "5d82a5d2.dc804c"
+            ]
+        ]
+    },
+    {
+        "id": "dcf85919.4cb008",
+        "type": "switch",
+        "z": "1b2853d6.84776c",
+        "name": "控制或查询",
+        "property": "payload.pld.open",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "-1",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "5d8d5b95.e14a84"
+            ],
+            [
+                "f73810e7.ad1e1",
+                "91569849.c16e08"
+            ]
+        ]
+    },
+    {
+        "id": "5d8d5b95.e14a84",
+        "type": "function",
+        "z": "1b2853d6.84776c",
+        "name": "查询",
+        "func": "let hd = msg.payload.hd;\nlet states = flow.get(\"states\") || {};\nlet key = hd.gid + \"/\" + hd.did;\nlet state = states[key] || {open: -1}\nhd.stp = 1;\nmsg.payload.pld = state\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "9531c25e.b8279",
+                "9c543de4.9f4e8"
+            ]
+        ]
+    },
+    {
+        "id": "9531c25e.b8279",
+        "type": "link out",
+        "z": "1b2853d6.84776c",
+        "name": "",
+        "links": [
+            "37f528b0.14a908"
+        ],
+        "x": 985,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f73810e7.ad1e1",
+        "type": "function",
+        "z": "1b2853d6.84776c",
+        "name": "控制",
+        "func": "let pld = msg.payload.pld;\nlet hd = msg.payload.hd;\nlet ray = pld.ray;\nif (ray) {\n  return {payload: ray, count: 4, did: hd.did};\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 540,
+        "wires": [
+            [
+                "f544fc9d.2dfb8"
+            ]
+        ]
+    },
+    {
+        "id": "91569849.c16e08",
+        "type": "function",
+        "z": "1b2853d6.84776c",
+        "name": "保存",
+        "func": "let hd = msg.payload.hd;\nlet pld = msg.payload.pld;\nlet states = flow.get(\"states\") || {};\n\nlet key = hd.gid + \"/\" + hd.did;\nlet state = {open: pld.open};\nstates[key] = state;\n\n\nreturn {payload: states};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 460,
+        "wires": [
+            [
+                "3ea1de8d.770fd2"
+            ]
+        ]
+    },
+    {
+        "id": "f544fc9d.2dfb8",
+        "type": "link out",
+        "z": "1b2853d6.84776c",
+        "name": "",
+        "links": [
+            "d71b7697.f65098"
+        ],
+        "x": 975,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4779fd8c.75dc44",
+        "type": "comment",
+        "z": "1b2853d6.84776c",
+        "name": "边缘下行",
+        "info": "",
+        "x": 80,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1201cef1.d04401",
+        "type": "comment",
+        "z": "1b2853d6.84776c",
+        "name": "状态加载",
+        "info": "",
+        "x": 80,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "9c543de4.9f4e8",
+        "type": "debug",
+        "z": "1b2853d6.84776c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2d490656.0c353a",
+        "type": "debug",
+        "z": "d9535c37.c62e9",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b748d0b8.c2c53",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "4-up",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,1300,650,650,650,650,1300,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "fff042a5.8f015"
+            ]
+        ]
+    },
+    {
+        "id": "fff042a5.8f015",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "CL_JZX01_curtain_04",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "CL_JZX01_curtain_04",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 1100,
+        "wires": [
+            [
+                "f0cbe7d1.b75088"
+            ]
+        ]
+    },
+    {
+        "id": "72f3de75.23dc3",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "4-down",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,1300,650,650,650,650,1300,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1100,
+        "wires": [
+            [
+                "fff042a5.8f015"
+            ]
+        ]
+    },
+    {
+        "id": "a65c2257.19941",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "4-stop",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "-2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,650,650,650,650,1300,650,650,650,650,1300,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,650,650,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1140,
+        "wires": [
+            [
+                "fff042a5.8f015"
+            ]
+        ]
+    },
+    {
+        "id": "e59f3d5b.3e59c",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "5-up",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,650,650,650,650,1300,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1160,
+        "wires": [
+            [
+                "31f5290d.36e606"
+            ]
+        ]
+    },
+    {
+        "id": "31f5290d.36e606",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "CL_JZX01_curtain_05",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "CL_JZX01_curtain_05",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 1200,
+        "wires": [
+            [
+                "f0cbe7d1.b75088"
+            ]
+        ]
+    },
+    {
+        "id": "3e0b11d5.84d45e",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "5-down",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,650,650,1300,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1200,
+        "wires": [
+            [
+                "31f5290d.36e606"
+            ]
+        ]
+    },
+    {
+        "id": "929c553b.3237c8",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "5-stop",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "-2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,1300,1300,650,650,1300,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,650,650,1300,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1240,
+        "wires": [
+            [
+                "31f5290d.36e606"
+            ]
+        ]
+    },
+    {
+        "id": "bd568072.0b166",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "6-up",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1260,
+        "wires": [
+            [
+                "8e0b387f.41d8d8"
+            ]
+        ]
+    },
+    {
+        "id": "8e0b387f.41d8d8",
+        "type": "change",
+        "z": "f3dde26d.e2daf",
+        "name": "CL_JZX01_curtain_05",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "CL_JZX01_curtain_05",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 1300,
+        "wires": [
+            [
+                "f0cbe7d1.b75088"
+            ]
+        ]
+    },
+    {
+        "id": "3296261.e65e5da",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "6-down",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,1300,650,650,1300,1300,650,650,650,650,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,1300,1300,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1300,
+        "wires": [
+            [
+                "8e0b387f.41d8d8"
+            ]
+        ]
+    },
+    {
+        "id": "e435e2d2.4bc6d",
+        "type": "inject",
+        "z": "f3dde26d.e2daf",
+        "name": "6-stop",
+        "props": [
+            {
+                "p": "payload.pld.open",
+                "v": "-2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld.ray",
+                "v": "2600,2600,650,650,650,1300,650,650,650,650,650,650,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,650,650,1300,650,650,1300,650,650,1300,1300,650,650,650,650,1300,650,650,1300,1300,650,650,650,650,650,650,650,650,650,650,1300,1300,650,650,1300,650,650,1300,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,650,",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1340,
+        "wires": [
+            [
+                "8e0b387f.41d8d8"
+            ]
+        ]
+    },
+    {
+        "id": "98e14510.043ba8",
+        "type": "gpio-rf-collect",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 40,
+        "wires": [
+            [
+                "5fb4f2bf.8012dc"
+            ]
+        ]
+    },
+    {
+        "id": "983a5411.92aa58",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "1",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "98e14510.043ba8"
+            ]
+        ]
+    },
+    {
+        "id": "5fb4f2bf.8012dc",
+        "type": "file",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/1.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 40,
+        "wires": [
+            [
+                "31ce70d1.9d45f"
+            ]
+        ]
+    },
+    {
+        "id": "67d79541.4ac8dc",
+        "type": "debug",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a9c4cf23.a5a51",
+        "type": "gpio-rf-collect",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 86,
+        "wires": [
+            [
+                "42f63e20.c99a1"
+            ]
+        ]
+    },
+    {
+        "id": "fb34906a.5425c",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "2",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 86,
+        "wires": [
+            [
+                "a9c4cf23.a5a51"
+            ]
+        ]
+    },
+    {
+        "id": "42f63e20.c99a1",
+        "type": "file",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/2.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 86,
+        "wires": [
+            [
+                "31ce70d1.9d45f"
+            ]
+        ]
+    },
+    {
+        "id": "f4317e9b.f2e6c",
+        "type": "gpio-rf-collect",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 135,
+        "wires": [
+            [
+                "66c9be46.07c45"
+            ]
+        ]
+    },
+    {
+        "id": "2e934cd2.f6f034",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "3",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 135,
+        "wires": [
+            [
+                "f4317e9b.f2e6c"
+            ]
+        ]
+    },
+    {
+        "id": "66c9be46.07c45",
+        "type": "file",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/3.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 135,
+        "wires": [
+            [
+                "31ce70d1.9d45f"
+            ]
+        ]
+    },
+    {
+        "id": "e8c80f41.3cebb",
+        "type": "gpio-rf-collect",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 184,
+        "wires": [
+            [
+                "fb34e4f.a7b4518"
+            ]
+        ]
+    },
+    {
+        "id": "c020e69c.820058",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "4",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 184,
+        "wires": [
+            [
+                "e8c80f41.3cebb"
+            ]
+        ]
+    },
+    {
+        "id": "fb34e4f.a7b4518",
+        "type": "file",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/4.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 184,
+        "wires": [
+            [
+                "31ce70d1.9d45f"
+            ]
+        ]
+    },
+    {
+        "id": "277839c.c6217c6",
+        "type": "gpio-rf-collect",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 233,
+        "wires": [
+            [
+                "17abadc2.a68ca2"
+            ]
+        ]
+    },
+    {
+        "id": "f50349f1.9a0238",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "5",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 233,
+        "wires": [
+            [
+                "277839c.c6217c6"
+            ]
+        ]
+    },
+    {
+        "id": "17abadc2.a68ca2",
+        "type": "file",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/5.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 233,
+        "wires": [
+            [
+                "31ce70d1.9d45f"
+            ]
+        ]
+    },
+    {
+        "id": "c923a657.4d42b8",
+        "type": "gpio-rf-collect",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": 13,
+        "maxCount": 1048576,
+        "milliTimeout": 5000,
+        "x": 290,
+        "y": 282,
+        "wires": [
+            [
+                "43e2a9ad.312158"
+            ]
+        ]
+    },
+    {
+        "id": "5cfbc705.8a4bf8",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "6",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 282,
+        "wires": [
+            [
+                "c923a657.4d42b8"
+            ]
+        ]
+    },
+    {
+        "id": "43e2a9ad.312158",
+        "type": "file",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/6.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 282,
+        "wires": [
+            [
+                "31ce70d1.9d45f"
+            ]
+        ]
+    },
+    {
+        "id": "74b018d7.de43a8",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "1",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "18e12cf0.3ac153"
+            ]
+        ]
+    },
+    {
+        "id": "c5c9e1e5.70cc7",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "2",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "9f32d2e1.044ea"
+            ]
+        ]
+    },
+    {
+        "id": "ece180bb.43608",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "3",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "8bd48618.82a328"
+            ]
+        ]
+    },
+    {
+        "id": "eddf938a.01ed6",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "4",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "bd6cdf53.57971"
+            ]
+        ]
+    },
+    {
+        "id": "98ca8334.5056c",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "5",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "c2552dea.188a7"
+            ]
+        ]
+    },
+    {
+        "id": "f7824905.3743d8",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "6",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "e895432f.70873"
+            ]
+        ]
+    },
+    {
+        "id": "18e12cf0.3ac153",
+        "type": "file in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/1.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "b13c9538.48a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "9f32d2e1.044ea",
+        "type": "file in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/2.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "b13c9538.48a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "8bd48618.82a328",
+        "type": "file in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/3.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "b13c9538.48a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "bd6cdf53.57971",
+        "type": "file in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/4.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "b13c9538.48a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "c2552dea.188a7",
+        "type": "file in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/5.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 520,
+        "wires": [
+            [
+                "b13c9538.48a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "e895432f.70873",
+        "type": "file in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "filename": "/data/temp/6.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 300,
+        "y": 560,
+        "wires": [
+            [
+                "b13c9538.48a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "b13c9538.48a0b8",
+        "type": "gpio-rf-sniffer",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "strMicros": "",
+        "minMicrotime": 150,
+        "minCount": 50,
+        "x": 510,
+        "y": 440,
+        "wires": [
+            [
+                "4bd9ab97.0a4254",
+                "57b00ff.d4523f"
+            ]
+        ]
+    },
+    {
+        "id": "31ce70d1.9d45f",
+        "type": "gpio-rf-sniffer",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "strMicros": "",
+        "minMicrotime": 150,
+        "minCount": 50,
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "67d79541.4ac8dc"
+            ]
+        ]
+    },
+    {
+        "id": "4bd9ab97.0a4254",
+        "type": "function",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "func": "let idx = 0;\nlet payload = msg.payload;\nlet count = Object.keys(payload).length;\n\nlet send = function(payload, idx, count) {\n    if (idx < count) {\n        node.send({\n            payload: payload[idx].micros\n        })\n    \n\n        idx++;\n        if (idx < count) {\n            setTimeout(() => {\n                send(payload, idx, count)\n            }, 3000)\n        }\n    }\n}\n\nsend(payload, idx, count)\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "57b00ff.d4523f",
+        "type": "debug",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1d670aa8.6da625",
+        "type": "gpio-rf-sender",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "pin": "13",
+        "strMicros": "",
+        "count": "3",
+        "x": 500,
+        "y": 720,
+        "wires": [
+            [
+                "e6c9eeff.e8adb",
+                "4f83eaef.5d0574"
+            ]
+        ]
+    },
+    {
+        "id": "84491339.25e1c",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "e6c9eeff.e8adb",
+        "type": "debug",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5b31f074.0747a",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "cc4420e3.ac7ce",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "3",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "913c53d.c3a87b",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "4",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "bbfd9cfd.98397",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "eaca50b0.5dd6",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "6",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "d71b7697.f65098",
+        "type": "link in",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "links": [
+            "4586dddb.ccea44",
+            "f544fc9d.2dfb8"
+        ],
+        "x": 155,
+        "y": 880,
+        "wires": [
+            [
+                "efcec49d.d4aaf8"
+            ]
+        ]
+    },
+    {
+        "id": "efcec49d.d4aaf8",
+        "type": "function",
+        "z": "84e2b33.40c105",
+        "name": "发送队列",
+        "func": "let list = flow.get(\"SendList\") || [];\nlist.push(msg);\nflow.set(\"SendList\", list);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f83eaef.5d0574",
+        "type": "function",
+        "z": "84e2b33.40c105",
+        "name": "发送",
+        "func": "let lowStr = \"0,1000\"\nlet sending = flow.get(\"sending\");\nlet ts = flow.get(\"timestamp\") || 0 ;\nlet now = new Date().valueOf();\n\n\nif (msg.payload || !sending || (now - ts) > 5000) {\n    if (msg.payload && msg.payload != lowStr ) {    \n        flow.set(\"sending\", true);\n        flow.set(\"timestamp\", now);\n        return {payload: lowStr};\n    } else {\n        let list = flow.get(\"SendList\") || [];\n        let _msg = list.pop();\n        if (_msg) {\n            flow.set(\"SendList\", list);\n            flow.set(\"sending\", true);\n            flow.set(\"timestamp\", now);\n            return _msg;\n        } else {\n            flow.set(\"sending\", false);\n        }        \n    }\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 880,
+        "wires": [
+            [
+                "1d670aa8.6da625"
+            ]
+        ]
+    },
+    {
+        "id": "f39344bc.2386d8",
+        "type": "inject",
+        "z": "84e2b33.40c105",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 360,
+        "y": 980,
+        "wires": [
+            [
+                "4f83eaef.5d0574"
+            ]
+        ]
     }
 ]
