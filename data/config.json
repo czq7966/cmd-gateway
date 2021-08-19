@@ -153,12 +153,30 @@
             "name": "长乐2号集装箱",
             "devices": {}
         },
+        "CMDGATE_CL_QYA53": {
+            "name": "长乐企业号A5-3",
+            "devices": {
+                "CL_QYA53_curtain_01": {
+                    "name": "1号窗帘"
+                },
+                "CL_QYA53_curtain_02": {
+                    "name": "2号窗帘"
+                }                
+            }
+        },        
         "CMDGATE_FZ_DEV1": {
             "name": "福州亚太二楼开发(有433射频)",
             "devices": {
                 "DJ-YT-500-01": {
                     "name": "1号舵机"
+                },
+                "6abf713c": {
+                    "name": "esp32开发板"
+                },
+                "97bf99": {
+                    "name": "esp8266开发板"
                 }
+                
             }
         },
         "CMDGATE_XA_KFDX01": {
