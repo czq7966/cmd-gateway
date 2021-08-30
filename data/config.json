@@ -114,39 +114,22 @@
                 "ESP8266_9936075":{"name":""},
                 "ESP8266_449971":{"name":""},
                 "ESP8266_9935390":{"name":""},
-                "ESP8266_10007032":{"name":""}
+                "ESP8266_10007032":{"name":""},
+                "ESP8266_5628343": {"name": ""}
             }
         },
         "CMDGATE_CL_JZX01": {
             "name": "长乐1号集装箱",
             "devices": {
-                "c8f742e36fd2": {
-                    "name": "1号空调"
-                },
-                "24dfa7056ca9": {
-                    "name": "2号空调"
-                },
-                "ESP8266_2317612": {
-                    "name": "窗帘控制芯片"
-                },
-                "CL_JZX01_curtain_01": {
-                    "name": "1号窗帘"
-                },
-                "CL_JZX01_curtain_02": {
-                    "name": "2号窗帘"
-                },
-                "CL_JZX01_curtain_03": {
-                    "name": "3号窗帘"
-                },
-                "CL_JZX01_curtain_04": {
-                    "name": "4号窗帘"
-                },
-                "CL_JZX01_curtain_05": {
-                    "name": "5号窗帘"
-                },
-                "CL_JZX01_curtain_06": {
-                    "name": "6号窗帘"
-                }
+                "c8f742e36fd2": {"name": "1号空调"},
+                "24dfa7056ca9": {"name": "2号空调"},
+                "ESP8266_2317612": {"name": "窗帘控制芯片"},
+                "CL_JZX01_curtain_01": {"name": "1号窗帘"},
+                "CL_JZX01_curtain_02": {"name": "2号窗帘"},
+                "CL_JZX01_curtain_03": {"name": "3号窗帘"},
+                "CL_JZX01_curtain_04": {"name": "4号窗帘"},
+                "CL_JZX01_curtain_05": {"name": "5号窗帘"},
+                "CL_JZX01_curtain_06": {"name": "6号窗帘"}
             }
         },
         "CMDGATE_CL_JZX02": {
@@ -179,6 +162,14 @@
                 
             }
         },
+        "CMDGATE_FZ_YT2DGN": {
+            "name": "福州亚太二楼多功能会议室",
+            "devices": {
+                "FZ_YT2DGN_curtain_01": {
+                    "name": "幕布"
+                }                
+            }
+        },        
         "CMDGATE_XA_KFDX01": {
             "name": "西安开放大学",
             "devices": {
@@ -193,6 +184,17 @@
                 },
                 "XA_KFDX01_curtain_03": {
                     "name": "3号窗帘"
+                }
+            }
+        },        
+        "CMDGATE_ZFZ01": {
+            "name": "中非展01",
+            "devices": {
+                "tasmota_982A80": {
+                    "name": "1号风扇"
+                },
+                "ZFZ01_curtain_01": {
+                    "name": "1号窗帘"
                 }
             }
         }
