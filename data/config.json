@@ -146,7 +146,32 @@
                     "name": "2号窗帘"
                 }                
             }
-        },        
+        }, 
+        "CMDGATE_CL_DJHYS": {
+            "name": "长乐DJ会议室",
+            "devices": {
+                "CL_DJHYS_curtain_01": {"name": "1号窗帘"},
+                "CL_DJHYS_curtain_02": {"name": "2号窗帘"},
+                "CL_DJHYS_curtain_03": {"name": "3号窗帘"},
+                "CL_DJHYS_curtain_04": {"name": "4号窗帘"},
+                "CL_DJHYS_curtain_05": {"name": "5号窗帘"},
+                "CL_DJHYS_curtain_06": {"name": "6号窗帘"},
+                "CL_DJHYS_curtain_07": {"name": "7号窗帘"},
+                "CL_DJHYS_curtain_08": {"name": "8号窗帘"},
+                "CL_DJHYS_curtain_09": {"name": "9号窗帘"},
+                "CL_DJHYS_curtain_10": {"name": "10号窗帘"},
+                "CL_DJHYS_curtain_11": {"name": "11号窗帘"},
+                "CL_DJHYS_curtain_12": {"name": "12号窗帘"},
+                "CL_DJHYS_curtain_13": {"name": "13号窗帘"},
+                "CL_DJHYS_curtain_14": {"name": "14号窗帘"},
+                "CL_DJHYS_curtain_15": {"name": "15号窗帘"},
+                "CL_DJHYS_curtain_16": {"name": "16号窗帘"},
+                "CL_DJHYS_curtain_17": {"name": "17号窗帘"},
+                "CL_DJHYS_curtain_18": {"name": "18号窗帘"},
+                "CL_DJHYS_curtain_19": {"name": "19号窗帘"},
+                "CL_DJHYS_curtain_20": {"name": "20号窗帘"}
+            }
+        },
         "CMDGATE_FZ_DEV1": {
             "name": "福州亚太二楼开发(有433射频)",
             "devices": {
@@ -158,7 +183,11 @@
                 },
                 "97bf99": {
                     "name": "esp8266开发板"
+                },
+                "android_924ed49": {
+                    "name": "采码android机1"
                 }
+
                 
             }
         },
