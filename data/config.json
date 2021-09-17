@@ -172,6 +172,48 @@
                 "CL_DJHYS_curtain_20": {"name": "20号窗帘"}
             }
         },
+        "CMDGATE_CL_FRA303": {
+            "name": "福软教室A303",
+            "devices": {
+                "CL_FRA303_curtain_01": {"name": "幕布"},
+                "CL_FRA303_curtain_02": {"name": "备用"}
+            }
+        },
+        "CMDGATE_CL_FRA305": {
+            "name": "福软教室A305",
+            "devices": {
+                "CL_FRA305_curtain_01": {"name": "幕布"},
+                "CL_FRA305_curtain_02": {"name": "备用"}
+            }
+        },  
+        "CMDGATE_CL_FRA306": {
+            "name": "福软教室A306",
+            "devices": {
+                "CL_FRA306_curtain_01": {"name": "幕布"},
+                "CL_FRA306_curtain_02": {"name": "备用"}
+            }
+        }, 
+        "CMDGATE_CL_FRD302": {
+            "name": "福软教室D302",
+            "devices": {
+                "CL_FRD302_curtain_01": {"name": "幕布"},
+                "CL_FRD302_curtain_02": {"name": "备用"}
+            }
+        },  
+        "CMDGATE_CL_FRF308": {
+            "name": "福软教室F308",
+            "devices": {
+                "CL_FRF308_curtain_01": {"name": "幕布"},
+                "CL_FRF308_curtain_02": {"name": "备用"}
+            }
+        },   
+        "CMDGATE_CL_FRF319": {
+            "name": "福软教室F319",
+            "devices": {
+                "CL_FRF319_curtain_01": {"name": "幕布"},
+                "CL_FRF319_curtain_02": {"name": "备用"}
+            }
+        },      
         "CMDGATE_FZ_DEV1": {
             "name": "福州亚太二楼开发(有433射频)",
             "devices": {
@@ -215,15 +257,37 @@
                     "name": "3号窗帘"
                 }
             }
-        },        
+        },   
+        "CMDGATE_XA_KFDX03": {
+            "name": "西安开放大学智慧教室303",
+            "devices": {
+                "XA_KFDX03_air_01": {
+                    "name": "1号空调"
+                }
+            }
+        },     
+        "CMDGATE_XA_KFDX08": {
+            "name": "西安开放大学智慧教室302",
+            "devices": {
+                "XA_KFDX08_air_01": {
+                    "name": "1号空调"
+                }
+            }
+        },    
         "CMDGATE_ZFZ01": {
             "name": "中非展01",
             "devices": {
                 "tasmota_982A80": {
                     "name": "1号风扇"
                 },
+                "tasmota_9AA972": {
+                    "name": "2号风扇"
+                },
                 "ZFZ01_curtain_01": {
                     "name": "1号窗帘"
+                },
+                "ZFZ01_curtain_02": {
+                    "name": "2号窗帘"
                 }
             }
         }
