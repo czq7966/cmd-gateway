@@ -1,0 +1,17 @@
+[Unit]
+Description=C-Gate server
+
+[Service]
+# WorkingDirectory=/data/cgate/cgate_2_11_3_3249
+# WorkingDirectory=/data/cgate/cgate_2_10_6_3145
+WorkingDirectory=/data/cgate/cgate_2_9_8_3077
+# WorkingDirectory=/data/cgate/cgate_2_8_0_2316
+# WorkingDirectory=/data/cgate/cgate_2_8_0_2303
+
+ExecStart=/data/jdk/jdk1.8.0_91/bin/java -Djava.awt.headless=true -jar cgate.jar 
+
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

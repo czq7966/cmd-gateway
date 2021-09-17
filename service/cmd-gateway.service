@@ -1,0 +1,11 @@
+[Unit]
+Description=CMD Gateway
+
+[Service]
+WorkingDirectory=/data/cmd-gateway
+ExecStart=/data/node/bin/node /data/cmd-gateway/src/index.js -u /data/cmd-gateway/data
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
