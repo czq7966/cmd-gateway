@@ -1,0 +1,34 @@
+#! /bin/sh
+# /etc/init.d/ser2sock
+
+### BEGIN INIT INFO
+# Provides:          ser2sock
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Accept simultaneous tcp connections and fwd them to a serial port
+# Description:       A simple script to start / stop the serial port network interface at boot / shutdown.
+### END INIT INFO
+
+# If you want a command to always run, put it here
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting ser2sock"
+    # run application you want to start
+    /data/ser2sock/ser2sock -d -p 10001 -s /dev/ttyS2 -b 9600
+    ;;
+  stop)
+    echo "Stopping ser2sock"
+    # kill application you want to stop
+    killall ser2sock
+    ;;
+  *)
+    echo "Usage: /etc/init.d/ser2sock {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
