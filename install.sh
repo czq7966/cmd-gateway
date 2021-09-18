@@ -186,8 +186,9 @@ sudo chmod 755 /etc/init.d/ser2sock
 sudo update-rc.d ser2sock defaults
 systemctl enable ser2sock
 systemctl list-unit-files|grep ser2sock
-systemctl start ser2sock
-systemctl status ser2sock -l
+/etc/init.d/ser2sock stop
+/etc/init.d/ser2sock start
+
 
 #安装JDK
 mkdir /data
