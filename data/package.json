@@ -9,7 +9,7 @@
         "node-red-nd-gpio-rf": "^0.0.19",
         "node-red-nd-gree-hvac": "^0.0.2",
         "node-red-nd-rf-coder": "0.0.4",
-        "node-red-nd-cgate": "0.0.2",
+        "node-red-nd-cgate": "0.0.3",
         "node-red-node-serialport": "^0.14.0",
         "onoff": "^6.0.3"
     }
