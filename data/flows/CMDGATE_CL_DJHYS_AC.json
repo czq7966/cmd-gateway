@@ -1,0 +1,1358 @@
+[
+    {
+        "id": "bc5992d7.5c6d2",
+        "type": "tab",
+        "label": "DJ会议室空调",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1f709da6.37b8a2",
+        "type": "link in",
+        "z": "bc5992d7.5c6d2",
+        "name": "终端上行",
+        "links": [
+            "50aa8a65.6a2c04"
+        ],
+        "x": 295,
+        "y": 260,
+        "wires": [
+            [
+                "c60f147e.93c578"
+            ]
+        ]
+    },
+    {
+        "id": "653d95e1.a5f5dc",
+        "type": "link in",
+        "z": "bc5992d7.5c6d2",
+        "name": "边缘下行",
+        "links": [
+            "a8683765.5e9b48"
+        ],
+        "x": 315,
+        "y": 480,
+        "wires": [
+            [
+                "53784a7b.206f64"
+            ]
+        ]
+    },
+    {
+        "id": "c60f147e.93c578",
+        "type": "switch",
+        "z": "bc5992d7.5c6d2",
+        "name": "网关",
+        "property": "payload.hd.gid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CMDGATE_CL_DJHYS",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "c191eeaa.0c621"
+            ]
+        ]
+    },
+    {
+        "id": "53784a7b.206f64",
+        "type": "switch",
+        "z": "bc5992d7.5c6d2",
+        "name": "网关",
+        "property": "payload.hd.gid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CMDGATE_CL_DJHYS",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "e1618e8f.ad0be"
+            ]
+        ]
+    },
+    {
+        "id": "c191eeaa.0c621",
+        "type": "switch",
+        "z": "bc5992d7.5c6d2",
+        "name": "指令",
+        "property": "payload.hd.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "6557d43e.9d9fac",
+                "6b409e8c.190d7",
+                "d3f05af6.478ad8"
+            ],
+            [
+                "bbc77c52.a15c",
+                "d3f05af6.478ad8"
+            ],
+            [
+                "6b409e8c.190d7",
+                "d3f05af6.478ad8"
+            ],
+            [
+                "d3f05af6.478ad8"
+            ],
+            [
+                "6b409e8c.190d7",
+                "d3f05af6.478ad8"
+            ]
+        ]
+    },
+    {
+        "id": "bbc77c52.a15c",
+        "type": "function",
+        "z": "bc5992d7.5c6d2",
+        "d": true,
+        "name": "空调解析",
+        "func": "    msg.payload.pld = msg.payload.pld || {}\n    let pld = msg.payload.pld;\n    if(!pld) {\n        node.error(\"终端没有返回数据：\" + msg.payload.hd.did)\n        node.error(msg)\n        return;\n    }\n    let extra = pld.extra;\n    let Mode = {\"0\": \"cool\",\"1\": \"dry\",\"2\": \"auto\",\"3\": \"heat\",\"4\": \"fan_only\"};\n    let Fan = {\"0\": \"auto\",\"1\": \"high\",\"2\": \"medium\",\"4\":\"low\", \"5\": \"auto\"};\n\n    if (extra) {\n        extra = extra.toLowerCase();\n        extra = extra.replace(\"Mesg Desc.:\".toLowerCase(), \"\");\n        let items = extra.split(\",\");\n        items.forEach(item => {\n            let _item = item.split(\":\");\n            let key = _item[0].trim();\n            let value = _item[1].trim();\n            switch(key) {\n                case \"power\":\n                    pld.power = value;                    \n                    break;\n                case \"temp\":                    \n                    value = value.substr(0, value.length -1)                    \n                    pld.temperature = parseInt(value);\n                    break;\n                case \"mode\":\n                    pld.mode = Mode[value[0]];\n                    break;\n                case \"fan\":\n                    pld.fanSpeed = Fan[value[0]];                   \n                    break;\n                case \"zone follow\":\n                \n                    break;     \n                case \"sensor temp\":\n            \n                    break;                          \n                                  \n            }\n        })\n    }\n    \n    let count = context.get(\"count\") \n    count = count ? count + 1 : 1;\n    context.set(\"count\", count) \n    node.status({fill:\"green\", shape:\"dot\", text: count});\n\n\n    return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 248,
+        "wires": [
+            [
+                "6557d43e.9d9fac",
+                "917f9525.628c28"
+            ]
+        ]
+    },
+    {
+        "id": "6557d43e.9d9fac",
+        "type": "link out",
+        "z": "bc5992d7.5c6d2",
+        "name": "边缘上行",
+        "links": [
+            "db90a60b.8feba8"
+        ],
+        "x": 975,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ac5118e5.d76e98",
+        "type": "comment",
+        "z": "bc5992d7.5c6d2",
+        "name": "终端上行",
+        "info": "",
+        "x": 160,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "af7f388.d7bfec8",
+        "type": "comment",
+        "z": "bc5992d7.5c6d2",
+        "name": "边缘下行",
+        "info": "",
+        "x": 160,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e1618e8f.ad0be",
+        "type": "switch",
+        "z": "bc5992d7.5c6d2",
+        "name": "指令",
+        "property": "payload.hd.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "bcf8aaaf.204bf8"
+            ],
+            [
+                "bcf8aaaf.204bf8"
+            ],
+            [
+                "bcf8aaaf.204bf8"
+            ],
+            [
+                "bcf8aaaf.204bf8"
+            ],
+            [
+                "bcf8aaaf.204bf8"
+            ],
+            [
+                "bcf8aaaf.204bf8"
+            ],
+            [
+                "bcf8aaaf.204bf8"
+            ]
+        ]
+    },
+    {
+        "id": "bcf8aaaf.204bf8",
+        "type": "function",
+        "z": "bc5992d7.5c6d2",
+        "name": "空调",
+        "func": "return {payload: msg.payload};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "bffd3bc5.0864c8"
+            ]
+        ]
+    },
+    {
+        "id": "bffd3bc5.0864c8",
+        "type": "link out",
+        "z": "bc5992d7.5c6d2",
+        "name": "终端下行",
+        "links": [
+            "90a962bb.f07c4"
+        ],
+        "x": 975,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "917f9525.628c28",
+        "type": "link out",
+        "z": "bc5992d7.5c6d2",
+        "name": "空调看板",
+        "links": [
+            "6e9291c.b1e257",
+            "7945fee2.25132"
+        ],
+        "x": 975,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6b409e8c.190d7",
+        "type": "function",
+        "z": "bc5992d7.5c6d2",
+        "name": "版本号",
+        "func": "msg.payload.pld = msg.payload.pld || {};\nlet pld = msg.payload.pld;\n\nswitch(msg.payload.hd.cmd) {\n    case 1:\n        pld.power = \"重新上线\";\n        break;\n    case 5:\n        pld.power = pld.version;\n        break;\n    case 7:\n        pld.power = \"重启中\";\n        break;\n}\n\npld.mode = \"\"; \npld.temperature = \"\";\npld.fanSpeed = \"\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 328,
+        "wires": [
+            [
+                "917f9525.628c28"
+            ]
+        ]
+    },
+    {
+        "id": "b4084c1c.526b7",
+        "type": "change",
+        "z": "bc5992d7.5c6d2",
+        "name": "6145672",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "ESP8266_6145672",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 720,
+        "wires": [
+            [
+                "e1618e8f.ad0be"
+            ]
+        ]
+    },
+    {
+        "id": "a49a861b.3d4e38",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "心跳",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "c21e8cd4.50f57",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "重启",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "d3f05af6.478ad8",
+        "type": "debug",
+        "z": "bc5992d7.5c6d2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "416e8a8f.17a714",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "版本号",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "5",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "5ef8a5a.6377c5c",
+        "type": "change",
+        "z": "bc5992d7.5c6d2",
+        "name": "6145655",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.did",
+                "pt": "msg",
+                "to": "ESP8266_6145655",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 780,
+        "wires": [
+            [
+                "e1618e8f.ad0be"
+            ]
+        ]
+    },
+    {
+        "id": "cc59c8f2.97ebb8",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "查询",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "bdd5cd74.bcda5",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "模式：制冷",
+        "props": [
+            {
+                "p": "payload.pld.mode",
+                "v": "cool",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 720,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "da0279fc.9bdde8",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "模式：吹风",
+        "props": [
+            {
+                "p": "payload.pld.mode",
+                "v": "fan",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 760,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "ea76f51b.586d98",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "模式：抽湿",
+        "props": [
+            {
+                "p": "payload.pld.mode",
+                "v": "dry",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 800,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "d088b1c2.27c19",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "模式：制热",
+        "props": [
+            {
+                "p": "payload.pld.mode",
+                "v": "heat",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 840,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "121b3f5d.42bd21",
+        "type": "change",
+        "z": "bc5992d7.5c6d2",
+        "name": "空调",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.hd.cmd",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload.pld.hour",
+                "pt": "msg",
+                "to": "12",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload.pld.minute",
+                "pt": "msg",
+                "to": "13",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 940,
+        "wires": [
+            [
+                "cc1f9442.1b7908"
+            ]
+        ]
+    },
+    {
+        "id": "d9ae8266.6e562",
+        "type": "change",
+        "z": "bc5992d7.5c6d2",
+        "name": "",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 720,
+        "wires": [
+            [
+                "5ef8a5a.6377c5c"
+            ]
+        ]
+    },
+    {
+        "id": "9e41a262.b4e65",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "风速：低",
+        "props": [
+            {
+                "p": "payload.pld.fanSpeed",
+                "v": "low",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 900,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "13a7982f.5a9e18",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "风速：中",
+        "props": [
+            {
+                "p": "payload.pld.fanSpeed",
+                "v": "medium",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "bda48511.799368",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "风速：高",
+        "props": [
+            {
+                "p": "payload.pld.fanSpeed",
+                "v": "high",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 980,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "568967f1.bdd258",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "风速：自动",
+        "props": [
+            {
+                "p": "payload.pld.fanSpeed",
+                "v": "auto",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 1020,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "a17d631.7d70ba",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "综合",
+        "props": [
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.mode",
+                "v": "fan",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.fanSpeed",
+                "v": "low",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.sleep",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.swing",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.temperature",
+                "v": "26",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 1440,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "cd028cad.77897",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "睡眠：开",
+        "props": [
+            {
+                "p": "payload.pld.sleep",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 1080,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "55ea6590.2e2d9c",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "睡眠：关",
+        "props": [
+            {
+                "p": "payload.pld.sleep",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 1120,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "44f0c32.a5e673c",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "摆风：开",
+        "props": [
+            {
+                "p": "payload.pld.swing",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 1180,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "79f6ea4d.e14f84",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "摆风：关",
+        "props": [
+            {
+                "p": "payload.pld.swing",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 1220,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "9f3822da.17ba3",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "关闭",
+        "props": [
+            {
+                "p": "payload.pld.power",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 1320,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "8e1516ed.06c9a8",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":0}},\"encode\":{\"blocks\":[{\"data\":\"0x16 21 49 16 53 50 24 98\"}]}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 540,
+        "y": 1140,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "3728aee6.3e2332",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":0},\"raw\":\"4570,2453,445,284,418,939,418,937,420,311,446,910,444,286,414,316,443,286,443,287,446,284,418,938,418,312,416,313,445,286,418,312,417,937,441,289,440,916,445,918,410,310,441,290,444,286,417,313,442,287,417,313,417,940,439,290,442,287,443,287,442,914,417,313,443,286,442,913,444,914,416,311,418,313,443,912,443,287,418,938,443,287,444,285,420,310,416,313,443,287,417,940,415,315,418,936,442,288,418,316,437,293,415,937,416,314,451,275,449,905,471,271,447,290,441,276,450,285,450,277,454,911,423,311,417,314,418,306,455,904,451,20076,4698,6265,9144,4923,417,312,416,315,414,315,416,314,418,938,415,941,415,314,414,315,441,288,440,288,440,287,412,315,412,940,415,935,415,312,414,315,437,290,437,290,413,315,413,316,413,313,411,317,414,314,439,288,440,289,409,318,415,313,442,285,436,291,440,288,413,315,413,315,412,316,412,315,414,314,414,314,412,316,412,316,438,290,412,316,410,317,413,315,412,316,412,316,436,292,412,316,409,319,410,317,411,317,411,316,439,289,437,291,411,317,415,313,414,314,413,315,413,315,412,315,414,315,411,316,414,314,411,941,410,941,412,315,414,20067,4663,65535,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 530,
+        "y": 1200,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "c9bab7f5.1603f8",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形1",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"repeat\":2},\"raw\":\"4690,2610,370,390,370,910,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,910,370,390,370,910,370,390,370,910,370,910,370,910,370,390,370,390,370,390,370,390,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,390,370,910,370,910,370,910,370,910,370,910,370,20470,4690,2610,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 530,
+        "y": 1280,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "d253c759.370158",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形原版",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":2},\"raw\":\"4689,2612, 417,391,375,907,405,910,407,459,  373,910,407,389,374,388,374,459,  376,388,373,910,407,389,373,460,  373,909,406,390,374,389,373,460,  374,908,407,390,372,391,370,463,  374,389,372,391,372,393,369,462,  372,391,374,907,407,391,373,459,  374,389,372,392,374,389,372,461,  374,909,406,908,405,392,373,460,  374,907,408,390,373,390,371,461,  373,391,372,391,372,390,373,460,  372,911,406,390,373,391,373,459,  372,910,407,391,372,909,405,462,  373,390,372,912,406,388,373,460,  375,390,372,391,371,390,374,981,  404,910,405,392,372,391,372,433,  375,20474,4694,65535,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 540,
+        "y": 1340,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "4669ee7.61a561",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "解码",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"decode\":{\"raw\":\"4689,2612, 417,391,375,907,405,910,407,459,  373,910,407,389,374,388,374,459,  376,388,373,910,407,389,373,460,  373,909,406,390,374,389,373,460,  374,908,407,390,372,391,370,463,  374,389,372,391,372,393,369,462,  372,391,374,907,407,391,373,459,  374,389,372,392,374,389,372,461,  374,909,406,908,405,392,373,460,  374,907,408,390,373,390,371,461,  373,391,372,391,372,390,373,460,  372,911,406,390,373,391,373,459,  372,910,407,391,372,909,405,462,  373,390,372,912,406,388,373,460,  375,390,372,391,371,390,374,981,  404,910,405,392,372,391,372,433,  375,20474,4694,65535,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 530,
+        "y": 1440,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "88ff8c0d.bdaca",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "编码",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"encode\":{\"blocks\":[{\"data\":\"0x16 84 50 19 53 50 24 d8\"}]}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 530,
+        "y": 1500,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "b2bfabf4.415f78",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "开启",
+        "props": [
+            {
+                "p": "payload.pld.power",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 1280,
+        "wires": [
+            [
+                "121b3f5d.42bd21"
+            ]
+        ]
+    },
+    {
+        "id": "cc1f9442.1b7908",
+        "type": "function",
+        "z": "bc5992d7.5c6d2",
+        "name": "设置时间",
+        "func": "let date = new Date();\nmsg.payload.pld.hour = date.getHours();\nmsg.payload.pld.minute = date.getMinutes();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 900,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "52ccf67f.da1228",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形-制冷",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":1},\"raw\":\"390,370,390,370,390,370,  4690,2610,370,390,370,910,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,910,370,910,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,390,370,20470,4690,2610,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 780,
+        "y": 1040,
+        "wires": [
+            [
+                "47ee53e0.57056c"
+            ]
+        ]
+    },
+    {
+        "id": "657835a4.a5c98c",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形-吹风",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":1},\"raw\":\"390,370,390,370,390,370,  4690,2610,370,390,370,910,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,910,370,390,370,910,370,390,370,910,370,390,370,390,370,910,370,910,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,910,370,390,370,910,370,910,370,20470,4690,2610,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 780,
+        "y": 1080,
+        "wires": [
+            [
+                "47ee53e0.57056c"
+            ]
+        ]
+    },
+    {
+        "id": "3d9bb60.c46a44a",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形-抽湿",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":1},\"raw\":\"390,370,390,370,390,370,  4690,2610,370,390,370,910,370,910,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,910,370,910,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,390,370,20470,4690,2610,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 780,
+        "y": 1120,
+        "wires": [
+            [
+                "47ee53e0.57056c"
+            ]
+        ]
+    },
+    {
+        "id": "55a18658.daae98",
+        "type": "inject",
+        "z": "bc5992d7.5c6d2",
+        "name": "波形-制热",
+        "props": [
+            {
+                "p": "payload.hd.cmd",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "p": "payload.pld",
+                "v": "{\"send\":{\"params\":{\"inverted\":0,\"modulation\":1,\"repeat\":1},\"raw\":\"390,370,390,370,390,370,  4690,2610,370,390,370,910,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,910,370,910,370,390,370,390,370,390,370,910,370,910,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,910,370,390,370,390,370,390,370,910,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,390,370,910,370,390,370,390,370,390,370,390,370,20470,4690,2610,\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 780,
+        "y": 1160,
+        "wires": [
+            [
+                "47ee53e0.57056c"
+            ]
+        ]
+    },
+    {
+        "id": "47ee53e0.57056c",
+        "type": "change",
+        "z": "bc5992d7.5c6d2",
+        "name": "",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 1040,
+        "wires": [
+            [
+                "d9ae8266.6e562"
+            ]
+        ]
+    },
+    {
+        "id": "97382dcf.1adfc",
+        "type": "comment",
+        "z": "bc5992d7.5c6d2",
+        "name": "",
+        "info": "",
+        "x": 100,
+        "y": 1720,
+        "wires": []
+    }
+]
