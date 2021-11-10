@@ -169,7 +169,9 @@
                 "CL_DJHYS_curtain_17": {"name": "17号窗帘"},
                 "CL_DJHYS_curtain_18": {"name": "18号窗帘"},
                 "CL_DJHYS_curtain_19": {"name": "19号窗帘"},
-                "CL_DJHYS_curtain_20": {"name": "20号窗帘"}
+                "CL_DJHYS_curtain_20": {"name": "20号窗帘"},
+                "ESP8266x6145672": {"name": "1号空调"},
+                "ESP8266x6145655": {"name": "2号空调"}
             }
         },
         "CMDGATE_CL_DJHYS_CBUS": {
@@ -217,7 +219,13 @@
                 "CL_DJHYS_lighting_39": {"name": "39组灯光"},
                 "CL_DJHYS_lighting_40": {"name": "40组灯光"}                
             }
-        },        
+        },  
+        "CMDGATE_CL_CXY": {
+            "name": "长乐禅修院",
+            "devices": {
+                "ESP8266x14476206": {"name": "音箱"}
+            }
+        },      
         "CMDGATE_CL_FRA303": {
             "name": "福软教室A303",
             "devices": {
@@ -279,6 +287,14 @@
                 
             }
         },
+        "CMDGATE_FZ_DM4": {
+            "name": "福州东门4楼",
+            "devices": {
+                "ESP32x6dabf498": {"name": "福州东门4楼测试格力空调遥控收"},
+                "ESP32x6abf713c": {"name": "福州东门4楼小茶会室空调ESP32红外射频"}                                
+            }
+        },        
+
         "CMDGATE_FZ_YT2DGN": {
             "name": "福州亚太二楼多功能会议室",
             "devices": {
