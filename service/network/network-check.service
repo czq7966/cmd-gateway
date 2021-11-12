@@ -1,0 +1,15 @@
+[Unit]
+Description=network-check
+After=network.target
+
+[Service]
+WorkingDirectory=/data/network
+ExecStart=. /data/network/check.sh
+StandardOutput=inherit
+StandardError=inherit
+KillMode=process
+Restart=always
+StartLimitInterval=1000
+
+[Install]
+WantedBy=multi-user.target
