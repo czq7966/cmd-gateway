@@ -170,8 +170,57 @@
                 "CL_DJHYS_curtain_18": {"name": "18号窗帘"},
                 "CL_DJHYS_curtain_19": {"name": "19号窗帘"},
                 "CL_DJHYS_curtain_20": {"name": "20号窗帘"},
-                "ESP8266x6145672": {"name": "1号空调"},
-                "ESP8266x6145655": {"name": "2号空调"}
+                "ESP8266x005dc688": {"name": "福州开发空调板"}, 
+                "ESP8266x005dc677": {"name": "弹丸区上方空调"},
+
+                "ESP8266x00c1dffd": {"name": "c1dffd"},
+                "ESP8266x00c1c16d": {"name": "c1c16d"},
+                "ESP8266x00c1cb9a": {"name": "c1cb9a"},
+                "ESP8266x00c223c1": {"name": "c223c1"},
+                "ESP8266x00c1a011": {"name": "c1a011"},
+                "ESP8266x00c1d2ab": {"name": "c1d2ab"},
+                
+                "ESP8266x00c203ef": {"name": "c203ef"},
+                "ESP8266x00c176cb": {"name": "c176cb"},
+                "ESP8266x00c17bd3": {"name": "c17bd3"},
+                "ESP8266x00c1a2ab": {"name": "c1a2ab"},
+                "ESP8266x00c23f17": {"name": "c23f17"},
+                "ESP8266x00c1e174": {"name": "c1e174"},
+                
+                "ESP8266x00c1d5ac": {"name": "c1d5ac"},
+                "ESP8266x00c22c11": {"name": "c22c11"},
+                "ESP8266x00c1bf04": {"name": "c1bf04"},
+                "ESP8266x00c14ddc": {"name": "c14ddc"},
+                "ESP8266x00c1e7f4": {"name": "c1e7f4"},
+                "ESP8266x00c1c9df": {"name": "c1c9df"},
+                
+                "ESP8266x00c20a26": {"name": "c20a26"},
+                "ESP8266x00c21296": {"name": "c21296"},
+                "ESP8266x00c17f7c": {"name": "c17f7c"},
+                "ESP8266x00c1a719": {"name": "c1a719"},
+                "ESP8266x00c1a9b2": {"name": "c1a9b2"},
+                "ESP8266x00c1c69d": {"name": "c1c69d"},
+                
+                "ESP8266x00c17d51": {"name": "c17d51"},
+                "ESP8266x00c20ca1": {"name": "c20ca1"},
+                "ESP8266x00c19fe5": {"name": "c19fe5"},
+                "ESP8266x00c204a1": {"name": "c204a1"},
+                "ESP8266x00c1cc0a": {"name": "c1cc0a"},
+                "ESP8266x00c1997e": {"name": "c1997e"},
+                
+                "ESP8266x00c1aa1c": {"name": "c1aa1c"},
+                "ESP8266x00c235cb": {"name": "c235cb"},
+                "ESP8266x00c1c1ec": {"name": "c1c1ec"},
+                "ESP8266x00c1cfb3": {"name": "c1cfb3"},
+                "ESP8266x00c1cda4": {"name": "c1cda4"},
+                "ESP8266x00c19a65": {"name": "c19a65"},
+                
+                "ESP8266x00c18442": {"name": "c18442"},
+                "ESP8266x00c17dd8": {"name": "c17dd8"},
+                "ESP8266x00c162fa": {"name": "c162fa"},
+                "ESP8266x00c1c5f9": {"name": "c1c5f9"},
+                "ESP8266x00c23379": {"name": "c23379"},
+                "ESP8266x00c1b48c": {"name": "c1b48c"}                
             }
         },
         "CMDGATE_CL_DJHYS_CBUS": {
