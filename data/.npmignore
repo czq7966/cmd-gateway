@@ -16,4 +16,3 @@ tsconfig.json
 /dist/desktop
 /config
 /docker
-/data/node_modules
