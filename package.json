@@ -1,11 +1,12 @@
 {
   "name": "nd-centre-cmd-gateway",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js -u ./data"
+    "start": "node ./index.js -u ./data",
+    "d101-iot-nr": "forever  ./index.js -u ./data -p 8080"
   },
   "author": "",
   "license": "ISC",
