@@ -1,0 +1,143 @@
+[
+    {
+        "id": "f5e1467c.f05168",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "92ae98a8.c3c138",
+        "type": "mongodb",
+        "hostname": "m3.edu.pre-prod.mongod.sdp",
+        "topology": "direct",
+        "connectOptions": "autoConnectRetry=true",
+        "port": "34001",
+        "db": "preproduction_mdb_iot_data",
+        "name": "mg-iot-data"
+    },
+    {
+        "id": "f5eae658.2bf5f8",
+        "type": "mqtt-broker",
+        "name": "mqtt.business",
+        "broker": "43.231.150.88",
+        "port": "1780",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7dd38f55.b8f4",
+        "type": "mongodb out",
+        "z": "f5e1467c.f05168",
+        "mongodb": "92ae98a8.c3c138",
+        "name": "",
+        "collection": "",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "23a9c2c2.7252de",
+        "type": "mqtt in",
+        "z": "f5e1467c.f05168",
+        "name": "边缘终端上行数据",
+        "topic": "business/svcgate/#",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "f5eae658.2bf5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "f85fc856.3f0c88"
+            ]
+        ]
+    },
+    {
+        "id": "11556766.000ec9",
+        "type": "function",
+        "z": "f5e1467c.f05168",
+        "name": "数据表",
+        "func": "let tm = new Date(msg.payload.tms)\nlet year = tm.getFullYear().toString()\nlet month = (tm.getMonth() + 101).toString().substr(1,2)\nlet date = (tm.getDate() + 101).toString().substr(1,2)\nmsg.collection=msg.payload.hd.gid + \"_\" + year+month+date\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "6028e302.6fbb6c",
+                "7dd38f55.b8f4"
+            ]
+        ]
+    },
+    {
+        "id": "f85fc856.3f0c88",
+        "type": "change",
+        "z": "f5e1467c.f05168",
+        "name": "时间戳",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.tms",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "11556766.000ec9"
+            ]
+        ]
+    },
+    {
+        "id": "6028e302.6fbb6c",
+        "type": "debug",
+        "z": "f5e1467c.f05168",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "collection",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 260,
+        "wires": []
+    }
+]
