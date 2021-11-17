@@ -72,7 +72,7 @@
         "y": 140,
         "wires": [
             [
-                "f85fc856.3f0c88"
+                "4469f48d.75bfdc"
             ]
         ]
     },
@@ -97,33 +97,6 @@
         ]
     },
     {
-        "id": "f85fc856.3f0c88",
-        "type": "change",
-        "z": "f5e1467c.f05168",
-        "name": "时间戳",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.tms",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 350,
-        "y": 140,
-        "wires": [
-            [
-                "11556766.000ec9"
-            ]
-        ]
-    },
-    {
         "id": "6028e302.6fbb6c",
         "type": "debug",
         "z": "f5e1467c.f05168",
@@ -139,5 +112,24 @@
         "x": 650,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "4469f48d.75bfdc",
+        "type": "function",
+        "z": "f5e1467c.f05168",
+        "name": "时间戳",
+        "func": "let date = new Date()\nmsg.payload.tms=date.valueOf()\nmsg.payload.tm=date.toLocaleString()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "11556766.000ec9"
+            ]
+        ]
     }
 ]
