@@ -249,7 +249,7 @@ cd /data/zigbee2mqtt
 npm ci
 
 cd /data/zigbee2mqtt
-cp service/cmd-gateway.service /lib/systemd/system/zigbee2mqtt.service
+cp service/zigbee2mqtt.service /lib/systemd/system/zigbee2mqtt.service
 
 systemctl daemon-reload
 systemctl enable zigbee2mqtt
@@ -284,6 +284,7 @@ Activate a connection -> Wi-Fi
 #wpa_supplicant -iwlan0（根据名字修改） -c/etc/wpa_supplicant.conf 
 mkdir /data/network
 cp service/network/. /data/network/.
+
 chmod 777 /data/network/check.sh
 cp  /data/network/network-check.service /lib/systemd/system/network-check.service
 
