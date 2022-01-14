@@ -118,6 +118,12 @@
                 "ESP8266_5628343": {"name": ""}
             }
         },
+        "CMDGATE_CL_VR_F2": {
+            "name": "长乐VR体验馆二楼",
+            "devices": {
+
+            }
+        },
         "CMDGATE_CL_JZX01": {
             "name": "长乐1号集装箱",
             "devices": {
@@ -172,58 +178,58 @@
                 "CL_DJHYS_curtain_20": {"name": "20号窗帘"},
                 "ESP8266x005dc688": {"name": "福州开发空调板"}, 
                 "ESP8266x005dc677": {
-                    "name": "弹丸区上方空调", 
+                    "name": "（后）走道区5号空调", 
                     "sensors":{
                         "0x00158d000704fdaa":"",
                         "0x00158d0007064a65":""
                     }
                 },
-                "ESP8266x00c1dffd": {"name": "c1dffd"},
+                "ESP8266x00c1dffd": {"name": "健身区->靠走道空调"},
                 "ESP8266x00c1c16d": {"name": "c1c16d"},
-                "ESP8266x00c1cb9a": {"name": "c1cb9a"},
+                "ESP8266x00c1cb9a": {"name": "会议区->靠模型区2入口2号空调"},
                 "ESP8266x00c223c1": {"name": "c223c1"},
                 "ESP8266x00c1a011": {"name": "c1a011"},
                 "ESP8266x00c1d2ab": {"name": "c1d2ab"},
                 
                 "ESP8266x00c203ef": {"name": "c203ef"},
-                "ESP8266x00c176cb": {"name": "c176cb"},
-                "ESP8266x00c17bd3": {"name": "c17bd3"},
-                "ESP8266x00c1a2ab": {"name": "c1a2ab"},
-                "ESP8266x00c23f17": {"name": "c23f17"},
-                "ESP8266x00c1e174": {"name": "c1e174"},
+                "ESP8266x00c176cb": {"name": "模型式1-靠墙空调"},
+                "ESP8266x00c17bd3": {"name": "会议区->会议桌左上方空调"},
+                "ESP8266x00c1a2ab": {"name": "读书区->靠窗空调"},
+                "ESP8266x00c23f17": {"name": "卫生间门口->柱子右前方靠走廊空调"},
+                "ESP8266x00c1e174": {"name": "会议区->靠模型区2入口1号空调"},
                 
-                "ESP8266x00c1d5ac": {"name": "c1d5ac"},
+                "ESP8266x00c1d5ac": {"name": "模型式1-中间空调"},
                 "ESP8266x00c22c11": {"name": "c22c11"},
                 "ESP8266x00c1bf04": {"name": "c1bf04"},
-                "ESP8266x00c14ddc": {"name": "c14ddc"},
+                "ESP8266x00c14ddc": {"name": "模型式2-靠墙空调"},
                 "ESP8266x00c1e7f4": {"name": "c1e7f4"},
                 "ESP8266x00c1c9df": {"name": "c1c9df"},
                 
-                "ESP8266x00c20a26": {"name": "c20a26"},
-                "ESP8266x00c21296": {"name": "c21296"},
+                "ESP8266x00c20a26": {"name": "（前）走道区3号空调"},
+                "ESP8266x00c21296": {"name": "会议区->靠前走廊空调"},
                 "ESP8266x00c17f7c": {"name": "c17f7c"},
-                "ESP8266x00c1a719": {"name": "c1a719"},
-                "ESP8266x00c1a9b2": {"name": "c1a9b2"},
+                "ESP8266x00c1a719": {"name": "卫生间门口->柱子右后方靠墙空调"},
+                "ESP8266x00c1a9b2": {"name": "模型式2->中间空调"},
                 "ESP8266x00c1c69d": {"name": "c1c69d"},
                 
-                "ESP8266x00c17d51": {"name": "c17d51"},
+                "ESP8266x00c17d51": {"name": "卫生间门口->柱子左边靠读书区空调"},
                 "ESP8266x00c20ca1": {"name": "c20ca1"},
-                "ESP8266x00c19fe5": {"name": "c19fe5"},
-                "ESP8266x00c204a1": {"name": "c204a1"},
+                "ESP8266x00c19fe5": {"name": "会议区->前大屏左上方空调"},
+                "ESP8266x00c204a1": {"name": "卫生间门口->靠走廊柱子后方空调"},
                 "ESP8266x00c1cc0a": {"name": "c1cc0a"},
-                "ESP8266x00c1997e": {"name": "c1997e"},
+                "ESP8266x00c1997e": {"name": "会议区->前大屏右上方空调"},
                 
-                "ESP8266x00c1aa1c": {"name": "c1aa1c"},
+                "ESP8266x00c1aa1c": {"name": "（后）走道区4号空调"},
                 "ESP8266x00c235cb": {"name": "c235cb"},
                 "ESP8266x00c1c1ec": {"name": "c1c1ec"},
                 "ESP8266x00c1cfb3": {"name": "c1cfb3"},
                 "ESP8266x00c1cda4": {"name": "c1cda4"},
-                "ESP8266x00c19a65": {"name": "c19a65"},
+                "ESP8266x00c19a65": {"name": "弹丸区->靠走道空调"},
                 
-                "ESP8266x00c18442": {"name": "c18442"},
+                "ESP8266x00c18442": {"name": "（前）走道区1号空调"},
                 "ESP8266x00c17dd8": {"name": "c17dd8"},
                 "ESP8266x00c162fa": {"name": "c162fa"},
-                "ESP8266x00c1c5f9": {"name": "c1c5f9"},
+                "ESP8266x00c1c5f9": {"name": "（前）走道区2号空调"},
                 "ESP8266x00c23379": {"name": "c23379"},
                 "ESP8266x00c1b48c": {"name": "c1b48c"},
 
@@ -255,7 +261,10 @@
                 "0x60a423fffe3470e5": {"name": "鸿雁温湿度计-无屏"},
                 "0x60a423fffe348618": {"name": "鸿雁温湿度计-无屏"},
                 "0x60a423fffe2a2eb6": {"name": "鸿雁温湿度计-无屏"},
-                "0x60a423fffe347315": {"name": "鸿雁温湿度计-无屏"}                
+                "0x60a423fffe347315": {"name": "鸿雁温湿度计-无屏"},
+
+                "ESP8266x00c20678": {"name": "乐高区射灯开关"}
+
                                 
             }
         },
@@ -308,7 +317,7 @@
         "CMDGATE_CL_CXY": {
             "name": "长乐禅修院",
             "devices": {
-                "ESP8266x14476206": {"name": "音箱"}
+                "ESP8266x00dce3ae": {"name": "音箱"}
             }
         },      
         "CMDGATE_CL_FRA303": {
@@ -359,7 +368,7 @@
                 "DJ-YT-500-01": {
                     "name": "1号舵机"
                 },
-                "6abf713c": {
+                "ESP32x6abf713c": {
                     "name": "esp32开发板"
                 },
                 "97bf99": {
@@ -367,16 +376,14 @@
                 },
                 "android_924ed49": {
                     "name": "采码android机1"
-                }
-
-                
+                }                
             }
         },
         "CMDGATE_FZ_DM4": {
             "name": "福州东门4楼",
             "devices": {
-                "ESP32x6dabf498": {"name": "福州东门4楼测试格力空调遥控收"},
-                "ESP32x6abf713c": {"name": "福州东门4楼小茶会室空调ESP32红外射频"}                                
+                "ESP32x6dabf498": {"name": "福州东门4楼测试格力空调遥控收"}
+                
             }
         },        
 
