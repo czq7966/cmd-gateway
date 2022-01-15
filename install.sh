@@ -10,6 +10,8 @@ cd /data
 wget https://npm.taobao.org/mirrors/node/v14.16.1/node-v14.16.1-linux-armv7l.tar.xz
 tar -xvf node-v14.16.1-linux-armv7l.tar.xz
 ln -s node-v14.16.1-linux-armv7l node
+ln -s  /data/node/bin/node /usr//bin/node
+ln -s  /data/node/bin/npm /usr/bin/npm
 
 #mv node-v14.16.1-linux-armv7l node-v14.16.1
 
@@ -258,7 +260,12 @@ systemctl start zigbee2mqtt
 systemctl status zigbee2mqtt -l
 
 # armbin安装rtl8188网卡驱动
-# 1、安装头部文件
+# 1、安armbin-config及头部文件 参考网址：https://blog.csdn.net/weixin_58010865/article/details/121144977?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-1-121144977.pc_agg_new_rank&utm_term=armbian-config+sudo&spm=1000.2123.3001.4430
+apt update
+apt list --upgradable
+apt upgrade
+apt install ntp armbin-config
+
 sudo armbin-config
 1、Software -> Headers_install
 2、Software -> Full
@@ -270,7 +277,9 @@ git clone https://github.com/lwfinger/rtl8188eu.git
 cd /data/driver/rtl8188eu
 make all
 make install
+ls /sys/class/net/
 reboot -i
+
 
 # armbin WiFi 配网
 sudo armbin-config 
