@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/data/network
-ExecStart=. /data/network/check.sh
+ExecStart=/data/network/check.sh
 StandardOutput=inherit
 StandardError=inherit
 KillMode=process
