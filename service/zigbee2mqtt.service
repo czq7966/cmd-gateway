@@ -4,12 +4,12 @@ After=network.target
 
 [Service]
 WorkingDirectory=/data/zigbee2mqtt
-ExecStart=/data/node/bin/node /data/zigbee2mqtt/index.js
+ExecStart=/data/node/bin/node start
 StandardOutput=inherit
 StandardError=inherit
 KillMode=process
 Restart=always
-StartLimitInterval=100
+StartLimitInterval=1000
 
 [Install]
 WantedBy=multi-user.target
