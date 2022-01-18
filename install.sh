@@ -10,7 +10,7 @@ cd /data
 wget https://npm.taobao.org/mirrors/node/v14.16.1/node-v14.16.1-linux-armv7l.tar.xz
 tar -xvf node-v14.16.1-linux-armv7l.tar.xz
 ln -s node-v14.16.1-linux-armv7l node
-ln -s  /data/node/bin/node /usr//bin/node
+ln -s  /data/node/bin/node /usr/bin/node
 ln -s  /data/node/bin/npm /usr/bin/npm
 
 #mv node-v14.16.1-linux-armv7l node-v14.16.1
@@ -154,6 +154,8 @@ tar -xvf node-red.tar.gz
 cd /data
 
 ln -s node-v14.16.1-linux-armv7l node
+ln -s  /data/node/bin/node /usr/bin/node
+ln -s  /data/node/bin/npm /usr/bin/npm
 
 vi /etc/environment 加入 :/data/node/bin
 echo  "export PATH=\$PATH:/data/node/bin" >> /etc/profile
@@ -292,7 +294,7 @@ Activate a connection -> Wi-Fi
 #Wifi 断线重连（未验证）
 #wpa_supplicant -iwlan0（根据名字修改） -c/etc/wpa_supplicant.conf 
 mkdir /data/network
-cp service/network/. /data/network/.
+scp -r service/network root@192.168.x.x:/data/.
 
 chmod 777 /data/network/check.sh
 cp  /data/network/network-check.service /lib/systemd/system/network-check.service

@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/data/zigbee2mqtt
-ExecStart=/data/node/bin/node start
+ExecStart=/data/node/bin/npm start
 StandardOutput=inherit
 StandardError=inherit
 KillMode=process
