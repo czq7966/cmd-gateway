@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "1.3.3-git",
+        "version": "1.3.7-git",
         "local": false,
         "user": false,
         "nodes": {
@@ -14,7 +14,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\20-inject.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/20-inject.js"
             },
             "debug": {
                 "name": "debug",
@@ -25,7 +25,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\21-debug.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/21-debug.js"
             },
             "complete": {
                 "name": "complete",
@@ -36,7 +36,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\24-complete.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/24-complete.js"
             },
             "catch": {
                 "name": "catch",
@@ -47,7 +47,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\25-catch.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/25-catch.js"
             },
             "status": {
                 "name": "status",
@@ -58,7 +58,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\25-status.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/25-status.js"
             },
             "link": {
                 "name": "link",
@@ -70,7 +70,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\60-link.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/60-link.js"
             },
             "comment": {
                 "name": "comment",
@@ -81,7 +81,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\90-comment.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/90-comment.js"
             },
             "unknown": {
                 "name": "unknown",
@@ -92,7 +92,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\common\\98-unknown.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/common/98-unknown.js"
             },
             "function": {
                 "name": "function",
@@ -103,7 +103,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\10-function.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/10-function.js"
             },
             "switch": {
                 "name": "switch",
@@ -114,7 +114,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\10-switch.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/10-switch.js"
             },
             "change": {
                 "name": "change",
@@ -125,7 +125,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\15-change.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/15-change.js"
             },
             "range": {
                 "name": "range",
@@ -136,7 +136,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\16-range.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/16-range.js"
             },
             "template": {
                 "name": "template",
@@ -147,7 +147,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\80-template.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/80-template.js"
             },
             "delay": {
                 "name": "delay",
@@ -158,7 +158,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\89-delay.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/89-delay.js"
             },
             "trigger": {
                 "name": "trigger",
@@ -169,7 +169,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\89-trigger.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/89-trigger.js"
             },
             "exec": {
                 "name": "exec",
@@ -180,7 +180,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\function\\90-exec.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/function/90-exec.js"
             },
             "tls": {
                 "name": "tls",
@@ -191,7 +191,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\05-tls.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/05-tls.js"
             },
             "httpproxy": {
                 "name": "httpproxy",
@@ -202,7 +202,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\06-httpproxy.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/06-httpproxy.js"
             },
             "mqtt": {
                 "name": "mqtt",
@@ -215,7 +215,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\10-mqtt.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/10-mqtt.js"
             },
             "httpin": {
                 "name": "httpin",
@@ -227,7 +227,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\21-httpin.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/21-httpin.js"
             },
             "httprequest": {
                 "name": "httprequest",
@@ -238,7 +238,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\21-httprequest.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/21-httprequest.js"
             },
             "websocket": {
                 "name": "websocket",
@@ -252,7 +252,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\22-websocket.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/22-websocket.js"
             },
             "tcpin": {
                 "name": "tcpin",
@@ -265,7 +265,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\31-tcpin.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/31-tcpin.js"
             },
             "udp": {
                 "name": "udp",
@@ -277,7 +277,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\network\\32-udp.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/network/32-udp.js"
             },
             "CSV": {
                 "name": "CSV",
@@ -288,7 +288,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\parsers\\70-CSV.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/parsers/70-CSV.js"
             },
             "HTML": {
                 "name": "HTML",
@@ -299,7 +299,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\parsers\\70-HTML.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/parsers/70-HTML.js"
             },
             "JSON": {
                 "name": "JSON",
@@ -310,7 +310,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\parsers\\70-JSON.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/parsers/70-JSON.js"
             },
             "XML": {
                 "name": "XML",
@@ -321,7 +321,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\parsers\\70-XML.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/parsers/70-XML.js"
             },
             "YAML": {
                 "name": "YAML",
@@ -332,7 +332,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\parsers\\70-YAML.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/parsers/70-YAML.js"
             },
             "split": {
                 "name": "split",
@@ -344,7 +344,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\sequence\\17-split.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/sequence/17-split.js"
             },
             "sort": {
                 "name": "sort",
@@ -355,7 +355,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\sequence\\18-sort.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/sequence/18-sort.js"
             },
             "batch": {
                 "name": "batch",
@@ -366,7 +366,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\sequence\\19-batch.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/sequence/19-batch.js"
             },
             "file": {
                 "name": "file",
@@ -378,7 +378,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\storage\\10-file.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/storage/10-file.js"
             },
             "watch": {
                 "name": "watch",
@@ -389,7 +389,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\@node-red\\nodes\\core\\storage\\23-watch.js"
+                "file": "/data/cmd-gateway/node_modules/@node-red/nodes/core/storage/23-watch.js"
             }
         }
     },
@@ -408,7 +408,7 @@
                 "local": false,
                 "user": false,
                 "module": "node-red-node-rbe",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\node-red-node-rbe\\rbe.js"
+                "file": "/data/cmd-gateway/node_modules/node-red-node-rbe/rbe.js"
             }
         }
     },
@@ -427,13 +427,13 @@
                 "local": false,
                 "user": false,
                 "module": "node-red-node-tail",
-                "file": "E:\\data\\cmd-gateway\\node_modules\\node-red-node-tail\\28-tail.js"
+                "file": "/data/cmd-gateway/node_modules/node-red-node-tail/28-tail.js"
             }
         }
     },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
-        "version": "2.28.2",
+        "version": "2.30.0",
         "local": true,
         "user": true,
         "nodes": {
@@ -446,7 +446,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_base.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_base.js"
             },
             "ui_button": {
                 "name": "ui_button",
@@ -457,7 +457,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_button.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_button.js"
             },
             "ui_dropdown": {
                 "name": "ui_dropdown",
@@ -468,7 +468,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_dropdown.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_dropdown.js"
             },
             "ui_switch": {
                 "name": "ui_switch",
@@ -479,7 +479,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_switch.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_switch.js"
             },
             "ui_slider": {
                 "name": "ui_slider",
@@ -490,7 +490,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_slider.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_slider.js"
             },
             "ui_numeric": {
                 "name": "ui_numeric",
@@ -501,7 +501,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_numeric.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_numeric.js"
             },
             "ui_text_input": {
                 "name": "ui_text_input",
@@ -512,7 +512,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_text_input.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_text_input.js"
             },
             "ui_date_picker": {
                 "name": "ui_date_picker",
@@ -523,7 +523,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_date_picker.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_date_picker.js"
             },
             "ui_colour_picker": {
                 "name": "ui_colour_picker",
@@ -534,7 +534,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_colour_picker.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_colour_picker.js"
             },
             "ui_form": {
                 "name": "ui_form",
@@ -545,7 +545,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_form.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_form.js"
             },
             "ui_text": {
                 "name": "ui_text",
@@ -556,7 +556,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_text.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_text.js"
             },
             "ui_gauge": {
                 "name": "ui_gauge",
@@ -567,7 +567,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_gauge.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_gauge.js"
             },
             "ui_chart": {
                 "name": "ui_chart",
@@ -578,7 +578,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_chart.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_chart.js"
             },
             "ui_audio": {
                 "name": "ui_audio",
@@ -589,7 +589,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_audio.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_audio.js"
             },
             "ui_toast": {
                 "name": "ui_toast",
@@ -600,7 +600,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_toast.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_toast.js"
             },
             "ui_ui_control": {
                 "name": "ui_ui_control",
@@ -611,7 +611,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_ui_control.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_ui_control.js"
             },
             "ui_template": {
                 "name": "ui_template",
@@ -622,7 +622,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_template.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_template.js"
             },
             "ui_link": {
                 "name": "ui_link",
@@ -633,7 +633,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_link.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_link.js"
             },
             "ui_tab": {
                 "name": "ui_tab",
@@ -644,7 +644,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_tab.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_tab.js"
             },
             "ui_group": {
                 "name": "ui_group",
@@ -655,7 +655,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_group.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_group.js"
             },
             "ui_spacer": {
                 "name": "ui_spacer",
@@ -666,7 +666,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-dashboard\\nodes\\ui_spacer.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
         }
     },
@@ -685,7 +685,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-nd-gree-hvac",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gree-hvac\\gree-hvac\\gree-hvac.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-gree-hvac/gree-hvac/gree-hvac.js"
             },
             "gree-hvac-config": {
                 "name": "gree-hvac-config",
@@ -696,7 +696,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-nd-gree-hvac",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gree-hvac\\gree-hvac\\gree-hvac-config.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-gree-hvac/gree-hvac/gree-hvac-config.js"
             }
         }
     },
@@ -715,7 +715,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\shepherd.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/shepherd.js"
             },
             "zigbee-controller": {
                 "name": "zigbee-controller",
@@ -726,7 +726,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\controller.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/controller.js"
             },
             "zigbee-converter": {
                 "name": "zigbee-converter",
@@ -737,7 +737,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\converter.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/converter.js"
             },
             "zigbee-event": {
                 "name": "zigbee-event",
@@ -748,7 +748,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\event.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/event.js"
             },
             "zigbee-command": {
                 "name": "zigbee-command",
@@ -759,7 +759,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\command.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/command.js"
             },
             "zigbee-offline": {
                 "name": "zigbee-offline",
@@ -770,7 +770,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\offline.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/offline.js"
             },
             "zigbee-hue-light": {
                 "name": "zigbee-hue-light",
@@ -781,7 +781,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\hue-light.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/hue-light.js"
             },
             "zigbee-hue-device": {
                 "name": "zigbee-hue-device",
@@ -792,13 +792,13 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-zigbee",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-zigbee\\nodes\\hue-device.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-zigbee/nodes/hue-device.js"
             }
         }
     },
     "node-red-node-serialport": {
         "name": "node-red-node-serialport",
-        "version": "0.14.0",
+        "version": "0.14.1",
         "local": true,
         "user": true,
         "nodes": {
@@ -814,26 +814,26 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-node-serialport",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-node-serialport\\25-serial.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-node-serialport/25-serial.js"
             }
         }
     },
     "node-red-nd-gpio-rf": {
         "name": "node-red-nd-gpio-rf",
-        "version": "0.0.8",
+        "version": "0.0.19",
         "local": true,
-        "user": false,
+        "user": true,
         "nodes": {
-            "gpio-rf-sender": {
-                "name": "gpio-rf-sender",
+            "gpio-rf-collect": {
+                "name": "gpio-rf-collect",
                 "types": [
-                    "gpio-rf-sender"
+                    "gpio-rf-collect"
                 ],
                 "enabled": true,
                 "local": true,
                 "user": false,
                 "module": "node-red-nd-gpio-rf",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gpio-rf\\dist\\gpio-rf-sender.js"
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-gpio-rf/dist/gpio-rf-collect.js"
             },
             "gpio-rf-sniffer": {
                 "name": "gpio-rf-sniffer",
@@ -844,26 +844,67 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-nd-gpio-rf",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-nd-gpio-rf\\dist\\gpio-rf-sniffer.js"
-            }
-        }
-    },
-    "node-red-contrib-rf-command": {
-        "name": "node-red-contrib-rf-command",
-        "version": "1.0.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "rf-command": {
-                "name": "rf-command",
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-gpio-rf/dist/gpio-rf-sniffer.js"
+            },
+            "gpio-rf-sender": {
+                "name": "gpio-rf-sender",
                 "types": [
-                    "rf-command"
+                    "gpio-rf-sender"
                 ],
                 "enabled": true,
                 "local": true,
                 "user": false,
-                "module": "node-red-contrib-rf-command",
-                "file": "E:\\data\\cmd-gateway\\data\\node_modules\\node-red-contrib-rf-command\\src\\rf-command.js"
+                "module": "node-red-nd-gpio-rf",
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-gpio-rf/dist/gpio-rf-sender.js"
+            }
+        }
+    },
+    "node-red-contrib-cbus": {
+        "name": "node-red-contrib-cbus",
+        "version": "0.0.6",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "iot-scope-in": {
+                "name": "iot-scope-in",
+                "types": [
+                    "iot-scope-in"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-cbus",
+                "file": "/data/cmd-gateway/data/node_modules/node-red-contrib-cbus/iot-scope-in.js"
+            }
+        }
+    },
+    "node-red-nd-rf-coder": {
+        "name": "node-red-nd-rf-coder",
+        "version": "0.0.4",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "rf-decoder": {
+                "name": "rf-decoder",
+                "types": [
+                    "rf-decoder"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-nd-rf-coder",
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-rf-coder/dist/rf-decoder.js"
+            },
+            "rf-encoder": {
+                "name": "rf-encoder",
+                "types": [
+                    "rf-encoder"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-nd-rf-coder",
+                "file": "/data/cmd-gateway/data/node_modules/node-red-nd-rf-coder/dist/rf-encoder.js"
             }
         }
     }
